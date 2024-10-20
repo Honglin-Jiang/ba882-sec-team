@@ -55,9 +55,13 @@ def etl_flow():
     result = schema_setup()
     print("The schema setup completed")
     
-    #extract_result = extract()
-    #print("The api were extracted onto motherdb")
-    #print(f"{extract_result}")
+    extract_mda_result = extract_mda()
+    print("The mda were extracted onto motherdb")
+    print(f"{extract_mda_result}")
+
+    extract_yfinance_result = extract_yfinance()
+    print("The market data were extracted onto motherdb")
+    print(f"{extract_yfinance_result}")
     
     # transform_result = transform(extract_result)
     # print("The parsing of the feeds into tables completed")
