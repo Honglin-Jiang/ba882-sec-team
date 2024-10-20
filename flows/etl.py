@@ -20,9 +20,16 @@ def schema_setup():
     return resp
 
 @task(retries=2)
-def extract():
-    """Extract the RSS feeds into JSON on GCS"""
-    url = "https://us-central1-ba882-team9.cloudfunctions.net/dev-extract-api"
+def extract_mda():
+    """Extract MD&A from sec api"""
+    url = "https://us-central1-ba882-team9.cloudfunctions.net/dev-extract-mda"
+    resp = invoke_gcf(url, payload={})
+    return resp
+
+@task(retries=2)
+def extract_yfinance():
+    """Extract stock data from yfinance"""
+    url = "https://us-central1-ba882-team9.cloudfunctions.net/dev-extract-yfinance"
     resp = invoke_gcf(url, payload={})
     return resp
 
