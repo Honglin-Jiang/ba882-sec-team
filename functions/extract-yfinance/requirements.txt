@@ -1,0 +1,6 @@
+google-cloud-secret-manager
+requests
+sec-api
+functions-framework==3.*
+duckdb==1.1.0
+yfinance
