@@ -52,21 +52,7 @@ def task(request):
             ticker VARCHAR PRIMARY KEY,
             time TIMESTAMP,
             close FLOAT,
-            volumne INT
-        );
-        """
-        print(f"{raw_tbl_sql}")
-        md.sql(raw_tbl_sql)
-
-        # 13F
-        raw_tbl_name = f"{db_schema}.F13"
-        raw_tbl_sql = f"""
-        CREATE TABLE IF NOT EXISTS {raw_tbl_name} (
-            name_of_issuer VARCHAR,
-            ticker VARCHAR PRIMARY KEY,
-            value INT,
-            title_of_class VARCHAR,
-            put_call VARCHAR
+            volume INT
         );
         """
         print(f"{raw_tbl_sql}")
@@ -77,9 +63,8 @@ def task(request):
         raw_tbl_sql = f"""
         CREATE TABLE IF NOT EXISTS {raw_tbl_name} (
             business VARCHAR,
-            risk_factors VARCHAR,
-            finan_cond_result_op VARCHAR,
-            quant_market_risk VARCHAR
+            date TIMESTAMP,
+            finan_cond_result_op VARCHAR
         );
         """
         print(f"{raw_tbl_sql}")
