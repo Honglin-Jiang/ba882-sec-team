@@ -19,12 +19,12 @@ def schema_setup():
     resp = invoke_gcf(url, payload={})
     return resp
 
-# @task(retries=2)
-# def extract():
-#     """Extract the RSS feeds into JSON on GCS"""
-#     url = "https://us-central1-btibert-ba882-fall24.cloudfunctions.net/dev-extract-rss"
-#     resp = invoke_gcf(url, payload={})
-#     return resp
+@task(retries=2)
+def extract():
+    """Extract the RSS feeds into JSON on GCS"""
+    url = "https://us-central1-ba882-team9.cloudfunctions.net/dev-extract-api"
+    resp = invoke_gcf(url, payload={})
+    return resp
 
 # @task(retries=2)
 # def transform(payload):
@@ -48,9 +48,9 @@ def etl_flow():
     result = schema_setup()
     print("The schema setup completed")
     
-    # extract_result = extract()
-    # print("The RSS feeds were extracted onto GCS")
-    # print(f"{extract_result}")
+    #extract_result = extract()
+    #print("The api were extracted onto motherdb")
+    #print(f"{extract_result}")
     
     # transform_result = transform(extract_result)
     # print("The parsing of the feeds into tables completed")
