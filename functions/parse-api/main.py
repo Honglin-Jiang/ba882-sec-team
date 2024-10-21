@@ -101,4 +101,4 @@ for index, row in yfinance_df.iterrows():
         'yfinance_data': "yfinance data loaded to DuckDB",
     }
 
-    return gcs_links, 200
+    return (gcs_links, 200)

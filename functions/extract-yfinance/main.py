@@ -18,8 +18,8 @@ schema = "stage"  # The new schema for y_finance data
 db_schema = f"{db}.{schema}"
 
 # Define the companies (ticker symbols)
-cloud_companies = ["AMZN", "MSFT"]
-chip_companies = ["INTC"]
+cloud_companies = ["AMZN", "MSFT", "GOOG", "BABA", "CRM"]
+chip_companies = ["INTC", "NVDA", "TSM", "AMD"]
 # Combine cloud and chip companies
 companies = cloud_companies + chip_companies
 

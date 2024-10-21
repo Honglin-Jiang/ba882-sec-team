@@ -24,20 +24,20 @@ from sec_api import QueryApi, ExtractorApi  # Import both classes
 import datetime
 
 # Your API key from sec-api.io
-api_key = "791d19143dece943f6431f197570ee4aedaa9f05b68a71e37f3a5ca7c4bfeae0"
+api_key = "da18ac258ecb6e7e0b48c5c2e2ef930cebd9230834d5993c7590ee3d2843358c"
 
 # Create instances of the API classes
 queryApi = QueryApi(api_key=api_key)
 extractorApi = ExtractorApi(api_key=api_key)
 # Define the companies (ticker symbols)
-cloud_companies = ["AMZN", "MSFT"]
-chip_companies = ["INTC"]
-#, "GOOG", "BABA", "CRM"
-#, "NVDA", "TSM", "AMD"
+cloud_companies = ["AMZN", "MSFT", "GOOG", "BABA", "CRM"]
+chip_companies = ["INTC", "NVDA", "TSM", "AMD"]
+#
+#
 
 # Calculate the filing years (last 5 years)
 current_year = datetime.datetime.now().year
-filing_years = list(range(current_year - 1, current_year + 1))
+filing_years = list(range(current_year - 4, current_year + 1))
 
 def get_mdna(ticker, year):
   """Fetches the MD&A section from a company's 10-K filing for a given year."""
@@ -90,24 +90,30 @@ def task(request):
             for year in filing_years:
                 cloud_mdna[company][year] = get_mdna(company, year)
 
-        #chip_mdna = {}
-        #for company in chip_companies:
-        #    chip_mdna[company] = {}
-        #    for year in filing_years:
-        #        chip_mdna[company][year] = get_mdna(company, year)
+        chip_mdna = {}
+        for company in chip_companies:
+            chip_mdna[company] = {}
+            for year in filing_years:
+                chip_mdna[company][year] = get_mdna(company, year)
 
         # Transform and load the data into MotherDuck
 # Transform and load the data into MotherDuck
         for company, data in cloud_mdna.items():
             for year, mdna in data.items():
                 insert_sql = f"""
-                    INSERT INTO {db_schema}.K10 (business, risk_factors, finan_cond_result_op) 
+                    INSERT INTO {db_schema}.K10 (business, date, finan_cond_result_op) 
                     VALUES ('{company}', '{year}', '{mdna}') 
                 """
                 md.sql(insert_sql)
 
         # Similarly, insert data for chip_mdna
-
+        for company, data in chip_mdna.items():
+            for year, mdna in data.items():
+                insert_sql = f"""
+                    INSERT INTO {db_schema}.K10 (business, date, finan_cond_result_op) 
+                    VALUES ('{company}', '{year}', '{mdna}') 
+                """
+                md.sql(insert_sql)
         return {}, 200
     except Exception as e:
         print(f"Error occurred: {e}")
