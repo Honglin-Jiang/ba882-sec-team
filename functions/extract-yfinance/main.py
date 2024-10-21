@@ -1,5 +1,3 @@
-
-
 import yfinance as yf
 from google.cloud import secretmanager
 import duckdb
@@ -30,30 +28,63 @@ def get_yfinance_data(ticker):
         stock = yf.Ticker(ticker)
         
         # Calculate the start and end dates for the past 5 years
-        end_date = datetime.date.today()
-        start_date = end_date - datetime.timedelta(days=5*365)
+        #end_date = datetime.date.today()
+        #start_date = end_date - datetime.timedelta(days=5*365)
 
-        history = stock.history(start=start_date, end=end_date)  # Get historical stock data for the past 5 years
-        print(f"Fetched history for {ticker}: {history.head()}")
+        #history = stock.history(start=start_date, end=end_date, interval='1d')  # Ensure '1d' interval for daily data
+        history = stock.history(period="3y")
+        print(f"Fetched {len(history)} records for {ticker}. Data preview: {history.head()}")
+        
+        # Check if data is empty
+        if history.empty:
+            print(f"No data found for {ticker}")
+            return None
+
         return history
     except Exception as e:
         print(f"Error fetching Yahoo Finance data for {ticker}: {e}")
         return None
 
+#def insert_yfinance_data_to_db(md, ticker, data):
+#    """Insert the yfinance data into MotherDuck for the given ticker."""
+#    try:
+#        if data is None or data.empty:
+#            print(f"No data to insert for {ticker}.")
+#            return
+
+#        for date, row in data.iterrows():
+#            insert_sql = f"""
+#                INSERT INTO {db_schema}.y_finance (ticker, time, close, volume) 
+#                VALUES ('{ticker}', '{date}', {row['Close']}, {row['Volume']})
+#            """
+#            print(f"Executing SQL: {insert_sql}")  # Log the SQL being executed
+#            md.sql(insert_sql)
+#        print(f"Data inserted for {ticker}.")
+#    except Exception as e:
+#        print(f"Error inserting data for {ticker}: {e}")
+
 def insert_yfinance_data_to_db(md, ticker, data):
     """Insert the yfinance data into MotherDuck for the given ticker."""
     try:
         for date, row in data.iterrows():
-            insert_sql = f"""
-                INSERT INTO {db_schema}.y_finance (ticker, time, close, volume) 
-                VALUES ('{ticker}', '{date}', {row['Close']}, {row['Volume']})
+            # Check if there are the same records
+            check_sql = f"""
+                SELECT COUNT(*) FROM {db_schema}.y_finance 
+                WHERE ticker = '{ticker}' AND time = '{date}';
             """
-            print(f"Executing SQL: {insert_sql}")  # Log the SQL being executed
-            md.sql(insert_sql)
-            print(f"Inserted data for {ticker} on {date}")
+            result = md.sql(check_sql).fetchone()[0]
+
+            if result == 0:  # If no, then insert data
+                insert_sql = f"""
+                    INSERT INTO {db_schema}.y_finance (ticker, time, close, volume) 
+                    VALUES ('{ticker}', '{date}', {row['Close']}, {row['Volume']});
+                """
+                md.sql(insert_sql)
+                print(f"Inserted data for {ticker} on {date}")
+            else:
+                print(f"Record already exists for {ticker} on {date}")
     except Exception as e:
         print(f"Error inserting data for {ticker}: {e}")
-
 
 
 # The main task function triggered by an HTTP request
@@ -84,5 +115,4 @@ def task(request):
     except Exception as e:
         print(f"Error occurred: {e}")
         return {"error": str(e)}, 500
-
 

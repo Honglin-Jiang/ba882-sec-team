@@ -12,7 +12,6 @@ db = 'ba882_team9'
 schema = "stage"
 db_schema = f"{db}.{schema}"
 
-
 @functions_framework.http
 def task(request):
     try:
@@ -49,7 +48,7 @@ def task(request):
         raw_tbl_name = f"{db_schema}.y_finance"
         raw_tbl_sql = f"""
         CREATE TABLE IF NOT EXISTS {raw_tbl_name} (
-            ticker VARCHAR PRIMARY KEY,
+            ticker VARCHAR,
             time TIMESTAMP,
             close FLOAT,
             volume INT
@@ -64,7 +63,7 @@ def task(request):
         CREATE TABLE IF NOT EXISTS {raw_tbl_name} (
             business VARCHAR,
             date TIMESTAMP,
-            finan_cond_result_op VARCHAR
+            finan_cond_result_op VARCHAR,
         );
         """
         print(f"{raw_tbl_sql}")
@@ -74,3 +73,5 @@ def task(request):
     except Exception as e:
             print(f"Error occurred: {e}")
             return {"error": str(e)}, 500
+
+
