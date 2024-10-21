@@ -93,12 +93,8 @@ for index, row in yfinance_df.iterrows():
         )
     """
     md.sql(insert_sql)
-
-
-
     ########################### return
     gcs_links = {
         'yfinance_data': "yfinance data loaded to DuckDB",
     }
-
     return (gcs_links, 200)

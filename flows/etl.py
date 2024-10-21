@@ -22,14 +22,14 @@ def schema_setup():
 @task(retries=2)
 def extract_mda():
     """Extract MD&A from sec api"""
-    url = "https://us-central1-ba882-team9.cloudfunctions.net/dev-extract-mda"
+    url = "https://us-central1-ba882-team9.cloudfunctions.net/extract-mda"
     resp = invoke_gcf(url, payload={})
     return resp
 
 @task(retries=2)
 def extract_yfinance():
     """Extract stock data from yfinance"""
-    url = "https://us-central1-ba882-team9.cloudfunctions.net/dev-extract-yfinance"
+    url = "https://us-central1-ba882-team9.cloudfunctions.net/extract-yfinance"
     resp = invoke_gcf(url, payload={})
     return resp
 

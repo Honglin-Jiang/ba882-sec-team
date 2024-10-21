@@ -5,7 +5,7 @@ echo "======================================================"
 echo "Deploying the extract-mda function"
 echo "======================================================"
 
-gcloud functions deploy dev-extract-mda \
+gcloud functions deploy extract-mda \
     --gen2 \
     --runtime python311 \
     --trigger-http \
@@ -22,7 +22,7 @@ echo "======================================================"
 echo "Deploying the extract-yfinance function"
 echo "======================================================"
 
-gcloud functions deploy dev-extract-yfinance \
+gcloud functions deploy extract-yfinance \
     --gen2 \
     --runtime python311 \
     --trigger-http \
@@ -39,7 +39,7 @@ echo "======================================================"
 echo "Process Datetime"
 echo "======================================================"
 
-gcloud functions deploy dev-parse-api \
+gcloud functions deploy parse-api \
     --gen2 \
     --runtime python311 \
     --trigger-http \
