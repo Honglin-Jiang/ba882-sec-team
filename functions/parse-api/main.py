@@ -1,8 +1,6 @@
 import functions_framework
 from google.cloud import secretmanager
-from google.cloud import storage
 import duckdb
-import json
 import pandas as pd
 import datetime
 
@@ -10,97 +8,86 @@ import datetime
 project_id = 'ba882-team9'
 secret_id = 'mother_duck'
 version_id = 'latest'
-bucket_name = 'ba882-team9'
+db = 'ba882_team9'
+stage_schema = 'stage'
+transformed_schema = 'transformed'
+stage_db_schema = f'{db}.{stage_schema}'
+transformed_db_schema = f'{db}.{transformed_schema}'
 
 ingest_timestamp = pd.Timestamp.now()
 
 ############################################################### helpers
 
-def parse_published(date_str):
-    dt_with_tz = datetime.datetime.strptime(date_str, '%a, %d %b %Y %H:%M:%S %z')
-    dt_naive = dt_with_tz.replace(tzinfo=None)
-    timestamp = pd.Timestamp(dt_naive)
-    return timestamp
+def convert_time_to_year(df, time_column):
+    """Convert timestamp to year."""
+    df[time_column] = pd.to_datetime(df[time_column])
+    df['year'] = df[time_column].dt.year
+    return df
 
 ############################################################### main task
 
 @functions_framework.http
 def task(request):
-    # Parse the request data
-    request_json = request.get_json(silent=True)
-    print(f"request: {json.dumps(request_json)}")
-
-    # Ensure bucket_name and blob_name are present
-    bucket_name = request_json.get('bucket_name')
-    file_path = request_json.get('blob_name')
-
-    if not bucket_name or not file_path:
-        print("Missing bucket name or blob name in request.")
-        return {"error": "Missing bucket name or blob name."}, 400  # Return a 400 Bad Request if either is missing
-
-    print(f"bucket: {bucket_name} and blob name {file_path}")
-
-    # Instantiate the services
-    storage_client = storage.Client()
-    sm = secretmanager.SecretManagerServiceClient()
-
-    # Get the file from GCS
+    """HTTP Cloud Function to process yfinance data and store yearly aggregated data into transformed schema."""
     try:
-        bucket = storage_client.get_bucket(bucket_name)
-        blob = bucket.blob(file_path)
-        json_data = blob.download_as_string()
-    except Exception as e:
-        print(f"Error accessing GCS: {e}")
-        return {"error": f"Error accessing GCS: {str(e)}"}, 500
+        # Instantiate the Secret Manager service
+        sm = secretmanager.SecretManagerServiceClient()
 
-    # Process the data
-    try:
-        entries = json.loads(json_data)
-        print(f"retrieved {len(entries)} entries")
-    except json.JSONDecodeError as e:
-        print(f"Error parsing JSON: {e}")
-        return {"error": f"Error parsing JSON: {str(e)}"}, 500
+        # Build the resource name of the secret version
+        name = f"projects/{project_id}/secrets/{secret_id}/versions/{version_id}"
 
-    # make it a dataframe
-    entries_df = pd.DataFrame(entries)
-    job_id = request_json.get('job_id')
-    entries_df['job_id'] = job_id
+        # Access the secret version
+        response = sm.access_secret_version(request={"name": name})
+        md_token = response.payload.data.decode("UTF-8")
 
-    # Convert the entries to a DataFrame
-    yfinance_df = pd.DataFrame(entries)
+        # Connect to MotherDuck
+        md = duckdb.connect(f'md:?motherduck_token={md_token}')
+        
+        # Step 1: Retrieve data from MotherDuck
+        select_sql = f"SELECT * FROM {stage_db_schema}.y_finance"
+        yfinance_df = md.sql(select_sql).df()  # Read as a pandas DataFrame
+        print(f"Fetched {len(yfinance_df)} records from y_finance table")
 
-    # Extract and format the date
-    yfinance_df['Date'] = pd.to_datetime(yfinance_df['Date'])
+        if yfinance_df.empty:
+            return {"error": "No data found in y_finance table"}, 404
 
-    # Build the resource name of the secret version
-    name = f"projects/{project_id}/secrets/{secret_id}/versions/{version_id}"
+        # Step 2: Convert time column to year
+        yfinance_df = convert_time_to_year(yfinance_df, 'time')
 
-    # Access the secret version
-    response = sm.access_secret_version(request={"name": name})
-    md_token = response.payload.data.decode("UTF-8")
+        # Step 3: Group by ticker and year, calculate average close and volume
+        yearly_avg = yfinance_df.groupby(['ticker', 'year']).agg({
+            'close': 'mean',
+            'volume': 'mean'
+        }).reset_index()
 
-    # Initiate the MotherDuck connection
-    md = duckdb.connect(f'md:?motherduck_token={md_token}')
+        # Rename columns for clarity
+        yearly_avg.rename(columns={'close': 'avg_close', 'volume': 'avg_volume'}, inplace=True)
 
-    # Insert data into DuckDB
-    try:
-        for index, row in yfinance_df.iterrows():
+        # Step 4: Create the transformed table if it doesn't exist
+        transformed_tbl_name = f"{transformed_db_schema}.y_finance"
+        md.sql(f"""
+            CREATE SCHEMA IF NOT EXISTS {transformed_db_schema};
+        """)
+        md.sql(f"""
+            CREATE TABLE IF NOT EXISTS {transformed_tbl_name} (
+                ticker VARCHAR,
+                year INT,
+                avg_close FLOAT,
+                avg_volume FLOAT
+            );
+        """)
+
+        # Step 5: Insert aggregated data into transformed table
+        for _, row in yearly_avg.iterrows():
             insert_sql = f"""
-                INSERT INTO your_schema.y_finance (ticker, time, close, volume) 
-                VALUES (
-                    '{row['Ticker']}',  -- Assuming the ticker is in the 'Ticker' column
-                    '{row['Date'].strftime('%Y-%m-%d')}', 
-                    {row['Close']}, 
-                    {row['Volume']}
-                )
+                INSERT INTO {transformed_tbl_name} (ticker, year, avg_close, avg_volume)
+                VALUES ('{row['ticker']}', {row['year']}, {row['avg_close']}, {row['avg_volume']});
             """
             md.sql(insert_sql)
-    except Exception as e:
-        print(f"Error inserting into DuckDB: {e}")
-        return {"error": f"Error inserting into DuckDB: {str(e)}"}, 500
+            print(f"Inserted aggregated data for {row['ticker']} in year {row['year']}")
 
-    # Return response after successful insertion
-    gcs_links = {
-        'yfinance_data': "yfinance data loaded to DuckDB",
-    }
-    return (gcs_links, 200)
+        return {"message": "YFinance data successfully transformed and inserted into transformed schema"}, 200
+
+    except Exception as e:
+        print(f"Error occurred: {e}")
+        return {"error": str(e)}, 500

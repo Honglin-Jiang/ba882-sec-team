@@ -32,12 +32,12 @@ def extract_yfinance():
     resp = invoke_gcf(url, payload={})
     return resp
 
-@task(retries=2)
-def parse_yfinance(payload):
-    """Process the y_finance feed JSON into parquet on GCS"""
-    url = "https://us-central1-ba882-team9.cloudfunctions.net/parse-api"
-    resp = invoke_gcf(url, payload=payload)
-    return resp
+# @task(retries=2)
+# def parse_yfinance(payload):
+#     """Process the y_finance feed JSON into parquet on GCS"""
+#     url = "https://us-central1-ba882-team9.cloudfunctions.net/parse-api"
+#     resp = invoke_gcf(url, payload=payload)
+#     return resp
 
 # @task(retries=2)
 # def transform(payload):
@@ -47,11 +47,18 @@ def parse_yfinance(payload):
 #     return resp
 
 @task(retries=2)
-def load_api_yfinance(payload):
-    """Load the tables into the raw schema, ingest new records into stage tables"""
-    url = "https://us-central1-ba882-team9.cloudfunctions.net/load-api"
+def transform_yfinance(payload):
+    """Process the RSS feed JSON into parquet on GCS"""
+    url = "https://us-central1-ba882-team9.cloudfunctions.net/transform-yfinance"
     resp = invoke_gcf(url, payload=payload)
     return resp
+
+# @task(retries=2)
+# def load_api_yfinance(payload):
+#     """Load the tables into the raw schema, ingest new records into stage tables"""
+#     url = "https://us-central1-ba882-team9.cloudfunctions.net/load-api"
+#     resp = invoke_gcf(url, payload=payload)
+#     return resp
 
 # @task(retries=2)
 # def load(payload):
@@ -73,15 +80,19 @@ def etl_flow():
     # print(f"{extract_mda_result}")
 
     extract_yfinance_result = extract_yfinance()
-    print("The market data were extracted onto motherdb")
+    print("The yfinance data were extracted into motherduck db")
     print(f"{extract_yfinance_result}")
     
+    transform_yfinance_result = transform_yfinance(extract_yfinance_result)
+    print("The yfinance data were transformed into motherduck db")
+    print(f"{transform_yfinance_result}")
+
     # parse_yfinance_result = parse_yfinance(extract_yfinance_result)
     # print("The parsing of the feeds into tables completed")
     # print(f"{parse_yfinance_result}")
 
-    load_yfinance_result = load_api_yfinance(extract_yfinance_result)
-    print("The y_finance data were loaded into the raw schema and changes added to stage")
+    # load_yfinance_result = load_api_yfinance(extract_yfinance_result)
+    # print("The y_finance data were loaded into the raw schema and changes added to stage")
 
 # the job
 if __name__ == "__main__":

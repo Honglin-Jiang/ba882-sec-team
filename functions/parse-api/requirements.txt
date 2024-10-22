@@ -1,5 +1,4 @@
 functions-framework==3.*
-google-cloud-secretmanager
-google-cloud-storage
+google-cloud-secret-manager
 duckdb==1.1.0
 pandas
