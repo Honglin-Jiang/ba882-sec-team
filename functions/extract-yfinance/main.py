@@ -3,7 +3,8 @@ from google.cloud import secretmanager
 import duckdb
 import datetime
 import uuid
-import functions_framework  # Import the Cloud Functions framework
+import functions_framework
+
 
 # settings
 project_id = 'ba882-team9'
@@ -12,13 +13,12 @@ version_id = 'latest'
 
 # db setup
 db = 'ba882_team9'
-schema = "stage"  # The new schema for y_finance data
+schema = "stage"
 db_schema = f"{db}.{schema}"
 
-# Define the companies (ticker symbols)
+# Define the companies (ticker)
 cloud_companies = ["AMZN", "MSFT", "GOOG", "BABA", "CRM"]
 chip_companies = ["INTC", "NVDA", "TSM", "AMD"]
-# Combine cloud and chip companies
 companies = cloud_companies + chip_companies
 
 # Function to fetch stock data using yfinance
@@ -26,12 +26,6 @@ def get_yfinance_data(ticker):
     """Fetch stock data for the given ticker using yfinance."""
     try:
         stock = yf.Ticker(ticker)
-        
-        # Calculate the start and end dates for the past 5 years
-        #end_date = datetime.date.today()
-        #start_date = end_date - datetime.timedelta(days=5*365)
-
-        #history = stock.history(start=start_date, end=end_date, interval='1d')  # Ensure '1d' interval for daily data
         history = stock.history(period="3y")
         print(f"Fetched {len(history)} records for {ticker}. Data preview: {history.head()}")
         
@@ -44,24 +38,6 @@ def get_yfinance_data(ticker):
     except Exception as e:
         print(f"Error fetching Yahoo Finance data for {ticker}: {e}")
         return None
-
-#def insert_yfinance_data_to_db(md, ticker, data):
-#    """Insert the yfinance data into MotherDuck for the given ticker."""
-#    try:
-#        if data is None or data.empty:
-#            print(f"No data to insert for {ticker}.")
-#            return
-
-#        for date, row in data.iterrows():
-#            insert_sql = f"""
-#                INSERT INTO {db_schema}.y_finance (ticker, time, close, volume) 
-#                VALUES ('{ticker}', '{date}', {row['Close']}, {row['Volume']})
-#            """
-#            print(f"Executing SQL: {insert_sql}")  # Log the SQL being executed
-#            md.sql(insert_sql)
-#        print(f"Data inserted for {ticker}.")
-#    except Exception as e:
-#        print(f"Error inserting data for {ticker}: {e}")
 
 def insert_yfinance_data_to_db(md, ticker, data):
     """Insert the yfinance data into MotherDuck for the given ticker."""

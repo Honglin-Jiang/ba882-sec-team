@@ -1,7 +1,0 @@
-google-cloud-secret-manager
-requests
-sec-api
-functions-framework==3.*
-duckdb==1.1.0
-yfinance==0.2.14
-google-cloud-storage==2.10.0

@@ -24,7 +24,7 @@ from sec_api import QueryApi, ExtractorApi  # Import both classes
 import datetime
 
 # Your API key from sec-api.io
-api_key = "da18ac258ecb6e7e0b48c5c2e2ef930cebd9230834d5993c7590ee3d2843358c"
+api_key = "5b5f62a623d03c00df1867b45e09bb0032549f095b90301a47a7824d5a72af8a"
 
 # Create instances of the API classes
 queryApi = QueryApi(api_key=api_key)
