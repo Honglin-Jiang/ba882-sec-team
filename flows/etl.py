@@ -4,6 +4,8 @@
 import requests
 import json
 from prefect import flow, task
+from datetime import timedelta
+
 
 # helper function - generic invoker
 def invoke_gcf(url:str, payload:dict):
@@ -33,7 +35,7 @@ def extract_yfinance():
     return resp
 
 @task(retries=2)
-def transform_yfinance(payload):
+def transform_load_yfinance(payload):
     """Process the RSS feed JSON into parquet on GCS"""
     url = "https://us-central1-ba882-team9.cloudfunctions.net/transform-yfinance"
     resp = invoke_gcf(url, payload=payload)
@@ -56,9 +58,9 @@ def etl_flow():
     print("The yfinance data were extracted into motherduck db")
     print(f"{extract_yfinance_result}")
     
-    transform_yfinance_result = transform_yfinance(extract_yfinance_result)
-    print("The yfinance data were transformed into motherduck db")
-    print(f"{transform_yfinance_result}")
+    transform_load_yfinance_result = transform_load_yfinance(extract_yfinance_result)
+    print("The yfinance data were transformed and stored into motherduck db")
+    print(f"{transform_load_yfinance_result}")
 
 
 # the job

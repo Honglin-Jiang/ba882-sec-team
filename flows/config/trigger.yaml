@@ -1,0 +1,12 @@
+version: 3
+
+name: ba882-team9-etl-flow
+description: Flow to run ETL for ba882 team9
+flow_name: ba882-team9-etl-flow
+work_queue_name: default
+schedule:
+  rrule: |
+    FREQ=DAILY;BYHOUR=1;BYMINUTE=42
+parameters: {}
+run_config:
+  type: LocalRun

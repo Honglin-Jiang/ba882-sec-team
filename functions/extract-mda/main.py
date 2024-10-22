@@ -96,7 +96,7 @@ def task(request):
             for year in filing_years:
                 chip_mdna[company][year] = get_mdna(company, year)
 
-        # Transform and load the data into MotherDuck
+
 # Transform and load the data into MotherDuck
         for company, data in cloud_mdna.items():
             for year, mdna in data.items():
