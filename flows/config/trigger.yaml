@@ -6,7 +6,7 @@ flow_name: ba882-team9-etl-flow
 work_queue_name: default
 schedule:
   rrule: |
-    FREQ=DAILY;BYHOUR=1;BYMINUTE=42
+    FREQ=DAILY;BYHOUR=8;BYMINUTE=00;TZID=America/New_York
 parameters: {}
 run_config:
   type: LocalRun
