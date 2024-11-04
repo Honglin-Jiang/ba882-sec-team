@@ -328,7 +328,7 @@ def etl_flow():
         # print(f"{extract_yfinance_sp100_30_35mo_result}")
 ################################################### 100 Companies Code Above ###################################################
 
-        '''
+        
 
         extract_yfinance_9companies_6mo_result = extract_yfinance_9companies_6mo()
         print("The yfinance data (9 companies) for range 6 months ago range were extracted into motherduck db")
@@ -390,7 +390,7 @@ def etl_flow():
         transform_load_yfinance_result = transform_load_yfinance(extract_yfinance_9companies_78_84mo_result, "9 companies 78-84 months")
         print("The yfinance data (9 companies) were transformed and stored into motherduck db")
         print(f"{transform_load_yfinance_result}")
-        '''
+        
 
         # Define batch parameters
         batch_size = 1000
