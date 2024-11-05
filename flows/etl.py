@@ -347,7 +347,7 @@ def etl_flow():
         # print(f"{extract_yfinance_sp100_30_35mo_result}")
 ################################################### 100 Companies Code Above ###################################################
 
-     
+
 
         extract_yfinance_9companies_6mo_result = extract_yfinance_9companies_6mo()
         print("The yfinance data (9 companies) for range 6 months ago range were extracted into motherduck db")
