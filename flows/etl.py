@@ -5,12 +5,28 @@ import requests
 import json
 from prefect import flow, task
 from datetime import timedelta
+from google.cloud import secretmanager
 
-# Slack Webhook URL
-slack_webhook_url = "https://hooks.slack.com/services/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"
+# Helper function - access any secret from Secret Manager
+def get_secret(secret_id, project_id="ba882-team9"):
+    # Create a Secret Manager client
+    sm = secretmanager.SecretManagerServiceClient()
+
+    # Construct the resource path for the secret
+    name = f"projects/{project_id}/secrets/{secret_id}/versions/latest"
+
+    # Access the secret
+    response = sm.access_secret_version(request={"name": name})
+
+    # Return the secret value
+    return response.payload.data.decode("UTF-8")
+
+
 
 # Helper function - send Slack notification
 def send_slack_alert(message: str):
+    # Retrieve the Slack Webhook URL from Secret Manager
+    slack_webhook_url = get_secret(secret_id="SLACK_WEBHOOK_URL")
     payload = {"text": message}
     try:
         response = requests.post(slack_webhook_url, json=payload)
@@ -18,6 +34,9 @@ def send_slack_alert(message: str):
         print("Slack alert sent successfully")
     except requests.exceptions.RequestException as e:
         print(f"Failed to send Slack alert: {e}")
+
+# Retrieve a Slack Webhook URL
+slack_webhook_url = get_secret(secret_id="SLACK_WEBHOOK_URL")
 
 # helper function - generic invoker
 def invoke_gcf(url:str, payload:dict):
@@ -328,7 +347,7 @@ def etl_flow():
         # print(f"{extract_yfinance_sp100_30_35mo_result}")
 ################################################### 100 Companies Code Above ###################################################
 
-        
+
 
         extract_yfinance_9companies_6mo_result = extract_yfinance_9companies_6mo()
         print("The yfinance data (9 companies) for range 6 months ago range were extracted into motherduck db")
@@ -393,7 +412,7 @@ def etl_flow():
         
 
         # Define batch parameters
-        batch_size = 1000
+        batch_size = 800
         offset = 0
         total_rows = None
         rows_processed = 0  # Initialize rows processed
