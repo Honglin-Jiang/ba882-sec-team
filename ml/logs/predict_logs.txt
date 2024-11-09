@@ -1,0 +1,3586 @@
+---
+insertId: 672fbf180006583b5ad555d7
+labels:
+  container_name: ml-sf-predict-1
+  instanceId: 004940b3b8d917c6cc2d30eddf82a45445f4bfb3c812ecb28d405177cdd9336f85c1b29c7ec42d273de54df4a6a6bd8f39e72acbb9638e3fa0fc090b2b226084a22f8bdf51
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:59:20.422657616Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00005-nl8
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: WARNING
+textPayload: Container called exit(3).
+timestamp: '2024-11-09T19:59:20.415713593Z'
+---
+insertId: 672fbf0d0002d8829232e0ba
+labels:
+  instanceId: 004940b3b8d917c6cc2d30eddf82a45445f4bfb3c812ecb28d405177cdd9336f85c1b29c7ec42d273de54df4a6a6bd8f39e72acbb9638e3fa0fc090b2b226084a22f8bdf51
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:59:09.330136099Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00005-nl8
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:59:08 +0000] [1] [INFO] Reason: Worker failed to boot.'
+timestamp: '2024-11-09T19:59:09.186498Z'
+---
+insertId: 672fbf0c000f10a9640114ce
+labels:
+  instanceId: 004940b3b8d917c6cc2d30eddf82a45445f4bfb3c812ecb28d405177cdd9336f85c1b29c7ec42d273de54df4a6a6bd8f39e72acbb9638e3fa0fc090b2b226084a22f8bdf51
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:59:08.994316735Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00005-nl8
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:59:08 +0000] [1] [INFO] Shutting down: Master'
+timestamp: '2024-11-09T19:59:08.987305Z'
+---
+insertId: 672fbef2000901760e593aea
+labels:
+  instanceId: 004940b3b8d917c6cc2d30eddf82a45445f4bfb3c812ecb28d405177cdd9336f85c1b29c7ec42d273de54df4a6a6bd8f39e72acbb9638e3fa0fc090b2b226084a22f8bdf51
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:58:42.928416214Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00005-nl8
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:58:42 +0000] [2] [INFO] Worker exiting (pid: 2)'
+timestamp: '2024-11-09T19:58:42.590198Z'
+---
+errorGroups:
+- id: CNW8wbmU7rS5eQ
+insertId: 672fbef2000901157a396907
+labels:
+  instanceId: 004940b3b8d917c6cc2d30eddf82a45445f4bfb3c812ecb28d405177cdd9336f85c1b29c7ec42d273de54df4a6a6bd8f39e72acbb9638e3fa0fc090b2b226084a22f8bdf51
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:58:42.928416214Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00005-nl8
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: ERROR
+textPayload: |-
+  Traceback (most recent call last):
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+      worker.init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+      super().init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+      self.load_wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+      self.wsgi = self.app.wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+      self.callable = self.load()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+      return self.load_wsgiapp()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+      return util.import_app(self.app_uri)
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/util.py", line 359, in import_app
+      mod = importlib.import_module(module)
+    File "/usr/local/lib/python3.9/importlib/__init__.py", line 127, in import_module
+      return _bootstrap._gcd_import(name[level:], package, level)
+    File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+    File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+    File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+    File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+    File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+    File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+    File "/app/main.py", line 5, in <module>
+      import pandas as pd
+    File "/usr/local/lib/python3.9/site-packages/pandas/__init__.py", line 22, in <module>
+      from pandas.compat import is_numpy_dev as _is_numpy_dev
+    File "/usr/local/lib/python3.9/site-packages/pandas/compat/__init__.py", line 14, in <module>
+      from pandas.compat.numpy import (
+    File "/usr/local/lib/python3.9/site-packages/pandas/compat/numpy/__init__.py", line 4, in <module>
+      from pandas.util.version import Version
+    File "/usr/local/lib/python3.9/site-packages/pandas/util/__init__.py", line 1, in <module>
+      from pandas.util._decorators import (  # noqa:F401
+    File "/usr/local/lib/python3.9/site-packages/pandas/util/_decorators.py", line 14, in <module>
+      from pandas._libs.properties import cache_readonly  # noqa:F401
+    File "/usr/local/lib/python3.9/site-packages/pandas/_libs/__init__.py", line 13, in <module>
+      from pandas._libs.interval import Interval
+    File "pandas/_libs/interval.pyx", line 1, in init pandas._libs.interval
+  ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+timestamp: '2024-11-09T19:58:42.590101Z'
+---
+insertId: 672fbef2000900bb76cce8b3
+labels:
+  instanceId: 004940b3b8d917c6cc2d30eddf82a45445f4bfb3c812ecb28d405177cdd9336f85c1b29c7ec42d273de54df4a6a6bd8f39e72acbb9638e3fa0fc090b2b226084a22f8bdf51
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:58:42.600148736Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00005-nl8
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:58:41 +0000] [2] [ERROR] Exception in worker process'
+timestamp: '2024-11-09T19:58:42.590011Z'
+---
+insertId: -oyipfwdzen6
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/ba882-team9/services/ml-sf-predict
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: ec527ea0-be3c-4f3e-9ea6-95e1e469723b
+        run.googleapis.com/urls: '["https://ml-sf-predict-1076180164120.us-central1.run.app","https://ml-sf-predict-fefwkff7jq-uc.a.run.app"]'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+        serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:17:23.607840Z'
+      generation: 5
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: ml-sf-predict
+      namespace: '1076180164120'
+      resourceVersion: AAYmgEYUGA4
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-predict
+      uid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '100'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 498.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: rlhufbshqj
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          containers:
+          - env:
+            - name: MOTHERDUCK_TOKEN
+              value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1Y2hlbmx5QGJ1LmVkdSIsInNlc3Npb24iOiJ5dWNoZW5seS5idS5lZHUiLCJwYXQiOiJvQUFnWld6YUxMQUd0RndfdDRKTFMwRlFDbVZFUEtnSzZ5VW14NEluUDhvIiwidXNlcklkIjoiYTI1NGQxMWEtZGNjMy00YTljLThlZGMtZjlmNTc4OWY1ZWY5IiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzI4NTg2NDI1fQ.GSJursfAW8KiHiQNWruyCWeEeIUTUUTpCjA0ffnSkkQ
+            - name: DB_SCHEMA
+              value: your_schema_name
+            image: gcr.io/ba882-team9/ml-sf-predict
+            ports:
+            - containerPort: 8080
+              name: http1
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 512Mi
+            startupProbe:
+              failureThreshold: 1
+              periodSeconds: 240
+              tcpSocket:
+                port: 8080
+              timeoutSeconds: 240
+          serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      address:
+        url: https://ml-sf-predict-fefwkff7jq-uc.a.run.app
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:57:13.655310Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:57:12.388027Z'
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2024-11-09T19:57:13.621383Z'
+        status: 'True'
+        type: RoutesReady
+      latestCreatedRevisionName: ml-sf-predict-00005-nl8
+      latestReadyRevisionName: ml-sf-predict-00005-nl8
+      observedGeneration: 5
+      traffic:
+      - latestRevision: true
+        percent: 100
+        revisionName: ml-sf-predict-00005-nl8
+      url: https://ml-sf-predict-fefwkff7jq-uc.a.run.app
+  serviceName: run.googleapis.com
+  status:
+    message: Ready condition status changed to True for Service ml-sf-predict.
+receiveTimestamp: '2024-11-09T19:57:13.766871681Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ''
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: INFO
+timestamp: '2024-11-09T19:57:13.669756Z'
+---
+insertId: -qko0s7e13fta
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/ba882-team9/revisions/ml-sf-predict-00005-nl8
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Revision
+    apiVersion: serving.knative.dev/v1
+    kind: Revision
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: '100'
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/operation-id: ec527ea0-be3c-4f3e-9ea6-95e1e469723b
+        run.googleapis.com/startup-cpu-boost: 'true'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:56:42.198059Z'
+      generation: 1
+      labels:
+        client.knative.dev/nonce: rlhufbshqj
+        cloud.googleapis.com/location: us-central1
+        run.googleapis.com/startupProbeType: Default
+        serving.knative.dev/configuration: ml-sf-predict
+        serving.knative.dev/configurationGeneration: '5'
+        serving.knative.dev/route: ml-sf-predict
+        serving.knative.dev/service: ml-sf-predict
+        serving.knative.dev/serviceUid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+      name: ml-sf-predict-00005-nl8
+      namespace: '1076180164120'
+      ownerReferences:
+      - apiVersion: serving.knative.dev/v1
+        blockOwnerDeletion: true
+        controller: true
+        kind: Configuration
+        name: ml-sf-predict
+        uid: 6e27b44c-3e56-40af-9ee6-a5ec47483858
+      resourceVersion: AAYmgEYAKB8
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/revisions/ml-sf-predict-00005-nl8
+      uid: 4cc7a2d6-e70a-450d-9aaf-6cfcc1977b10
+    spec:
+      containerConcurrency: 80
+      containers:
+      - env:
+        - name: MOTHERDUCK_TOKEN
+          value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1Y2hlbmx5QGJ1LmVkdSIsInNlc3Npb24iOiJ5dWNoZW5seS5idS5lZHUiLCJwYXQiOiJvQUFnWld6YUxMQUd0RndfdDRKTFMwRlFDbVZFUEtnSzZ5VW14NEluUDhvIiwidXNlcklkIjoiYTI1NGQxMWEtZGNjMy00YTljLThlZGMtZjlmNTc4OWY1ZWY5IiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzI4NTg2NDI1fQ.GSJursfAW8KiHiQNWruyCWeEeIUTUUTpCjA0ffnSkkQ
+        - name: DB_SCHEMA
+          value: your_schema_name
+        image: gcr.io/ba882-team9/ml-sf-predict@sha256:8be25864cb7fda3674ab12c550734534f592d0fb7d9518ce3474040d66b09fc3
+        name: ml-sf-predict-1
+        ports:
+        - containerPort: 8080
+          name: http1
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 512Mi
+        startupProbe:
+          failureThreshold: 1
+          periodSeconds: 240
+          tcpSocket:
+            port: 8080
+          timeoutSeconds: 240
+      serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+      timeoutSeconds: 300
+    status:
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:57:12.348703Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:57:12.302323Z'
+        message: Container became healthy.
+        status: 'True'
+        type: ContainerHealthy
+      - lastTransitionTime: '2024-11-09T19:57:08.476362Z'
+        message: Container image import completed in 25.538758s.
+        status: 'True'
+        type: ContainerReady
+      - lastTransitionTime: '2024-11-09T19:57:11.163968Z'
+        message: Revision deployment finished in 2.691884s. Checking container health.
+        status: 'True'
+        type: ResourcesAvailable
+      containerStatuses:
+      - imageDigest: gcr.io/ba882-team9/ml-sf-predict@sha256:8be25864cb7fda3674ab12c550734534f592d0fb7d9518ce3474040d66b09fc3
+        name: ml-sf-predict-1
+      imageDigest: gcr.io/ba882-team9/ml-sf-predict@sha256:8be25864cb7fda3674ab12c550734534f592d0fb7d9518ce3474040d66b09fc3
+      logUrl: https://console.cloud.google.com/logs/viewer?project=ba882-team9&resource=cloud_run_revision/service_name/ml-sf-predict/revision_name/ml-sf-predict-00005-nl8&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22ml-sf-predict%22%0Aresource.labels.revision_name%3D%22ml-sf-predict-00005-nl8%22
+      observedGeneration: 1
+  serviceName: run.googleapis.com
+  status:
+    message: Ready condition status changed to True for Revision ml-sf-predict-00005-nl8.
+receiveTimestamp: '2024-11-09T19:57:13.375287215Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00005-nl8
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: INFO
+timestamp: '2024-11-09T19:57:12.359063Z'
+---
+insertId: 672fbe980004ce6414e81052
+labels:
+  instanceId: 004940b3b8d917c6cc2d30eddf82a45445f4bfb3c812ecb28d405177cdd9336f85c1b29c7ec42d273de54df4a6a6bd8f39e72acbb9638e3fa0fc090b2b226084a22f8bdf51
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:57:12.628331346Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00005-nl8
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:57:12 +0000] [2] [INFO] Booting worker with pid: 2'
+timestamp: '2024-11-09T19:57:12.314980Z'
+---
+insertId: 672fbe9800046f94f5e8f52b
+labels:
+  instanceId: 004940b3b8d917c6cc2d30eddf82a45445f4bfb3c812ecb28d405177cdd9336f85c1b29c7ec42d273de54df4a6a6bd8f39e72acbb9638e3fa0fc090b2b226084a22f8bdf51
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:57:12.295751681Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00005-nl8
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: INFO
+textPayload: Default STARTUP TCP probe succeeded after 1 attempt for container "ml-sf-predict-1"
+  on port 8080.
+timestamp: '2024-11-09T19:57:12.290708Z'
+---
+insertId: 672fbe9800046cad515042c5
+labels:
+  instanceId: 004940b3b8d917c6cc2d30eddf82a45445f4bfb3c812ecb28d405177cdd9336f85c1b29c7ec42d273de54df4a6a6bd8f39e72acbb9638e3fa0fc090b2b226084a22f8bdf51
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:57:12.628331346Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00005-nl8
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:57:12 +0000] [1] [INFO] Using worker: gthread'
+timestamp: '2024-11-09T19:57:12.289965Z'
+---
+insertId: 672fbe9800046c6e9cdb274c
+labels:
+  instanceId: 004940b3b8d917c6cc2d30eddf82a45445f4bfb3c812ecb28d405177cdd9336f85c1b29c7ec42d273de54df4a6a6bd8f39e72acbb9638e3fa0fc090b2b226084a22f8bdf51
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:57:12.628331346Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00005-nl8
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:57:12 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080
+  (1)'
+timestamp: '2024-11-09T19:57:12.289902Z'
+---
+insertId: 672fbe9800046787dc14b0ba
+labels:
+  instanceId: 004940b3b8d917c6cc2d30eddf82a45445f4bfb3c812ecb28d405177cdd9336f85c1b29c7ec42d273de54df4a6a6bd8f39e72acbb9638e3fa0fc090b2b226084a22f8bdf51
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:57:12.292826216Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00005-nl8
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:57:12 +0000] [1] [INFO] Starting gunicorn 20.1.0'
+timestamp: '2024-11-09T19:57:12.288647Z'
+---
+insertId: 59uoindl1j8
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Factivity
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  authenticationInfo:
+    principalEmail: 1076180164120-compute@developer.gserviceaccount.com
+    principalSubject: serviceAccount:1076180164120-compute@developer.gserviceaccount.com
+  authorizationInfo:
+  - granted: true
+    permission: run.services.update
+    permissionType: ADMIN_WRITE
+    resource: namespaces/ba882-team9/services/ml-sf-predict
+    resourceAttributes: {}
+  - granted: true
+    permission: run.services.update
+    permissionType: ADMIN_WRITE
+    resourceAttributes:
+      name: namespaces/ba882-team9/services/ml-sf-predict
+      service: run.googleapis.com/
+      type: run.googleapis.com/Service
+  methodName: google.cloud.run.v1.Services.ReplaceService
+  request:
+    '@type': type.googleapis.com/google.cloud.run.v1.ReplaceServiceRequest
+    name: namespaces/ba882-team9/services/ml-sf-predict
+    service:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      metadata:
+        annotations:
+          run.googleapis.com/client-name: gcloud
+          run.googleapis.com/client-version: 498.0.0
+          run.googleapis.com/ingress: all
+          run.googleapis.com/ingress-status: all
+          run.googleapis.com/operation-id: 6ce95473-1785-40a0-aa96-6088cdc69b6e
+          run.googleapis.com/urls: '["https://ml-sf-predict-1076180164120.us-central1.run.app","https://ml-sf-predict-fefwkff7jq-uc.a.run.app"]'
+          serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+          serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+        creationTimestamp: '2024-11-09T19:17:23.607840Z'
+        generation: 4
+        labels:
+          cloud.googleapis.com/location: us-central1
+        name: ml-sf-predict
+        namespace: '1076180164120'
+        resourceVersion: AAYmgCkS5zs
+        selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-predict
+        uid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+      spec:
+        template:
+          metadata:
+            annotations:
+              autoscaling.knative.dev/maxScale: '100'
+              run.googleapis.com/client-name: gcloud
+              run.googleapis.com/client-version: 498.0.0
+              run.googleapis.com/startup-cpu-boost: 'true'
+            labels:
+              client.knative.dev/nonce: rlhufbshqj
+              run.googleapis.com/startupProbeType: Default
+          spec:
+            containerConcurrency: 80
+            serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+            timeoutSeconds: 300
+        traffic:
+        - latestRevision: true
+          percent: 100
+      status:
+        conditions:
+        - lastTransitionTime: '2024-11-09T19:49:07.038011Z'
+          status: 'True'
+          type: Ready
+        - lastTransitionTime: '2024-11-09T19:49:06.281772Z'
+          status: 'True'
+          type: ConfigurationsReady
+        - lastTransitionTime: '2024-11-09T19:49:07.001366Z'
+          status: 'True'
+          type: RoutesReady
+        latestCreatedRevisionName: ml-sf-predict-00004-z5t
+        latestReadyRevisionName: ml-sf-predict-00004-z5t
+        observedGeneration: 4
+        traffic:
+        - latestRevision: true
+          percent: 100
+          revisionName: ml-sf-predict-00004-z5t
+        url: https://ml-sf-predict-fefwkff7jq-uc.a.run.app
+  requestMetadata:
+    callerIp: 35.194.91.125
+    callerSuppliedUserAgent: google-cloud-sdk gcloud/498.0.0 command/gcloud.run.deploy
+      invocation-id/b195fc0e9f864fc7b8330b6d0b4d7c94 environment/GCE environment-version/None
+      client-os/LINUX client-os-ver/5.10.0 client-pltf-arch/x86_64 interactive/False
+      from-script/True python/3.11.9 term/ (Linux 5.10.0-33-cloud-amd64),gzip(gfe)
+    destinationAttributes: {}
+    requestAttributes:
+      auth: {}
+      time: '2024-11-09T19:56:42.155239Z'
+  resourceLocation:
+    currentLocations:
+    - us-central1
+  resourceName: namespaces/ba882-team9/services/ml-sf-predict
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: ec527ea0-be3c-4f3e-9ea6-95e1e469723b
+        run.googleapis.com/urls: '["https://ml-sf-predict-1076180164120.us-central1.run.app","https://ml-sf-predict-fefwkff7jq-uc.a.run.app"]'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+        serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:17:23.607840Z'
+      generation: 5
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: ml-sf-predict
+      namespace: '1076180164120'
+      resourceVersion: AAYmgEQzA1g
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-predict
+      uid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '100'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 498.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: rlhufbshqj
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:49:07.038011Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:49:06.281772Z'
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2024-11-09T19:49:07.001366Z'
+        status: 'True'
+        type: RoutesReady
+      latestCreatedRevisionName: ml-sf-predict-00004-z5t
+      latestReadyRevisionName: ml-sf-predict-00004-z5t
+      observedGeneration: 4
+      traffic:
+      - latestRevision: true
+        percent: 100
+        revisionName: ml-sf-predict-00004-z5t
+      url: https://ml-sf-predict-fefwkff7jq-uc.a.run.app
+  serviceName: run.googleapis.com
+receiveTimestamp: '2024-11-09T19:56:42.561945495Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ''
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: NOTICE
+timestamp: '2024-11-09T19:56:42.041132Z'
+---
+insertId: 672fbd57000ede80de919d65
+labels:
+  instanceId: 004940b3b8e88bd95a4b31cf530548542b0fc3949ab0d8ce3e3665e45b6786af90f6fa116c8e6a079ac4a051ec5309c28189322dcebea7201693c7c0bd7d79733d3f44add42d
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:51:52.282514614Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:51:51 +0000] [1] [INFO] Reason: Worker failed to boot.'
+timestamp: '2024-11-09T19:51:51.974464Z'
+---
+insertId: 672fbd57000ede329b0a56e4
+labels:
+  instanceId: 004940b3b8e88bd95a4b31cf530548542b0fc3949ab0d8ce3e3665e45b6786af90f6fa116c8e6a079ac4a051ec5309c28189322dcebea7201693c7c0bd7d79733d3f44add42d
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:51:52.282514614Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:51:51 +0000] [1] [INFO] Shutting down: Master'
+timestamp: '2024-11-09T19:51:51.974386Z'
+---
+insertId: 672fbd57000dac0187fd8a18
+labels:
+  instanceId: 004940b3b8e88bd95a4b31cf530548542b0fc3949ab0d8ce3e3665e45b6786af90f6fa116c8e6a079ac4a051ec5309c28189322dcebea7201693c7c0bd7d79733d3f44add42d
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:51:51.949608891Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:51:51 +0000] [2] [INFO] Worker exiting (pid: 2)'
+timestamp: '2024-11-09T19:51:51.896001Z'
+---
+errorGroups:
+- id: CNW8wbmU7rS5eQ
+insertId: 672fbd57000dab71f71d8032
+labels:
+  instanceId: 004940b3b8e88bd95a4b31cf530548542b0fc3949ab0d8ce3e3665e45b6786af90f6fa116c8e6a079ac4a051ec5309c28189322dcebea7201693c7c0bd7d79733d3f44add42d
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:51:51.949608891Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: ERROR
+textPayload: |-
+  Traceback (most recent call last):
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+      worker.init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+      super().init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+      self.load_wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+      self.wsgi = self.app.wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+      self.callable = self.load()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+      return self.load_wsgiapp()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+      return util.import_app(self.app_uri)
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/util.py", line 359, in import_app
+      mod = importlib.import_module(module)
+    File "/usr/local/lib/python3.9/importlib/__init__.py", line 127, in import_module
+      return _bootstrap._gcd_import(name[level:], package, level)
+    File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+    File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+    File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+    File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+    File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+    File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+    File "/app/main.py", line 5, in <module>
+      import pandas as pd
+    File "/usr/local/lib/python3.9/site-packages/pandas/__init__.py", line 22, in <module>
+      from pandas.compat import is_numpy_dev as _is_numpy_dev
+    File "/usr/local/lib/python3.9/site-packages/pandas/compat/__init__.py", line 14, in <module>
+      from pandas.compat.numpy import (
+    File "/usr/local/lib/python3.9/site-packages/pandas/compat/numpy/__init__.py", line 4, in <module>
+      from pandas.util.version import Version
+    File "/usr/local/lib/python3.9/site-packages/pandas/util/__init__.py", line 1, in <module>
+      from pandas.util._decorators import (  # noqa:F401
+    File "/usr/local/lib/python3.9/site-packages/pandas/util/_decorators.py", line 14, in <module>
+      from pandas._libs.properties import cache_readonly  # noqa:F401
+    File "/usr/local/lib/python3.9/site-packages/pandas/_libs/__init__.py", line 13, in <module>
+      from pandas._libs.interval import Interval
+    File "pandas/_libs/interval.pyx", line 1, in init pandas._libs.interval
+  ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+timestamp: '2024-11-09T19:51:51.895857Z'
+---
+insertId: 672fbd57000dab32ebb16793
+labels:
+  instanceId: 004940b3b8e88bd95a4b31cf530548542b0fc3949ab0d8ce3e3665e45b6786af90f6fa116c8e6a079ac4a051ec5309c28189322dcebea7201693c7c0bd7d79733d3f44add42d
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:51:51.949608891Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:51:51 +0000] [2] [ERROR] Exception in worker process'
+timestamp: '2024-11-09T19:51:51.895794Z'
+---
+insertId: 672fbd5700047a15e8e4797d
+labels:
+  instanceId: 004940b3b8e88bd95a4b31cf530548542b0fc3949ab0d8ce3e3665e45b6786af90f6fa116c8e6a079ac4a051ec5309c28189322dcebea7201693c7c0bd7d79733d3f44add42d
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:51:51.616529894Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:51:51 +0000] [2] [INFO] Booting worker with pid: 2'
+timestamp: '2024-11-09T19:51:51.293397Z'
+---
+insertId: 672fbd57000442b71c509203
+labels:
+  instanceId: 004940b3b8e88bd95a4b31cf530548542b0fc3949ab0d8ce3e3665e45b6786af90f6fa116c8e6a079ac4a051ec5309c28189322dcebea7201693c7c0bd7d79733d3f44add42d
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:51:51.292520438Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: INFO
+textPayload: Default STARTUP TCP probe succeeded after 1 attempt for container "ml-sf-predict-1"
+  on port 8080.
+timestamp: '2024-11-09T19:51:51.279223Z'
+---
+insertId: 672fbd5700043d2bff1e66a1
+labels:
+  instanceId: 004940b3b8e88bd95a4b31cf530548542b0fc3949ab0d8ce3e3665e45b6786af90f6fa116c8e6a079ac4a051ec5309c28189322dcebea7201693c7c0bd7d79733d3f44add42d
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:51:51.616529894Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:51:51 +0000] [1] [INFO] Using worker: gthread'
+timestamp: '2024-11-09T19:51:51.277803Z'
+---
+insertId: 672fbd5700043cf5dc6f99ad
+labels:
+  instanceId: 004940b3b8e88bd95a4b31cf530548542b0fc3949ab0d8ce3e3665e45b6786af90f6fa116c8e6a079ac4a051ec5309c28189322dcebea7201693c7c0bd7d79733d3f44add42d
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:51:51.616529894Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:51:51 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080
+  (1)'
+timestamp: '2024-11-09T19:51:51.277749Z'
+---
+insertId: 672fbd570004385ecf7b6b74
+labels:
+  instanceId: 004940b3b8e88bd95a4b31cf530548542b0fc3949ab0d8ce3e3665e45b6786af90f6fa116c8e6a079ac4a051ec5309c28189322dcebea7201693c7c0bd7d79733d3f44add42d
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:51:51.287481887Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:51:51 +0000] [1] [INFO] Starting gunicorn 20.1.0'
+timestamp: '2024-11-09T19:51:51.276574Z'
+---
+httpRequest:
+  latency: 1.192178097s
+  protocol: HTTP/1.1
+  remoteIp: 35.237.233.73
+  requestMethod: POST
+  requestSize: '338'
+  requestUrl: https://ml-sf-predict-1076180164120.us-central1.run.app/predict
+  responseSize: '67'
+  serverIp: 216.239.32.53
+  status: 503
+  userAgent: curl/8.5.0
+insertId: 672fbd57000f37697b5e7112
+labels:
+  instanceId: 004940b3b8e88bd95a4b31cf530548542b0fc3949ab0d8ce3e3665e45b6786af90f6fa116c8e6a079ac4a051ec5309c28189322dcebea7201693c7c0bd7d79733d3f44add42d
+logName: projects/ba882-team9/logs/run.googleapis.com%2Frequests
+receiveTimestamp: '2024-11-09T19:51:52.002735046Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: ERROR
+spanId: a5ff1bf6eb4676c2
+textPayload: 'The request failed because either the HTTP response was malformed or
+  connection to the instance had an error. Additional troubleshooting documentation
+  can be found at: https://cloud.google.com/run/docs/troubleshooting#malformed-response-or-connection-error'
+timestamp: '2024-11-09T19:51:50.678527Z'
+trace: projects/ba882-team9/traces/baa0157b58ba67dac370f1c90c9eea99
+traceSampled: true
+---
+insertId: 672fbd24000c00d67c53b2b1
+labels:
+  container_name: ml-sf-predict-1
+  instanceId: 004940b3b8e9549f77e280a98ca58046afcb2d099331122f3477ee47e251b275d7319bcad3f09de4a4886ec73ca8898e6f3c262dc69ac606474ca23ec3184d3c726ed19e65cc
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:51:00.792595804Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: WARNING
+textPayload: Container called exit(3).
+timestamp: '2024-11-09T19:51:00.786636882Z'
+---
+insertId: 672fbd1a000e74f7087e7b2c
+labels:
+  instanceId: 004940b3b8e9549f77e280a98ca58046afcb2d099331122f3477ee47e251b275d7319bcad3f09de4a4886ec73ca8898e6f3c262dc69ac606474ca23ec3184d3c726ed19e65cc
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:50:51.288473091Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:50:50 +0000] [1] [INFO] Reason: Worker failed to boot.'
+timestamp: '2024-11-09T19:50:50.947447Z'
+---
+insertId: 672fbd1a000e7434b27d571f
+labels:
+  instanceId: 004940b3b8e9549f77e280a98ca58046afcb2d099331122f3477ee47e251b275d7319bcad3f09de4a4886ec73ca8898e6f3c262dc69ac606474ca23ec3184d3c726ed19e65cc
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:50:50.953028201Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:50:50 +0000] [1] [INFO] Shutting down: Master'
+timestamp: '2024-11-09T19:50:50.947252Z'
+---
+insertId: 672fbd07000548f51e0e9533
+labels:
+  instanceId: 004940b3b8e9549f77e280a98ca58046afcb2d099331122f3477ee47e251b275d7319bcad3f09de4a4886ec73ca8898e6f3c262dc69ac606474ca23ec3184d3c726ed19e65cc
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:50:31.591260554Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:50:31 +0000] [2] [INFO] Worker exiting (pid: 2)'
+timestamp: '2024-11-09T19:50:31.346357Z'
+---
+errorGroups:
+- id: CNW8wbmU7rS5eQ
+insertId: 672fbd070003d7494b338466
+labels:
+  instanceId: 004940b3b8e9549f77e280a98ca58046afcb2d099331122f3477ee47e251b275d7319bcad3f09de4a4886ec73ca8898e6f3c262dc69ac606474ca23ec3184d3c726ed19e65cc
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:50:31.591260554Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: ERROR
+textPayload: |-
+  Traceback (most recent call last):
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+      worker.init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+      super().init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+      self.load_wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+      self.wsgi = self.app.wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+      self.callable = self.load()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+      return self.load_wsgiapp()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+      return util.import_app(self.app_uri)
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/util.py", line 359, in import_app
+      mod = importlib.import_module(module)
+    File "/usr/local/lib/python3.9/importlib/__init__.py", line 127, in import_module
+      return _bootstrap._gcd_import(name[level:], package, level)
+    File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+    File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+    File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+    File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+    File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+    File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+    File "/app/main.py", line 5, in <module>
+      import pandas as pd
+    File "/usr/local/lib/python3.9/site-packages/pandas/__init__.py", line 22, in <module>
+      from pandas.compat import is_numpy_dev as _is_numpy_dev
+    File "/usr/local/lib/python3.9/site-packages/pandas/compat/__init__.py", line 14, in <module>
+      from pandas.compat.numpy import (
+    File "/usr/local/lib/python3.9/site-packages/pandas/compat/numpy/__init__.py", line 4, in <module>
+      from pandas.util.version import Version
+    File "/usr/local/lib/python3.9/site-packages/pandas/util/__init__.py", line 1, in <module>
+      from pandas.util._decorators import (  # noqa:F401
+    File "/usr/local/lib/python3.9/site-packages/pandas/util/_decorators.py", line 14, in <module>
+      from pandas._libs.properties import cache_readonly  # noqa:F401
+    File "/usr/local/lib/python3.9/site-packages/pandas/_libs/__init__.py", line 13, in <module>
+      from pandas._libs.interval import Interval
+    File "pandas/_libs/interval.pyx", line 1, in init pandas._libs.interval
+  ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+timestamp: '2024-11-09T19:50:31.251721Z'
+---
+insertId: 672fbd070003d6fab15a40d6
+labels:
+  instanceId: 004940b3b8e9549f77e280a98ca58046afcb2d099331122f3477ee47e251b275d7319bcad3f09de4a4886ec73ca8898e6f3c262dc69ac606474ca23ec3184d3c726ed19e65cc
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:50:31.258502733Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:50:30 +0000] [2] [ERROR] Exception in worker process'
+timestamp: '2024-11-09T19:50:31.251642Z'
+---
+insertId: -u6xenae13458
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/ba882-team9/services/ml-sf-predict
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: 6ce95473-1785-40a0-aa96-6088cdc69b6e
+        run.googleapis.com/urls: '["https://ml-sf-predict-1076180164120.us-central1.run.app","https://ml-sf-predict-fefwkff7jq-uc.a.run.app"]'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+        serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:17:23.607840Z'
+      generation: 4
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: ml-sf-predict
+      namespace: '1076180164120'
+      resourceVersion: AAYmgCkS5zs
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-predict
+      uid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '100'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 498.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: kpxiddozxm
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          containers:
+          - env:
+            - name: MOTHERDUCK_TOKEN
+              value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1Y2hlbmx5QGJ1LmVkdSIsInNlc3Npb24iOiJ5dWNoZW5seS5idS5lZHUiLCJwYXQiOiJvQUFnWld6YUxMQUd0RndfdDRKTFMwRlFDbVZFUEtnSzZ5VW14NEluUDhvIiwidXNlcklkIjoiYTI1NGQxMWEtZGNjMy00YTljLThlZGMtZjlmNTc4OWY1ZWY5IiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzI4NTg2NDI1fQ.GSJursfAW8KiHiQNWruyCWeEeIUTUUTpCjA0ffnSkkQ
+            - name: DB_SCHEMA
+              value: your_schema_name
+            image: gcr.io/ba882-team9/ml-sf-predict
+            ports:
+            - containerPort: 8080
+              name: http1
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 512Mi
+            startupProbe:
+              failureThreshold: 1
+              periodSeconds: 240
+              tcpSocket:
+                port: 8080
+              timeoutSeconds: 240
+          serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      address:
+        url: https://ml-sf-predict-fefwkff7jq-uc.a.run.app
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:49:07.038011Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:49:06.281772Z'
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2024-11-09T19:49:07.001366Z'
+        status: 'True'
+        type: RoutesReady
+      latestCreatedRevisionName: ml-sf-predict-00004-z5t
+      latestReadyRevisionName: ml-sf-predict-00004-z5t
+      observedGeneration: 4
+      traffic:
+      - latestRevision: true
+        percent: 100
+        revisionName: ml-sf-predict-00004-z5t
+      url: https://ml-sf-predict-fefwkff7jq-uc.a.run.app
+  serviceName: run.googleapis.com
+  status:
+    message: Ready condition status changed to True for Service ml-sf-predict.
+receiveTimestamp: '2024-11-09T19:49:07.389216887Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ''
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: INFO
+timestamp: '2024-11-09T19:49:07.052604Z'
+---
+insertId: -27htkhe14k3s
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/ba882-team9/revisions/ml-sf-predict-00004-z5t
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Revision
+    apiVersion: serving.knative.dev/v1
+    kind: Revision
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: '100'
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/operation-id: 6ce95473-1785-40a0-aa96-6088cdc69b6e
+        run.googleapis.com/startup-cpu-boost: 'true'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:48:34.533027Z'
+      generation: 1
+      labels:
+        client.knative.dev/nonce: kpxiddozxm
+        cloud.googleapis.com/location: us-central1
+        run.googleapis.com/startupProbeType: Default
+        serving.knative.dev/configuration: ml-sf-predict
+        serving.knative.dev/configurationGeneration: '4'
+        serving.knative.dev/route: ml-sf-predict
+        serving.knative.dev/service: ml-sf-predict
+        serving.knative.dev/serviceUid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+      name: ml-sf-predict-00004-z5t
+      namespace: '1076180164120'
+      ownerReferences:
+      - apiVersion: serving.knative.dev/v1
+        blockOwnerDeletion: true
+        controller: true
+        kind: Configuration
+        name: ml-sf-predict
+        uid: 6e27b44c-3e56-40af-9ee6-a5ec47483858
+      resourceVersion: AAYmgCj+1xE
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/revisions/ml-sf-predict-00004-z5t
+      uid: 625e80e4-7bf3-4340-a988-c55d8864f048
+    spec:
+      containerConcurrency: 80
+      containers:
+      - env:
+        - name: MOTHERDUCK_TOKEN
+          value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1Y2hlbmx5QGJ1LmVkdSIsInNlc3Npb24iOiJ5dWNoZW5seS5idS5lZHUiLCJwYXQiOiJvQUFnWld6YUxMQUd0RndfdDRKTFMwRlFDbVZFUEtnSzZ5VW14NEluUDhvIiwidXNlcklkIjoiYTI1NGQxMWEtZGNjMy00YTljLThlZGMtZjlmNTc4OWY1ZWY5IiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzI4NTg2NDI1fQ.GSJursfAW8KiHiQNWruyCWeEeIUTUUTpCjA0ffnSkkQ
+        - name: DB_SCHEMA
+          value: your_schema_name
+        image: gcr.io/ba882-team9/ml-sf-predict@sha256:16b5e0129b155d475e4d4493604ffa5f173c7508b2a40a44f7fa3245c61f046a
+        name: ml-sf-predict-1
+        ports:
+        - containerPort: 8080
+          name: http1
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 512Mi
+        startupProbe:
+          failureThreshold: 1
+          periodSeconds: 240
+          tcpSocket:
+            port: 8080
+          timeoutSeconds: 240
+      serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+      timeoutSeconds: 300
+    status:
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:49:05.723153Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:49:05.670519Z'
+        message: Container became healthy.
+        status: 'True'
+        type: ContainerHealthy
+      - lastTransitionTime: '2024-11-09T19:48:53.923081Z'
+        message: Container image import completed in 18.663215s.
+        status: 'True'
+        type: ContainerReady
+      - lastTransitionTime: '2024-11-09T19:49:04.532018Z'
+        message: Revision deployment finished in 10.612346s. Checking container health.
+        status: 'True'
+        type: ResourcesAvailable
+      containerStatuses:
+      - imageDigest: gcr.io/ba882-team9/ml-sf-predict@sha256:16b5e0129b155d475e4d4493604ffa5f173c7508b2a40a44f7fa3245c61f046a
+        name: ml-sf-predict-1
+      imageDigest: gcr.io/ba882-team9/ml-sf-predict@sha256:16b5e0129b155d475e4d4493604ffa5f173c7508b2a40a44f7fa3245c61f046a
+      logUrl: https://console.cloud.google.com/logs/viewer?project=ba882-team9&resource=cloud_run_revision/service_name/ml-sf-predict/revision_name/ml-sf-predict-00004-z5t&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22ml-sf-predict%22%0Aresource.labels.revision_name%3D%22ml-sf-predict-00004-z5t%22
+      observedGeneration: 1
+  serviceName: run.googleapis.com
+  status:
+    message: Ready condition status changed to True for Revision ml-sf-predict-00004-z5t.
+receiveTimestamp: '2024-11-09T19:49:06.998406704Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: INFO
+timestamp: '2024-11-09T19:49:05.734904Z'
+---
+insertId: 672fbcb1000a5cf70e2f90f5
+labels:
+  instanceId: 004940b3b8e9549f77e280a98ca58046afcb2d099331122f3477ee47e251b275d7319bcad3f09de4a4886ec73ca8898e6f3c262dc69ac606474ca23ec3184d3c726ed19e65cc
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:49:06.009905220Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:49:05 +0000] [2] [INFO] Booting worker with pid: 2'
+timestamp: '2024-11-09T19:49:05.679159Z'
+---
+insertId: 672fbcb1000a0720f85fbc0d
+labels:
+  instanceId: 004940b3b8e9549f77e280a98ca58046afcb2d099331122f3477ee47e251b275d7319bcad3f09de4a4886ec73ca8898e6f3c262dc69ac606474ca23ec3184d3c726ed19e65cc
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:49:05.661022425Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: INFO
+textPayload: Default STARTUP TCP probe succeeded after 1 attempt for container "ml-sf-predict-1"
+  on port 8080.
+timestamp: '2024-11-09T19:49:05.657184Z'
+---
+insertId: 672fbcb1000a054c9b7e3d07
+labels:
+  instanceId: 004940b3b8e9549f77e280a98ca58046afcb2d099331122f3477ee47e251b275d7319bcad3f09de4a4886ec73ca8898e6f3c262dc69ac606474ca23ec3184d3c726ed19e65cc
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:49:06.009905220Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:49:05 +0000] [1] [INFO] Using worker: gthread'
+timestamp: '2024-11-09T19:49:05.656716Z'
+---
+insertId: 672fbcb1000a05165de4d345
+labels:
+  instanceId: 004940b3b8e9549f77e280a98ca58046afcb2d099331122f3477ee47e251b275d7319bcad3f09de4a4886ec73ca8898e6f3c262dc69ac606474ca23ec3184d3c726ed19e65cc
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:49:06.009905220Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:49:05 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080
+  (1)'
+timestamp: '2024-11-09T19:49:05.656662Z'
+---
+insertId: 672fbcb1000a003b6311186f
+labels:
+  instanceId: 004940b3b8e9549f77e280a98ca58046afcb2d099331122f3477ee47e251b275d7319bcad3f09de4a4886ec73ca8898e6f3c262dc69ac606474ca23ec3184d3c726ed19e65cc
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:49:05.662536847Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00004-z5t
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:49:05 +0000] [1] [INFO] Starting gunicorn 20.1.0'
+timestamp: '2024-11-09T19:49:05.655419Z'
+---
+insertId: 59uoindl15v
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Factivity
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  authenticationInfo:
+    principalEmail: 1076180164120-compute@developer.gserviceaccount.com
+    principalSubject: serviceAccount:1076180164120-compute@developer.gserviceaccount.com
+  authorizationInfo:
+  - granted: true
+    permission: run.services.update
+    permissionType: ADMIN_WRITE
+    resource: namespaces/ba882-team9/services/ml-sf-predict
+    resourceAttributes: {}
+  - granted: true
+    permission: run.services.update
+    permissionType: ADMIN_WRITE
+    resourceAttributes:
+      name: namespaces/ba882-team9/services/ml-sf-predict
+      service: run.googleapis.com/
+      type: run.googleapis.com/Service
+  methodName: google.cloud.run.v1.Services.ReplaceService
+  request:
+    '@type': type.googleapis.com/google.cloud.run.v1.ReplaceServiceRequest
+    name: namespaces/ba882-team9/services/ml-sf-predict
+    service:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      metadata:
+        annotations:
+          run.googleapis.com/client-name: gcloud
+          run.googleapis.com/client-version: 498.0.0
+          run.googleapis.com/ingress: all
+          run.googleapis.com/ingress-status: all
+          run.googleapis.com/operation-id: 6b9e2685-b048-456c-8145-5a22972d7037
+          run.googleapis.com/urls: '["https://ml-sf-predict-1076180164120.us-central1.run.app","https://ml-sf-predict-fefwkff7jq-uc.a.run.app"]'
+          serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+          serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+        creationTimestamp: '2024-11-09T19:17:23.607840Z'
+        generation: 3
+        labels:
+          cloud.googleapis.com/location: us-central1
+        name: ml-sf-predict
+        namespace: '1076180164120'
+        resourceVersion: AAYmf/wF6Ik
+        selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-predict
+        uid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+      spec:
+        template:
+          metadata:
+            annotations:
+              autoscaling.knative.dev/maxScale: '100'
+              run.googleapis.com/client-name: gcloud
+              run.googleapis.com/client-version: 498.0.0
+              run.googleapis.com/startup-cpu-boost: 'true'
+            labels:
+              client.knative.dev/nonce: kpxiddozxm
+              run.googleapis.com/startupProbeType: Default
+          spec:
+            containerConcurrency: 80
+            serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+            timeoutSeconds: 300
+        traffic:
+        - latestRevision: true
+          percent: 100
+      status:
+        conditions:
+        - lastTransitionTime: '2024-11-09T19:36:31.211657Z'
+          status: 'True'
+          type: Ready
+        - lastTransitionTime: '2024-11-09T19:36:30.525400Z'
+          status: 'True'
+          type: ConfigurationsReady
+        - lastTransitionTime: '2024-11-09T19:36:31.177417Z'
+          status: 'True'
+          type: RoutesReady
+        latestCreatedRevisionName: ml-sf-predict-00003-sbb
+        latestReadyRevisionName: ml-sf-predict-00003-sbb
+        observedGeneration: 3
+        traffic:
+        - latestRevision: true
+          percent: 100
+          revisionName: ml-sf-predict-00003-sbb
+        url: https://ml-sf-predict-fefwkff7jq-uc.a.run.app
+  requestMetadata:
+    callerIp: 34.85.196.91
+    callerSuppliedUserAgent: google-cloud-sdk gcloud/498.0.0 command/gcloud.run.deploy
+      invocation-id/264f32b8814e4e9ba6c99058a2aa6c80 environment/GCE environment-version/None
+      client-os/LINUX client-os-ver/5.10.0 client-pltf-arch/x86_64 interactive/False
+      from-script/True python/3.11.9 term/ (Linux 5.10.0-33-cloud-amd64),gzip(gfe)
+    destinationAttributes: {}
+    requestAttributes:
+      auth: {}
+      time: '2024-11-09T19:48:34.494219Z'
+  resourceLocation:
+    currentLocations:
+    - us-central1
+  resourceName: namespaces/ba882-team9/services/ml-sf-predict
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: 6ce95473-1785-40a0-aa96-6088cdc69b6e
+        run.googleapis.com/urls: '["https://ml-sf-predict-1076180164120.us-central1.run.app","https://ml-sf-predict-fefwkff7jq-uc.a.run.app"]'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+        serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:17:23.607840Z'
+      generation: 4
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: ml-sf-predict
+      namespace: '1076180164120'
+      resourceVersion: AAYmgCch1mI
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-predict
+      uid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '100'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 498.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: kpxiddozxm
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:36:31.211657Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:36:30.525400Z'
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2024-11-09T19:36:31.177417Z'
+        status: 'True'
+        type: RoutesReady
+      latestCreatedRevisionName: ml-sf-predict-00003-sbb
+      latestReadyRevisionName: ml-sf-predict-00003-sbb
+      observedGeneration: 3
+      traffic:
+      - latestRevision: true
+        percent: 100
+        revisionName: ml-sf-predict-00003-sbb
+      url: https://ml-sf-predict-fefwkff7jq-uc.a.run.app
+  serviceName: run.googleapis.com
+receiveTimestamp: '2024-11-09T19:48:35.455096327Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ''
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: NOTICE
+timestamp: '2024-11-09T19:48:34.361564Z'
+---
+insertId: 672fbb7b000a00e55023a741
+labels:
+  instanceId: 004940b3b8c8ac6444da09c72db1a687df017553051e115ccb87d19beec5a2893f8c00e2904820eaa343f3512e8f3cacde0095504f68478549887937deb5cb34de8e44d331b4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:43:55.988853740Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:43:55 +0000] [1] [INFO] Reason: Worker failed to boot.'
+timestamp: '2024-11-09T19:43:55.655589Z'
+---
+insertId: 672fbb7b000a00b5310f4aff
+labels:
+  instanceId: 004940b3b8c8ac6444da09c72db1a687df017553051e115ccb87d19beec5a2893f8c00e2904820eaa343f3512e8f3cacde0095504f68478549887937deb5cb34de8e44d331b4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:43:55.988853740Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:43:55 +0000] [1] [INFO] Shutting down: Master'
+timestamp: '2024-11-09T19:43:55.655541Z'
+---
+insertId: 672fbb7b00091abb850f3923
+labels:
+  instanceId: 004940b3b8c8ac6444da09c72db1a687df017553051e115ccb87d19beec5a2893f8c00e2904820eaa343f3512e8f3cacde0095504f68478549887937deb5cb34de8e44d331b4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:43:55.656076832Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:43:55 +0000] [2] [INFO] Worker exiting (pid: 2)'
+timestamp: '2024-11-09T19:43:55.596667Z'
+---
+errorGroups:
+- id: CJ_FiaS6heGW7wE
+insertId: 672fbb7b00091a419e398687
+labels:
+  instanceId: 004940b3b8c8ac6444da09c72db1a687df017553051e115ccb87d19beec5a2893f8c00e2904820eaa343f3512e8f3cacde0095504f68478549887937deb5cb34de8e44d331b4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:43:55.656076832Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: ERROR
+textPayload: |-
+  Traceback (most recent call last):
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+      worker.init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+      super().init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+      self.load_wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+      self.wsgi = self.app.wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+      self.callable = self.load()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+      return self.load_wsgiapp()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+      return util.import_app(self.app_uri)
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/util.py", line 359, in import_app
+      mod = importlib.import_module(module)
+    File "/usr/local/lib/python3.9/importlib/__init__.py", line 127, in import_module
+      return _bootstrap._gcd_import(name[level:], package, level)
+    File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+    File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+    File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+    File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+    File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+    File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+    File "/app/main.py", line 3, in <module>
+      from flask import Flask, jsonify, request
+    File "/usr/local/lib/python3.9/site-packages/flask/__init__.py", line 7, in <module>
+      from .app import Flask as Flask
+    File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 28, in <module>
+      from . import cli
+    File "/usr/local/lib/python3.9/site-packages/flask/cli.py", line 18, in <module>
+      from .helpers import get_debug_flag
+    File "/usr/local/lib/python3.9/site-packages/flask/helpers.py", line 16, in <module>
+      from werkzeug.urls import url_quote
+  ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.9/site-packages/werkzeug/urls.py)
+timestamp: '2024-11-09T19:43:55.596545Z'
+---
+insertId: 672fbb7b000919e6a7391898
+labels:
+  instanceId: 004940b3b8c8ac6444da09c72db1a687df017553051e115ccb87d19beec5a2893f8c00e2904820eaa343f3512e8f3cacde0095504f68478549887937deb5cb34de8e44d331b4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:43:55.656076832Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:43:55 +0000] [2] [ERROR] Exception in worker process'
+timestamp: '2024-11-09T19:43:55.596454Z'
+---
+insertId: 672fbb7b0005242f8747ec4e
+labels:
+  instanceId: 004940b3b8c8ac6444da09c72db1a687df017553051e115ccb87d19beec5a2893f8c00e2904820eaa343f3512e8f3cacde0095504f68478549887937deb5cb34de8e44d331b4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:43:55.656076832Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:43:55 +0000] [2] [INFO] Booting worker with pid: 2'
+timestamp: '2024-11-09T19:43:55.336943Z'
+---
+insertId: 672fbb7b0004e577717cd861
+labels:
+  instanceId: 004940b3b8c8ac6444da09c72db1a687df017553051e115ccb87d19beec5a2893f8c00e2904820eaa343f3512e8f3cacde0095504f68478549887937deb5cb34de8e44d331b4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:43:55.325791101Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: INFO
+textPayload: Default STARTUP TCP probe succeeded after 1 attempt for container "ml-sf-predict-1"
+  on port 8080.
+timestamp: '2024-11-09T19:43:55.320887Z'
+---
+insertId: 672fbb7b0004deac90fbf9d9
+labels:
+  instanceId: 004940b3b8c8ac6444da09c72db1a687df017553051e115ccb87d19beec5a2893f8c00e2904820eaa343f3512e8f3cacde0095504f68478549887937deb5cb34de8e44d331b4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:43:55.656076832Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:43:55 +0000] [1] [INFO] Using worker: gthread'
+timestamp: '2024-11-09T19:43:55.319148Z'
+---
+insertId: 672fbb7b0004de543132cd6b
+labels:
+  instanceId: 004940b3b8c8ac6444da09c72db1a687df017553051e115ccb87d19beec5a2893f8c00e2904820eaa343f3512e8f3cacde0095504f68478549887937deb5cb34de8e44d331b4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:43:55.656076832Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:43:55 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080
+  (1)'
+timestamp: '2024-11-09T19:43:55.319060Z'
+---
+insertId: 672fbb7b0004d9913cdaea39
+labels:
+  instanceId: 004940b3b8c8ac6444da09c72db1a687df017553051e115ccb87d19beec5a2893f8c00e2904820eaa343f3512e8f3cacde0095504f68478549887937deb5cb34de8e44d331b4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:43:55.324903713Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:43:55 +0000] [1] [INFO] Starting gunicorn 20.1.0'
+timestamp: '2024-11-09T19:43:55.317841Z'
+---
+httpRequest:
+  latency: 0.939260263s
+  protocol: HTTP/1.1
+  remoteIp: 35.237.233.73
+  requestMethod: POST
+  requestSize: '339'
+  requestUrl: https://ml-sf-predict-1076180164120.us-central1.run.app/predict
+  responseSize: '67'
+  serverIp: 216.239.36.53
+  status: 503
+  userAgent: curl/8.5.0
+insertId: 672fbb7b000a445b1204ba7a
+labels:
+  instanceId: 004940b3b8c8ac6444da09c72db1a687df017553051e115ccb87d19beec5a2893f8c00e2904820eaa343f3512e8f3cacde0095504f68478549887937deb5cb34de8e44d331b4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Frequests
+receiveTimestamp: '2024-11-09T19:43:55.679138222Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: ERROR
+spanId: b7f850c18d53ab45
+textPayload: 'The request failed because either the HTTP response was malformed or
+  connection to the instance had an error. Additional troubleshooting documentation
+  can be found at: https://cloud.google.com/run/docs/troubleshooting#malformed-response-or-connection-error'
+timestamp: '2024-11-09T19:43:54.561270Z'
+trace: projects/ba882-team9/traces/88187c0311655119a299427521c75b6d
+traceSampled: true
+---
+insertId: 672fba7500070efae6e60e3b
+labels:
+  instanceId: 004940b3b88ac34d0f1e1d435748fa56c5154352a89a14e8baa3db8a0c715bac91d01900ec42db507910e7ea89362042ffc8a1fd30ffc59455b6d871f1e07bb58b478a8c2418
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:39:33.504450170Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:39:33 +0000] [1] [INFO] Reason: Worker failed to boot.'
+timestamp: '2024-11-09T19:39:33.462586Z'
+---
+insertId: 672fba7500070ec6afd52629
+labels:
+  instanceId: 004940b3b88ac34d0f1e1d435748fa56c5154352a89a14e8baa3db8a0c715bac91d01900ec42db507910e7ea89362042ffc8a1fd30ffc59455b6d871f1e07bb58b478a8c2418
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:39:33.504450170Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:39:33 +0000] [1] [INFO] Shutting down: Master'
+timestamp: '2024-11-09T19:39:33.462534Z'
+---
+insertId: 672fba7500066bdf58502aef
+labels:
+  instanceId: 004940b3b88ac34d0f1e1d435748fa56c5154352a89a14e8baa3db8a0c715bac91d01900ec42db507910e7ea89362042ffc8a1fd30ffc59455b6d871f1e07bb58b478a8c2418
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:39:33.504450170Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:39:33 +0000] [2] [INFO] Worker exiting (pid: 2)'
+timestamp: '2024-11-09T19:39:33.420831Z'
+---
+errorGroups:
+- id: CJ_FiaS6heGW7wE
+insertId: 672fba7500066b8b3cf26ce5
+labels:
+  instanceId: 004940b3b88ac34d0f1e1d435748fa56c5154352a89a14e8baa3db8a0c715bac91d01900ec42db507910e7ea89362042ffc8a1fd30ffc59455b6d871f1e07bb58b478a8c2418
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:39:33.504450170Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: ERROR
+textPayload: |-
+  Traceback (most recent call last):
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+      worker.init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+      super().init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+      self.load_wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+      self.wsgi = self.app.wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+      self.callable = self.load()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+      return self.load_wsgiapp()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+      return util.import_app(self.app_uri)
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/util.py", line 359, in import_app
+      mod = importlib.import_module(module)
+    File "/usr/local/lib/python3.9/importlib/__init__.py", line 127, in import_module
+      return _bootstrap._gcd_import(name[level:], package, level)
+    File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+    File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+    File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+    File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+    File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+    File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+    File "/app/main.py", line 3, in <module>
+      from flask import Flask, jsonify, request
+    File "/usr/local/lib/python3.9/site-packages/flask/__init__.py", line 7, in <module>
+      from .app import Flask as Flask
+    File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 28, in <module>
+      from . import cli
+    File "/usr/local/lib/python3.9/site-packages/flask/cli.py", line 18, in <module>
+      from .helpers import get_debug_flag
+    File "/usr/local/lib/python3.9/site-packages/flask/helpers.py", line 16, in <module>
+      from werkzeug.urls import url_quote
+  ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.9/site-packages/werkzeug/urls.py)
+timestamp: '2024-11-09T19:39:33.420747Z'
+---
+insertId: 672fba7500066b541c963c29
+labels:
+  instanceId: 004940b3b88ac34d0f1e1d435748fa56c5154352a89a14e8baa3db8a0c715bac91d01900ec42db507910e7ea89362042ffc8a1fd30ffc59455b6d871f1e07bb58b478a8c2418
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:39:33.504450170Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:39:33 +0000] [2] [ERROR] Exception in worker process'
+timestamp: '2024-11-09T19:39:33.420692Z'
+---
+insertId: 672fba750002e745a3ffb932
+labels:
+  instanceId: 004940b3b88ac34d0f1e1d435748fa56c5154352a89a14e8baa3db8a0c715bac91d01900ec42db507910e7ea89362042ffc8a1fd30ffc59455b6d871f1e07bb58b478a8c2418
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:39:33.504450170Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:39:33 +0000] [2] [INFO] Booting worker with pid: 2'
+timestamp: '2024-11-09T19:39:33.190277Z'
+---
+insertId: 672fba750002b9b47d3a643e
+labels:
+  instanceId: 004940b3b88ac34d0f1e1d435748fa56c5154352a89a14e8baa3db8a0c715bac91d01900ec42db507910e7ea89362042ffc8a1fd30ffc59455b6d871f1e07bb58b478a8c2418
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:39:33.183904705Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: INFO
+textPayload: Default STARTUP TCP probe succeeded after 1 attempt for container "ml-sf-predict-1"
+  on port 8080.
+timestamp: '2024-11-09T19:39:33.178612Z'
+---
+insertId: 672fba7500028f04bea8e2d0
+labels:
+  instanceId: 004940b3b88ac34d0f1e1d435748fa56c5154352a89a14e8baa3db8a0c715bac91d01900ec42db507910e7ea89362042ffc8a1fd30ffc59455b6d871f1e07bb58b478a8c2418
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:39:33.504450170Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:39:33 +0000] [1] [INFO] Using worker: gthread'
+timestamp: '2024-11-09T19:39:33.167684Z'
+---
+insertId: 672fba7500028ea7909beb8e
+labels:
+  instanceId: 004940b3b88ac34d0f1e1d435748fa56c5154352a89a14e8baa3db8a0c715bac91d01900ec42db507910e7ea89362042ffc8a1fd30ffc59455b6d871f1e07bb58b478a8c2418
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:39:33.504450170Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:39:33 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080
+  (1)'
+timestamp: '2024-11-09T19:39:33.167591Z'
+---
+insertId: 672fba7500028a41d21e8f9e
+labels:
+  instanceId: 004940b3b88ac34d0f1e1d435748fa56c5154352a89a14e8baa3db8a0c715bac91d01900ec42db507910e7ea89362042ffc8a1fd30ffc59455b6d871f1e07bb58b478a8c2418
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:39:33.173733327Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:39:33 +0000] [1] [INFO] Starting gunicorn 20.1.0'
+timestamp: '2024-11-09T19:39:33.166465Z'
+---
+httpRequest:
+  latency: 0.820709992s
+  protocol: HTTP/1.1
+  remoteIp: 35.237.233.73
+  requestMethod: POST
+  requestSize: '340'
+  requestUrl: https://ml-sf-predict-1076180164120.us-central1.run.app/predict
+  responseSize: '67'
+  serverIp: 216.239.38.53
+  status: 503
+  userAgent: curl/8.5.0
+insertId: 672fba7500073aaea8b363da
+labels:
+  instanceId: 004940b3b88ac34d0f1e1d435748fa56c5154352a89a14e8baa3db8a0c715bac91d01900ec42db507910e7ea89362042ffc8a1fd30ffc59455b6d871f1e07bb58b478a8c2418
+logName: projects/ba882-team9/logs/run.googleapis.com%2Frequests
+receiveTimestamp: '2024-11-09T19:39:33.480211997Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: ERROR
+spanId: 0b38ceb2eef569d6
+textPayload: 'The request failed because either the HTTP response was malformed or
+  connection to the instance had an error. Additional troubleshooting documentation
+  can be found at: https://cloud.google.com/run/docs/troubleshooting#malformed-response-or-connection-error'
+timestamp: '2024-11-09T19:39:32.415186Z'
+trace: projects/ba882-team9/traces/2d55be772b40f819705fff0ac4a8a064
+traceSampled: true
+---
+httpRequest:
+  latency: 0s
+  protocol: HTTP/1.1
+  remoteIp: 35.237.233.73
+  requestMethod: POST
+  requestSize: '340'
+  requestUrl: https://ml-sf-predict-1076180164120.us-central1.run.app/predict
+  serverIp: 216.239.34.53
+  status: 403
+  userAgent: curl/8.5.0
+insertId: 672fba2b000659c94ebed10f
+logName: projects/ba882-team9/logs/run.googleapis.com%2Frequests
+receiveTimestamp: '2024-11-09T19:38:19.423512354Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: WARNING
+spanId: 0a122df484e563ce
+textPayload: 'The request was not authenticated. Either allow unauthenticated invocations
+  or set the proper Authorization header. Read more at https://cloud.google.com/run/docs/securing/authenticating
+  Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client'
+timestamp: '2024-11-09T19:38:19.321621Z'
+trace: projects/ba882-team9/traces/db1ae2edf42cb0e7037f9e12c396452b
+traceSampled: true
+---
+httpRequest:
+  latency: 0s
+  protocol: HTTP/1.1
+  remoteIp: 35.237.233.73
+  requestMethod: GET
+  requestSize: '262'
+  requestUrl: https://ml-sf-predict-1076180164120.us-central1.run.app/
+  serverIp: 216.239.34.53
+  status: 403
+  userAgent: curl/8.5.0
+insertId: 672fba1c0007e89f33476eef
+logName: projects/ba882-team9/logs/run.googleapis.com%2Frequests
+receiveTimestamp: '2024-11-09T19:38:04.525142140Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: WARNING
+spanId: 6b8c9fc309e8ff3e
+textPayload: 'The request was not authenticated. Either allow unauthenticated invocations
+  or set the proper Authorization header. Read more at https://cloud.google.com/run/docs/securing/authenticating
+  Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client'
+timestamp: '2024-11-09T19:38:04.467506Z'
+trace: projects/ba882-team9/traces/f117c9ea1b6236ea32bca0df1a243b02
+traceSampled: true
+---
+insertId: 672fba05000ed7f784803a35
+labels:
+  container_name: ml-sf-predict-1
+  instanceId: 004940b3b810c99460e7e2fc8fe6b00bdad9ffc728ee9f306b43e663843693c84e3ecea4627b3efe2cac427bb4a8ff3a92a9f6a64323063b9b7c12988df9206e291f36976578
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:37:41.977813324Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: WARNING
+textPayload: Container called exit(3).
+timestamp: '2024-11-09T19:37:41.972719350Z'
+---
+insertId: 672fb9fc00029f2929fbc742
+labels:
+  instanceId: 004940b3b810c99460e7e2fc8fe6b00bdad9ffc728ee9f306b43e663843693c84e3ecea4627b3efe2cac427bb4a8ff3a92a9f6a64323063b9b7c12988df9206e291f36976578
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:37:32.414037940Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:37:32 +0000] [1] [INFO] Reason: Worker failed to boot.'
+timestamp: '2024-11-09T19:37:32.171817Z'
+---
+insertId: 672fb9fc00011bb18708f972
+labels:
+  instanceId: 004940b3b810c99460e7e2fc8fe6b00bdad9ffc728ee9f306b43e663843693c84e3ecea4627b3efe2cac427bb4a8ff3a92a9f6a64323063b9b7c12988df9206e291f36976578
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:37:32.079463256Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:37:32 +0000] [1] [INFO] Shutting down: Master'
+timestamp: '2024-11-09T19:37:32.072625Z'
+---
+insertId: 672fb9e900073785a5c3397c
+labels:
+  instanceId: 004940b3b810c99460e7e2fc8fe6b00bdad9ffc728ee9f306b43e663843693c84e3ecea4627b3efe2cac427bb4a8ff3a92a9f6a64323063b9b7c12988df9206e291f36976578
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:37:13.812968372Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:37:13 +0000] [2] [INFO] Worker exiting (pid: 2)'
+timestamp: '2024-11-09T19:37:13.472965Z'
+---
+errorGroups:
+- id: CJ_FiaS6heGW7wE
+insertId: 672fb9e900073717fc844c29
+labels:
+  instanceId: 004940b3b810c99460e7e2fc8fe6b00bdad9ffc728ee9f306b43e663843693c84e3ecea4627b3efe2cac427bb4a8ff3a92a9f6a64323063b9b7c12988df9206e291f36976578
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:37:13.480090042Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: ERROR
+textPayload: |-
+  Traceback (most recent call last):
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+      worker.init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+      super().init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+      self.load_wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+      self.wsgi = self.app.wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+      self.callable = self.load()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+      return self.load_wsgiapp()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+      return util.import_app(self.app_uri)
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/util.py", line 359, in import_app
+      mod = importlib.import_module(module)
+    File "/usr/local/lib/python3.9/importlib/__init__.py", line 127, in import_module
+      return _bootstrap._gcd_import(name[level:], package, level)
+    File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+    File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+    File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+    File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+    File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+    File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+    File "/app/main.py", line 3, in <module>
+      from flask import Flask, jsonify, request
+    File "/usr/local/lib/python3.9/site-packages/flask/__init__.py", line 7, in <module>
+      from .app import Flask as Flask
+    File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 28, in <module>
+      from . import cli
+    File "/usr/local/lib/python3.9/site-packages/flask/cli.py", line 18, in <module>
+      from .helpers import get_debug_flag
+    File "/usr/local/lib/python3.9/site-packages/flask/helpers.py", line 16, in <module>
+      from werkzeug.urls import url_quote
+  ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.9/site-packages/werkzeug/urls.py)
+timestamp: '2024-11-09T19:37:13.472855Z'
+---
+insertId: 672fb9e9000736d487a7da24
+labels:
+  instanceId: 004940b3b810c99460e7e2fc8fe6b00bdad9ffc728ee9f306b43e663843693c84e3ecea4627b3efe2cac427bb4a8ff3a92a9f6a64323063b9b7c12988df9206e291f36976578
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:37:13.480090042Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:37:12 +0000] [2] [ERROR] Exception in worker process'
+timestamp: '2024-11-09T19:37:13.472788Z'
+---
+insertId: -hfsch5e1n0zm
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/ba882-team9/services/ml-sf-predict
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: 6b9e2685-b048-456c-8145-5a22972d7037
+        run.googleapis.com/urls: '["https://ml-sf-predict-1076180164120.us-central1.run.app","https://ml-sf-predict-fefwkff7jq-uc.a.run.app"]'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+        serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:17:23.607840Z'
+      generation: 3
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: ml-sf-predict
+      namespace: '1076180164120'
+      resourceVersion: AAYmf/wF6Ik
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-predict
+      uid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '100'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 498.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: qrwzniymfh
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          containers:
+          - env:
+            - name: MOTHERDUCK_TOKEN
+              value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1Y2hlbmx5QGJ1LmVkdSIsInNlc3Npb24iOiJ5dWNoZW5seS5idS5lZHUiLCJwYXQiOiJvQUFnWld6YUxMQUd0RndfdDRKTFMwRlFDbVZFUEtnSzZ5VW14NEluUDhvIiwidXNlcklkIjoiYTI1NGQxMWEtZGNjMy00YTljLThlZGMtZjlmNTc4OWY1ZWY5IiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzI4NTg2NDI1fQ.GSJursfAW8KiHiQNWruyCWeEeIUTUUTpCjA0ffnSkkQ
+            - name: DB_SCHEMA
+              value: your_schema_name
+            image: gcr.io/ba882-team9/ml-sf-predict
+            ports:
+            - containerPort: 8080
+              name: http1
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 512Mi
+            startupProbe:
+              failureThreshold: 1
+              periodSeconds: 240
+              tcpSocket:
+                port: 8080
+              timeoutSeconds: 240
+          serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      address:
+        url: https://ml-sf-predict-fefwkff7jq-uc.a.run.app
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:36:31.211657Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:36:30.525400Z'
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2024-11-09T19:36:31.177417Z'
+        status: 'True'
+        type: RoutesReady
+      latestCreatedRevisionName: ml-sf-predict-00003-sbb
+      latestReadyRevisionName: ml-sf-predict-00003-sbb
+      observedGeneration: 3
+      traffic:
+      - latestRevision: true
+        percent: 100
+        revisionName: ml-sf-predict-00003-sbb
+      url: https://ml-sf-predict-fefwkff7jq-uc.a.run.app
+  serviceName: run.googleapis.com
+  status:
+    message: Ready condition status changed to True for Service ml-sf-predict.
+receiveTimestamp: '2024-11-09T19:36:31.867483717Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ''
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: INFO
+timestamp: '2024-11-09T19:36:31.226803Z'
+---
+insertId: -us8cmfdycj6
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/ba882-team9/revisions/ml-sf-predict-00003-sbb
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Revision
+    apiVersion: serving.knative.dev/v1
+    kind: Revision
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: '100'
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/operation-id: 6b9e2685-b048-456c-8145-5a22972d7037
+        run.googleapis.com/startup-cpu-boost: 'true'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:36:03.509560Z'
+      generation: 1
+      labels:
+        client.knative.dev/nonce: qrwzniymfh
+        cloud.googleapis.com/location: us-central1
+        run.googleapis.com/startupProbeType: Default
+        serving.knative.dev/configuration: ml-sf-predict
+        serving.knative.dev/configurationGeneration: '3'
+        serving.knative.dev/route: ml-sf-predict
+        serving.knative.dev/service: ml-sf-predict
+        serving.knative.dev/serviceUid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+      name: ml-sf-predict-00003-sbb
+      namespace: '1076180164120'
+      ownerReferences:
+      - apiVersion: serving.knative.dev/v1
+        blockOwnerDeletion: true
+        controller: true
+        kind: Configuration
+        name: ml-sf-predict
+        uid: 6e27b44c-3e56-40af-9ee6-a5ec47483858
+      resourceVersion: AAYmf/vxsmQ
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/revisions/ml-sf-predict-00003-sbb
+      uid: 9cd45a82-ba67-4b29-8af8-defce45ed263
+    spec:
+      containerConcurrency: 80
+      containers:
+      - env:
+        - name: MOTHERDUCK_TOKEN
+          value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1Y2hlbmx5QGJ1LmVkdSIsInNlc3Npb24iOiJ5dWNoZW5seS5idS5lZHUiLCJwYXQiOiJvQUFnWld6YUxMQUd0RndfdDRKTFMwRlFDbVZFUEtnSzZ5VW14NEluUDhvIiwidXNlcklkIjoiYTI1NGQxMWEtZGNjMy00YTljLThlZGMtZjlmNTc4OWY1ZWY5IiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzI4NTg2NDI1fQ.GSJursfAW8KiHiQNWruyCWeEeIUTUUTpCjA0ffnSkkQ
+        - name: DB_SCHEMA
+          value: your_schema_name
+        image: gcr.io/ba882-team9/ml-sf-predict@sha256:88d8253e8226745bc4b0602dacd84520e6e05298ba5452fcb8c3ae6264d19d74
+        name: ml-sf-predict-1
+        ports:
+        - containerPort: 8080
+          name: http1
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 512Mi
+        startupProbe:
+          failureThreshold: 1
+          periodSeconds: 240
+          tcpSocket:
+            port: 8080
+          timeoutSeconds: 240
+      serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+      timeoutSeconds: 300
+    status:
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:36:29.887076Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:36:29.831254Z'
+        message: Container became healthy.
+        status: 'True'
+        type: ContainerHealthy
+      - lastTransitionTime: '2024-11-09T19:36:17.916361Z'
+        message: Container image import completed in 13.756216s.
+        status: 'True'
+        type: ContainerReady
+      - lastTransitionTime: '2024-11-09T19:36:28.710442Z'
+        message: Revision deployment finished in 10.797005s. Checking container health.
+        status: 'True'
+        type: ResourcesAvailable
+      containerStatuses:
+      - imageDigest: gcr.io/ba882-team9/ml-sf-predict@sha256:88d8253e8226745bc4b0602dacd84520e6e05298ba5452fcb8c3ae6264d19d74
+        name: ml-sf-predict-1
+      imageDigest: gcr.io/ba882-team9/ml-sf-predict@sha256:88d8253e8226745bc4b0602dacd84520e6e05298ba5452fcb8c3ae6264d19d74
+      logUrl: https://console.cloud.google.com/logs/viewer?project=ba882-team9&resource=cloud_run_revision/service_name/ml-sf-predict/revision_name/ml-sf-predict-00003-sbb&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22ml-sf-predict%22%0Aresource.labels.revision_name%3D%22ml-sf-predict-00003-sbb%22
+      observedGeneration: 1
+  serviceName: run.googleapis.com
+  status:
+    message: Ready condition status changed to True for Revision ml-sf-predict-00003-sbb.
+receiveTimestamp: '2024-11-09T19:36:30.862117867Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: INFO
+timestamp: '2024-11-09T19:36:29.902957Z'
+---
+insertId: 672fb9bd000cdd39677202ee
+labels:
+  instanceId: 004940b3b810c99460e7e2fc8fe6b00bdad9ffc728ee9f306b43e663843693c84e3ecea4627b3efe2cac427bb4a8ff3a92a9f6a64323063b9b7c12988df9206e291f36976578
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:36:30.154372539Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:36:29 +0000] [2] [INFO] Booting worker with pid: 2'
+timestamp: '2024-11-09T19:36:29.843065Z'
+---
+insertId: 672fb9bd000c8406a899a588
+labels:
+  instanceId: 004940b3b810c99460e7e2fc8fe6b00bdad9ffc728ee9f306b43e663843693c84e3ecea4627b3efe2cac427bb4a8ff3a92a9f6a64323063b9b7c12988df9206e291f36976578
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:36:29.825560893Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: INFO
+textPayload: Default STARTUP TCP probe succeeded after 1 attempt for container "ml-sf-predict-1"
+  on port 8080.
+timestamp: '2024-11-09T19:36:29.820230Z'
+---
+insertId: 672fb9bd000c824105f7340e
+labels:
+  instanceId: 004940b3b810c99460e7e2fc8fe6b00bdad9ffc728ee9f306b43e663843693c84e3ecea4627b3efe2cac427bb4a8ff3a92a9f6a64323063b9b7c12988df9206e291f36976578
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:36:30.154372539Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:36:29 +0000] [1] [INFO] Using worker: gthread'
+timestamp: '2024-11-09T19:36:29.819777Z'
+---
+insertId: 672fb9bd000c81efeb62612b
+labels:
+  instanceId: 004940b3b810c99460e7e2fc8fe6b00bdad9ffc728ee9f306b43e663843693c84e3ecea4627b3efe2cac427bb4a8ff3a92a9f6a64323063b9b7c12988df9206e291f36976578
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:36:30.154372539Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:36:29 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080
+  (1)'
+timestamp: '2024-11-09T19:36:29.819695Z'
+---
+insertId: 672fb9bd000c7cbad350e220
+labels:
+  instanceId: 004940b3b810c99460e7e2fc8fe6b00bdad9ffc728ee9f306b43e663843693c84e3ecea4627b3efe2cac427bb4a8ff3a92a9f6a64323063b9b7c12988df9206e291f36976578
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:36:29.824806515Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00003-sbb
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:36:29 +0000] [1] [INFO] Starting gunicorn 20.1.0'
+timestamp: '2024-11-09T19:36:29.818362Z'
+---
+insertId: 1adyizbdnpm3
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Factivity
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  authenticationInfo:
+    principalEmail: 1076180164120-compute@developer.gserviceaccount.com
+    principalSubject: serviceAccount:1076180164120-compute@developer.gserviceaccount.com
+  authorizationInfo:
+  - granted: true
+    permission: run.services.update
+    permissionType: ADMIN_WRITE
+    resource: namespaces/ba882-team9/services/ml-sf-predict
+    resourceAttributes: {}
+  - granted: true
+    permission: run.services.update
+    permissionType: ADMIN_WRITE
+    resourceAttributes:
+      name: namespaces/ba882-team9/services/ml-sf-predict
+      service: run.googleapis.com/
+      type: run.googleapis.com/Service
+  methodName: google.cloud.run.v1.Services.ReplaceService
+  request:
+    '@type': type.googleapis.com/google.cloud.run.v1.ReplaceServiceRequest
+    name: namespaces/ba882-team9/services/ml-sf-predict
+    service:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      metadata:
+        annotations:
+          run.googleapis.com/client-name: gcloud
+          run.googleapis.com/client-version: 498.0.0
+          run.googleapis.com/ingress: all
+          run.googleapis.com/ingress-status: all
+          run.googleapis.com/operation-id: 53250877-c37b-4868-91bd-3bc026c6972e
+          run.googleapis.com/urls: '["https://ml-sf-predict-1076180164120.us-central1.run.app","https://ml-sf-predict-fefwkff7jq-uc.a.run.app"]'
+          serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+          serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+        creationTimestamp: '2024-11-09T19:17:23.607840Z'
+        generation: 2
+        labels:
+          cloud.googleapis.com/location: us-central1
+        name: ml-sf-predict
+        namespace: '1076180164120'
+        resourceVersion: AAYmf89+5+c
+        selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-predict
+        uid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+      spec:
+        template:
+          metadata:
+            annotations:
+              autoscaling.knative.dev/maxScale: '100'
+              run.googleapis.com/client-name: gcloud
+              run.googleapis.com/client-version: 498.0.0
+              run.googleapis.com/startup-cpu-boost: 'true'
+            labels:
+              client.knative.dev/nonce: qrwzniymfh
+              run.googleapis.com/startupProbeType: Default
+          spec:
+            containerConcurrency: 80
+            serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+            timeoutSeconds: 300
+        traffic:
+        - latestRevision: true
+          percent: 100
+      status:
+        conditions:
+        - lastTransitionTime: '2024-11-09T19:24:04.166631Z'
+          status: 'True'
+          type: Ready
+        - lastTransitionTime: '2024-11-09T19:24:02.889518Z'
+          status: 'True'
+          type: ConfigurationsReady
+        - lastTransitionTime: '2024-11-09T19:24:04.134106Z'
+          status: 'True'
+          type: RoutesReady
+        latestCreatedRevisionName: ml-sf-predict-00002-4z5
+        latestReadyRevisionName: ml-sf-predict-00002-4z5
+        observedGeneration: 2
+        traffic:
+        - latestRevision: true
+          percent: 100
+          revisionName: ml-sf-predict-00002-4z5
+        url: https://ml-sf-predict-fefwkff7jq-uc.a.run.app
+  requestMetadata:
+    callerIp: 34.31.130.205
+    callerSuppliedUserAgent: google-cloud-sdk gcloud/498.0.0 command/gcloud.run.deploy
+      invocation-id/4ef89b55f79247bdb6cf621c9ec94e8c environment/GCE environment-version/None
+      client-os/LINUX client-os-ver/5.10.0 client-pltf-arch/x86_64 interactive/False
+      from-script/True python/3.11.9 term/ (Linux 5.10.0-33-cloud-amd64),gzip(gfe)
+    destinationAttributes: {}
+    requestAttributes:
+      auth: {}
+      time: '2024-11-09T19:36:03.463180Z'
+  resourceLocation:
+    currentLocations:
+    - us-central1
+  resourceName: namespaces/ba882-team9/services/ml-sf-predict
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: 6b9e2685-b048-456c-8145-5a22972d7037
+        run.googleapis.com/urls: '["https://ml-sf-predict-1076180164120.us-central1.run.app","https://ml-sf-predict-fefwkff7jq-uc.a.run.app"]'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+        serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:17:23.607840Z'
+      generation: 3
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: ml-sf-predict
+      namespace: '1076180164120'
+      resourceVersion: AAYmf/pd+WQ
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-predict
+      uid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '100'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 498.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: qrwzniymfh
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:24:04.166631Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:24:02.889518Z'
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2024-11-09T19:24:04.134106Z'
+        status: 'True'
+        type: RoutesReady
+      latestCreatedRevisionName: ml-sf-predict-00002-4z5
+      latestReadyRevisionName: ml-sf-predict-00002-4z5
+      observedGeneration: 2
+      traffic:
+      - latestRevision: true
+        percent: 100
+        revisionName: ml-sf-predict-00002-4z5
+      url: https://ml-sf-predict-fefwkff7jq-uc.a.run.app
+  serviceName: run.googleapis.com
+receiveTimestamp: '2024-11-09T19:36:03.730822910Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ''
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: NOTICE
+timestamp: '2024-11-09T19:36:03.330070Z'
+---
+insertId: 672fb70d000c13e75315186c
+labels:
+  container_name: ml-sf-predict-1
+  instanceId: 004940b3b8dbbfc6fd02e195c3dd259fd9ffad5d5c81f795c229dea335559ea98889ad975da79f21d4133a8a1192e6d821fa8d5828d4fa7d2073408f9a5bc85342b9131831
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:25:01.798105537Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00002-4z5
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: WARNING
+textPayload: Container called exit(3).
+timestamp: '2024-11-09T19:25:01.791511936Z'
+---
+insertId: 672fb7030009e9ca13353c19
+labels:
+  instanceId: 004940b3b8dbbfc6fd02e195c3dd259fd9ffad5d5c81f795c229dea335559ea98889ad975da79f21d4133a8a1192e6d821fa8d5828d4fa7d2073408f9a5bc85342b9131831
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:24:51.653881191Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00002-4z5
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:24:51 +0000] [1] [INFO] Reason: Worker failed to boot.'
+timestamp: '2024-11-09T19:24:51.649674Z'
+---
+insertId: 672fb7030009e98d507731bb
+labels:
+  instanceId: 004940b3b8dbbfc6fd02e195c3dd259fd9ffad5d5c81f795c229dea335559ea98889ad975da79f21d4133a8a1192e6d821fa8d5828d4fa7d2073408f9a5bc85342b9131831
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:24:51.653881191Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00002-4z5
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:24:51 +0000] [1] [INFO] Shutting down: Master'
+timestamp: '2024-11-09T19:24:51.649613Z'
+---
+insertId: 672fb6f40003b9dcb34eb561
+labels:
+  instanceId: 004940b3b8dbbfc6fd02e195c3dd259fd9ffad5d5c81f795c229dea335559ea98889ad975da79f21d4133a8a1192e6d821fa8d5828d4fa7d2073408f9a5bc85342b9131831
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:24:36.583324008Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00002-4z5
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:24:36 +0000] [2] [INFO] Worker exiting (pid: 2)'
+timestamp: '2024-11-09T19:24:36.244188Z'
+---
+errorGroups:
+- id: CJ_FiaS6heGW7wE
+insertId: 672fb6f40003b9950c51c9e0
+labels:
+  instanceId: 004940b3b8dbbfc6fd02e195c3dd259fd9ffad5d5c81f795c229dea335559ea98889ad975da79f21d4133a8a1192e6d821fa8d5828d4fa7d2073408f9a5bc85342b9131831
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:24:36.249778356Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00002-4z5
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: ERROR
+textPayload: |-
+  Traceback (most recent call last):
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+      worker.init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+      super().init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+      self.load_wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+      self.wsgi = self.app.wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+      self.callable = self.load()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+      return self.load_wsgiapp()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+      return util.import_app(self.app_uri)
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/util.py", line 359, in import_app
+      mod = importlib.import_module(module)
+    File "/usr/local/lib/python3.9/importlib/__init__.py", line 127, in import_module
+      return _bootstrap._gcd_import(name[level:], package, level)
+    File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+    File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+    File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+    File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+    File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+    File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+    File "/app/main.py", line 3, in <module>
+      from flask import Flask, jsonify, request
+    File "/usr/local/lib/python3.9/site-packages/flask/__init__.py", line 7, in <module>
+      from .app import Flask as Flask
+    File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 28, in <module>
+      from . import cli
+    File "/usr/local/lib/python3.9/site-packages/flask/cli.py", line 18, in <module>
+      from .helpers import get_debug_flag
+    File "/usr/local/lib/python3.9/site-packages/flask/helpers.py", line 16, in <module>
+      from werkzeug.urls import url_quote
+  ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.9/site-packages/werkzeug/urls.py)
+timestamp: '2024-11-09T19:24:36.244117Z'
+---
+insertId: 672fb6f40003b93e30a08143
+labels:
+  instanceId: 004940b3b8dbbfc6fd02e195c3dd259fd9ffad5d5c81f795c229dea335559ea98889ad975da79f21d4133a8a1192e6d821fa8d5828d4fa7d2073408f9a5bc85342b9131831
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:24:36.249778356Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00002-4z5
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:24:34 +0000] [2] [ERROR] Exception in worker process'
+timestamp: '2024-11-09T19:24:36.244030Z'
+---
+insertId: -lwxy15e1jba2
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/ba882-team9/services/ml-sf-predict
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: 53250877-c37b-4868-91bd-3bc026c6972e
+        run.googleapis.com/urls: '["https://ml-sf-predict-1076180164120.us-central1.run.app","https://ml-sf-predict-fefwkff7jq-uc.a.run.app"]'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+        serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:17:23.607840Z'
+      generation: 2
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: ml-sf-predict
+      namespace: '1076180164120'
+      resourceVersion: AAYmf89+5+c
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-predict
+      uid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '100'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 498.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: qaycgfyuhj
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          containers:
+          - env:
+            - name: MOTHERDUCK_TOKEN
+              value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1Y2hlbmx5QGJ1LmVkdSIsInNlc3Npb24iOiJ5dWNoZW5seS5idS5lZHUiLCJwYXQiOiJvQUFnWld6YUxMQUd0RndfdDRKTFMwRlFDbVZFUEtnSzZ5VW14NEluUDhvIiwidXNlcklkIjoiYTI1NGQxMWEtZGNjMy00YTljLThlZGMtZjlmNTc4OWY1ZWY5IiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzI4NTg2NDI1fQ.GSJursfAW8KiHiQNWruyCWeEeIUTUUTpCjA0ffnSkkQ
+            - name: DB_SCHEMA
+              value: your_schema_name
+            image: gcr.io/ba882-team9/ml-sf-predict
+            ports:
+            - containerPort: 8080
+              name: http1
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 512Mi
+            startupProbe:
+              failureThreshold: 1
+              periodSeconds: 240
+              tcpSocket:
+                port: 8080
+              timeoutSeconds: 240
+          serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      address:
+        url: https://ml-sf-predict-fefwkff7jq-uc.a.run.app
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:24:04.166631Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:24:02.889518Z'
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2024-11-09T19:24:04.134106Z'
+        status: 'True'
+        type: RoutesReady
+      latestCreatedRevisionName: ml-sf-predict-00002-4z5
+      latestReadyRevisionName: ml-sf-predict-00002-4z5
+      observedGeneration: 2
+      traffic:
+      - latestRevision: true
+        percent: 100
+        revisionName: ml-sf-predict-00002-4z5
+      url: https://ml-sf-predict-fefwkff7jq-uc.a.run.app
+  serviceName: run.googleapis.com
+  status:
+    message: Ready condition status changed to True for Service ml-sf-predict.
+receiveTimestamp: '2024-11-09T19:24:04.404361808Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ''
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: INFO
+timestamp: '2024-11-09T19:24:04.183246Z'
+---
+insertId: nvxrxvdyo5s
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/ba882-team9/revisions/ml-sf-predict-00002-4z5
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Revision
+    apiVersion: serving.knative.dev/v1
+    kind: Revision
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: '100'
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/operation-id: 53250877-c37b-4868-91bd-3bc026c6972e
+        run.googleapis.com/startup-cpu-boost: 'true'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:23:46.590648Z'
+      generation: 1
+      labels:
+        client.knative.dev/nonce: qaycgfyuhj
+        cloud.googleapis.com/location: us-central1
+        run.googleapis.com/startupProbeType: Default
+        serving.knative.dev/configuration: ml-sf-predict
+        serving.knative.dev/configurationGeneration: '2'
+        serving.knative.dev/route: ml-sf-predict
+        serving.knative.dev/service: ml-sf-predict
+        serving.knative.dev/serviceUid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+      name: ml-sf-predict-00002-4z5
+      namespace: '1076180164120'
+      ownerReferences:
+      - apiVersion: serving.knative.dev/v1
+        blockOwnerDeletion: true
+        controller: true
+        kind: Configuration
+        name: ml-sf-predict
+        uid: 6e27b44c-3e56-40af-9ee6-a5ec47483858
+      resourceVersion: AAYmf89q9hI
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/revisions/ml-sf-predict-00002-4z5
+      uid: 2a227684-ec8e-42f7-8ad5-9f3adbf3e91a
+    spec:
+      containerConcurrency: 80
+      containers:
+      - env:
+        - name: MOTHERDUCK_TOKEN
+          value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1Y2hlbmx5QGJ1LmVkdSIsInNlc3Npb24iOiJ5dWNoZW5seS5idS5lZHUiLCJwYXQiOiJvQUFnWld6YUxMQUd0RndfdDRKTFMwRlFDbVZFUEtnSzZ5VW14NEluUDhvIiwidXNlcklkIjoiYTI1NGQxMWEtZGNjMy00YTljLThlZGMtZjlmNTc4OWY1ZWY5IiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzI4NTg2NDI1fQ.GSJursfAW8KiHiQNWruyCWeEeIUTUUTpCjA0ffnSkkQ
+        - name: DB_SCHEMA
+          value: your_schema_name
+        image: gcr.io/ba882-team9/ml-sf-predict@sha256:0e6ca27cfedaf6c03dc8a7a283f9c63cd9bc49600e76d9ff80b3443a9014bee3
+        name: ml-sf-predict-1
+        ports:
+        - containerPort: 8080
+          name: http1
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 512Mi
+        startupProbe:
+          failureThreshold: 1
+          periodSeconds: 240
+          tcpSocket:
+            port: 8080
+          timeoutSeconds: 240
+      serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+      timeoutSeconds: 300
+    status:
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:24:02.859538Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:24:02.798857Z'
+        message: Container became healthy in 1.034077s.
+        status: 'True'
+        type: ContainerHealthy
+      - lastTransitionTime: '2024-11-09T19:23:58.845119Z'
+        message: Container image import completed in 11.658175s.
+        status: 'True'
+        type: ContainerReady
+      - lastTransitionTime: '2024-11-09T19:24:01.512560Z'
+        message: Revision deployment finished in 2.669738s. Checking container health.
+        status: 'True'
+        type: ResourcesAvailable
+      containerStatuses:
+      - imageDigest: gcr.io/ba882-team9/ml-sf-predict@sha256:0e6ca27cfedaf6c03dc8a7a283f9c63cd9bc49600e76d9ff80b3443a9014bee3
+        name: ml-sf-predict-1
+      imageDigest: gcr.io/ba882-team9/ml-sf-predict@sha256:0e6ca27cfedaf6c03dc8a7a283f9c63cd9bc49600e76d9ff80b3443a9014bee3
+      logUrl: https://console.cloud.google.com/logs/viewer?project=ba882-team9&resource=cloud_run_revision/service_name/ml-sf-predict/revision_name/ml-sf-predict-00002-4z5&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22ml-sf-predict%22%0Aresource.labels.revision_name%3D%22ml-sf-predict-00002-4z5%22
+      observedGeneration: 1
+  serviceName: run.googleapis.com
+  status:
+    message: Ready condition status changed to True for Revision ml-sf-predict-00002-4z5.
+receiveTimestamp: '2024-11-09T19:24:03.806717048Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00002-4z5
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: INFO
+timestamp: '2024-11-09T19:24:02.869767Z'
+---
+insertId: 672fb6d2000c328fbe5233ea
+labels:
+  instanceId: 004940b3b8dbbfc6fd02e195c3dd259fd9ffad5d5c81f795c229dea335559ea98889ad975da79f21d4133a8a1192e6d821fa8d5828d4fa7d2073408f9a5bc85342b9131831
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:24:03.118025281Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00002-4z5
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:24:02 +0000] [2] [INFO] Booting worker with pid: 2'
+timestamp: '2024-11-09T19:24:02.799375Z'
+---
+insertId: 672fb6d2000bf65a0ed43db2
+labels:
+  instanceId: 004940b3b8dbbfc6fd02e195c3dd259fd9ffad5d5c81f795c229dea335559ea98889ad975da79f21d4133a8a1192e6d821fa8d5828d4fa7d2073408f9a5bc85342b9131831
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:24:02.789485530Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00002-4z5
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: INFO
+textPayload: Default STARTUP TCP probe succeeded after 1 attempt for container "ml-sf-predict-1"
+  on port 8080.
+timestamp: '2024-11-09T19:24:02.783962Z'
+---
+insertId: 672fb6d2000bf09c2a93cc8a
+labels:
+  instanceId: 004940b3b8dbbfc6fd02e195c3dd259fd9ffad5d5c81f795c229dea335559ea98889ad975da79f21d4133a8a1192e6d821fa8d5828d4fa7d2073408f9a5bc85342b9131831
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:24:03.118025281Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00002-4z5
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:24:02 +0000] [1] [INFO] Using worker: gthread'
+timestamp: '2024-11-09T19:24:02.782492Z'
+---
+insertId: 672fb6d2000bf01b5be3e68c
+labels:
+  instanceId: 004940b3b8dbbfc6fd02e195c3dd259fd9ffad5d5c81f795c229dea335559ea98889ad975da79f21d4133a8a1192e6d821fa8d5828d4fa7d2073408f9a5bc85342b9131831
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:24:03.118025281Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00002-4z5
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:24:02 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080
+  (1)'
+timestamp: '2024-11-09T19:24:02.782363Z'
+---
+insertId: 672fb6d2000beafb2f9be05b
+labels:
+  instanceId: 004940b3b8dbbfc6fd02e195c3dd259fd9ffad5d5c81f795c229dea335559ea98889ad975da79f21d4133a8a1192e6d821fa8d5828d4fa7d2073408f9a5bc85342b9131831
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:24:02.786741272Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00002-4z5
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:24:02 +0000] [1] [INFO] Starting gunicorn 20.1.0'
+timestamp: '2024-11-09T19:24:02.781051Z'
+---
+insertId: 1e8w3gvdnj22
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Factivity
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  authenticationInfo:
+    principalEmail: 1076180164120-compute@developer.gserviceaccount.com
+    principalSubject: serviceAccount:1076180164120-compute@developer.gserviceaccount.com
+  authorizationInfo:
+  - granted: true
+    permission: run.services.update
+    permissionType: ADMIN_WRITE
+    resource: namespaces/ba882-team9/services/ml-sf-predict
+    resourceAttributes: {}
+  - granted: true
+    permission: run.services.update
+    permissionType: ADMIN_WRITE
+    resourceAttributes:
+      name: namespaces/ba882-team9/services/ml-sf-predict
+      service: run.googleapis.com/
+      type: run.googleapis.com/Service
+  methodName: google.cloud.run.v1.Services.ReplaceService
+  request:
+    '@type': type.googleapis.com/google.cloud.run.v1.ReplaceServiceRequest
+    name: namespaces/ba882-team9/services/ml-sf-predict
+    service:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      metadata:
+        annotations:
+          run.googleapis.com/client-name: gcloud
+          run.googleapis.com/client-version: 498.0.0
+          run.googleapis.com/ingress: all
+          run.googleapis.com/ingress-status: all
+          run.googleapis.com/operation-id: a4eb2e0f-b94f-4782-bb2b-ec3b654ec515
+          run.googleapis.com/urls: '["https://ml-sf-predict-1076180164120.us-central1.run.app"]'
+          serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+          serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+        creationTimestamp: '2024-11-09T19:17:23.607840Z'
+        generation: 1
+        labels:
+          cloud.googleapis.com/location: us-central1
+        name: ml-sf-predict
+        namespace: '1076180164120'
+        resourceVersion: AAYmf7mLqw8
+        selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-predict
+        uid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+      spec:
+        template:
+          metadata:
+            annotations:
+              autoscaling.knative.dev/maxScale: '100'
+              run.googleapis.com/client-name: gcloud
+              run.googleapis.com/client-version: 498.0.0
+              run.googleapis.com/startup-cpu-boost: 'true'
+            labels:
+              client.knative.dev/nonce: qaycgfyuhj
+              run.googleapis.com/startupProbeType: Default
+          spec:
+            containerConcurrency: 80
+            serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+            timeoutSeconds: 300
+        traffic:
+        - latestRevision: true
+          percent: 100
+      status:
+        conditions:
+        - lastTransitionTime: '2024-11-09T19:17:55.832428Z'
+          reason: HealthCheckContainerError
+          status: 'False'
+          type: Ready
+        - lastTransitionTime: '2024-11-09T19:17:55.825806Z'
+          status: 'True'
+          type: ConfigurationsReady
+        - lastTransitionTime: '2024-11-09T19:17:55.832428Z'
+          reason: HealthCheckContainerError
+          status: 'False'
+          type: RoutesReady
+        latestCreatedRevisionName: ml-sf-predict-00001-nfz
+        latestReadyRevisionName: ml-sf-predict-00001-nfz
+        observedGeneration: 1
+  requestMetadata:
+    callerIp: 34.66.39.141
+    callerSuppliedUserAgent: google-cloud-sdk gcloud/498.0.0 command/gcloud.run.deploy
+      invocation-id/62ac44143d4647318384d1a964392377 environment/GCE environment-version/None
+      client-os/LINUX client-os-ver/5.10.0 client-pltf-arch/x86_64 interactive/False
+      from-script/True python/3.11.9 term/ (Linux 5.10.0-33-cloud-amd64),gzip(gfe)
+    destinationAttributes: {}
+    requestAttributes:
+      auth: {}
+      time: '2024-11-09T19:23:46.547860Z'
+  resourceLocation:
+    currentLocations:
+    - us-central1
+  resourceName: namespaces/ba882-team9/services/ml-sf-predict
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: 53250877-c37b-4868-91bd-3bc026c6972e
+        run.googleapis.com/urls: '["https://ml-sf-predict-1076180164120.us-central1.run.app"]'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+        serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:17:23.607840Z'
+      generation: 2
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: ml-sf-predict
+      namespace: '1076180164120'
+      resourceVersion: AAYmf85xmpw
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-predict
+      uid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '100'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 498.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: qaycgfyuhj
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:17:55.832428Z'
+        reason: HealthCheckContainerError
+        status: 'False'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:17:55.825806Z'
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2024-11-09T19:17:55.832428Z'
+        reason: HealthCheckContainerError
+        status: 'False'
+        type: RoutesReady
+      latestCreatedRevisionName: ml-sf-predict-00001-nfz
+      latestReadyRevisionName: ml-sf-predict-00001-nfz
+      observedGeneration: 1
+  serviceName: run.googleapis.com
+receiveTimestamp: '2024-11-09T19:23:46.947028529Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ''
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: NOTICE
+timestamp: '2024-11-09T19:23:46.424236Z'
+---
+insertId: -hfsch5e1mxsy
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.CreateService
+  resourceName: namespaces/ba882-team9/services/ml-sf-predict
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: a4eb2e0f-b94f-4782-bb2b-ec3b654ec515
+        run.googleapis.com/urls: '["https://ml-sf-predict-1076180164120.us-central1.run.app"]'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+        serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:17:23.607840Z'
+      generation: 1
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: ml-sf-predict
+      namespace: '1076180164120'
+      resourceVersion: AAYmf7mLqw8
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-predict
+      uid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '100'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 498.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: ajtubejfux
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          containers:
+          - env:
+            - name: MOTHERDUCK_TOKEN
+              value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1Y2hlbmx5QGJ1LmVkdSIsInNlc3Npb24iOiJ5dWNoZW5seS5idS5lZHUiLCJwYXQiOiJvQUFnWld6YUxMQUd0RndfdDRKTFMwRlFDbVZFUEtnSzZ5VW14NEluUDhvIiwidXNlcklkIjoiYTI1NGQxMWEtZGNjMy00YTljLThlZGMtZjlmNTc4OWY1ZWY5IiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzI4NTg2NDI1fQ.GSJursfAW8KiHiQNWruyCWeEeIUTUUTpCjA0ffnSkkQ
+            - name: DB_SCHEMA
+              value: your_schema_name
+            image: gcr.io/ba882-team9/ml-sf-predict
+            ports:
+            - containerPort: 8080
+              name: http1
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 512Mi
+            startupProbe:
+              failureThreshold: 1
+              periodSeconds: 240
+              tcpSocket:
+                port: 8080
+              timeoutSeconds: 240
+          serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:17:55.832428Z'
+        message: |-
+          Revision 'ml-sf-predict-00001-nfz' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The healtcheck timeout can be extended. Logs for this revision might contain more information.
+
+          Logs URL: https://console.cloud.google.com/logs/viewer?project=ba882-team9&resource=cloud_run_revision/service_name/ml-sf-predict/revision_name/ml-sf-predict-00001-nfz&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22ml-sf-predict%22%0Aresource.labels.revision_name%3D%22ml-sf-predict-00001-nfz%22 
+          For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+        reason: HealthCheckContainerError
+        status: 'False'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:17:55.825806Z'
+        message: |-
+          The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The healtcheck timeout can be extended. Logs for this revision might contain more information.
+
+          Logs URL: https://console.cloud.google.com/logs/viewer?project=ba882-team9&resource=cloud_run_revision/service_name/ml-sf-predict/revision_name/ml-sf-predict-00001-nfz&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22ml-sf-predict%22%0Aresource.labels.revision_name%3D%22ml-sf-predict-00001-nfz%22 
+          For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2024-11-09T19:17:55.832428Z'
+        message: |-
+          Revision 'ml-sf-predict-00001-nfz' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The healtcheck timeout can be extended. Logs for this revision might contain more information.
+
+          Logs URL: https://console.cloud.google.com/logs/viewer?project=ba882-team9&resource=cloud_run_revision/service_name/ml-sf-predict/revision_name/ml-sf-predict-00001-nfz&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22ml-sf-predict%22%0Aresource.labels.revision_name%3D%22ml-sf-predict-00001-nfz%22 
+          For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+        reason: HealthCheckContainerError
+        status: 'False'
+        type: RoutesReady
+      latestCreatedRevisionName: ml-sf-predict-00001-nfz
+      latestReadyRevisionName: ml-sf-predict-00001-nfz
+      observedGeneration: 1
+  serviceName: run.googleapis.com
+  status:
+    code: 9
+    message: |-
+      Ready condition status changed to False for Service ml-sf-predict with message: Revision 'ml-sf-predict-00001-nfz' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The healtcheck timeout can be extended. Logs for this revision might contain more information.
+
+      Logs URL: https://console.cloud.google.com/logs/viewer?project=ba882-team9&resource=cloud_run_revision/service_name/ml-sf-predict/revision_name/ml-sf-predict-00001-nfz&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22ml-sf-predict%22%0Aresource.labels.revision_name%3D%22ml-sf-predict-00001-nfz%22 
+      For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+receiveTimestamp: '2024-11-09T19:17:56.535889848Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ''
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: ERROR
+timestamp: '2024-11-09T19:17:55.926623Z'
+---
+insertId: oqj781e146ps
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.CreateService
+  resourceName: namespaces/ba882-team9/revisions/ml-sf-predict-00001-nfz
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Revision
+    apiVersion: serving.knative.dev/v1
+    kind: Revision
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: '100'
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/operation-id: a4eb2e0f-b94f-4782-bb2b-ec3b654ec515
+        run.googleapis.com/startup-cpu-boost: 'true'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:17:23.688919Z'
+      generation: 1
+      labels:
+        client.knative.dev/nonce: ajtubejfux
+        cloud.googleapis.com/location: us-central1
+        run.googleapis.com/startupProbeType: Default
+        serving.knative.dev/configuration: ml-sf-predict
+        serving.knative.dev/configurationGeneration: '1'
+        serving.knative.dev/route: ml-sf-predict
+        serving.knative.dev/service: ml-sf-predict
+        serving.knative.dev/serviceUid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+      name: ml-sf-predict-00001-nfz
+      namespace: '1076180164120'
+      ownerReferences:
+      - apiVersion: serving.knative.dev/v1
+        blockOwnerDeletion: true
+        controller: true
+        kind: Configuration
+        name: ml-sf-predict
+        uid: 6e27b44c-3e56-40af-9ee6-a5ec47483858
+      resourceVersion: AAYmf7mJ9uo
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/revisions/ml-sf-predict-00001-nfz
+      uid: 823959ac-2215-46cc-9f9d-fc9414c8fe6c
+    spec:
+      containerConcurrency: 80
+      containers:
+      - env:
+        - name: MOTHERDUCK_TOKEN
+          value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1Y2hlbmx5QGJ1LmVkdSIsInNlc3Npb24iOiJ5dWNoZW5seS5idS5lZHUiLCJwYXQiOiJvQUFnWld6YUxMQUd0RndfdDRKTFMwRlFDbVZFUEtnSzZ5VW14NEluUDhvIiwidXNlcklkIjoiYTI1NGQxMWEtZGNjMy00YTljLThlZGMtZjlmNTc4OWY1ZWY5IiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzI4NTg2NDI1fQ.GSJursfAW8KiHiQNWruyCWeEeIUTUUTpCjA0ffnSkkQ
+        - name: DB_SCHEMA
+          value: your_schema_name
+        image: gcr.io/ba882-team9/ml-sf-predict@sha256:0cfcc335630107d03e4a3df0598a10028c3e0076043f54d6b9f306a6eb6d1732
+        name: ml-sf-predict-1
+        ports:
+        - containerPort: 8080
+          name: http1
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 512Mi
+        startupProbe:
+          failureThreshold: 1
+          periodSeconds: 240
+          tcpSocket:
+            port: 8080
+          timeoutSeconds: 240
+      serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+      timeoutSeconds: 300
+    status:
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:17:55.792618Z'
+        message: |-
+          The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The healtcheck timeout can be extended. Logs for this revision might contain more information.
+
+          Logs URL: https://console.cloud.google.com/logs/viewer?project=ba882-team9&resource=cloud_run_revision/service_name/ml-sf-predict/revision_name/ml-sf-predict-00001-nfz&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22ml-sf-predict%22%0Aresource.labels.revision_name%3D%22ml-sf-predict-00001-nfz%22 
+          For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+        reason: HealthCheckContainerError
+        status: 'False'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:17:55.792618Z'
+        message: |-
+          The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The healtcheck timeout can be extended. Logs for this revision might contain more information.
+
+          Logs URL: https://console.cloud.google.com/logs/viewer?project=ba882-team9&resource=cloud_run_revision/service_name/ml-sf-predict/revision_name/ml-sf-predict-00001-nfz&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22ml-sf-predict%22%0Aresource.labels.revision_name%3D%22ml-sf-predict-00001-nfz%22 
+          For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+        reason: HealthCheckContainerError
+        status: 'False'
+        type: ContainerHealthy
+      - lastTransitionTime: '2024-11-09T19:17:50.750734Z'
+        message: Container image import completed in 26.337964s.
+        status: 'True'
+        type: ContainerReady
+      - lastTransitionTime: '2024-11-09T19:17:53.403910Z'
+        message: Revision deployment finished in 2.656219s. Checking container health.
+        status: 'True'
+        type: ResourcesAvailable
+      - lastTransitionTime: '2024-11-09T19:17:53.403910Z'
+        message: System will retry after 0:00:00 from lastTransitionTime for attempt
+          0.
+        reason: ImmediateRetry
+        severity: Info
+        status: 'True'
+        type: Retry
+      containerStatuses:
+      - imageDigest: gcr.io/ba882-team9/ml-sf-predict@sha256:0cfcc335630107d03e4a3df0598a10028c3e0076043f54d6b9f306a6eb6d1732
+        name: ml-sf-predict-1
+      imageDigest: gcr.io/ba882-team9/ml-sf-predict@sha256:0cfcc335630107d03e4a3df0598a10028c3e0076043f54d6b9f306a6eb6d1732
+      logUrl: https://console.cloud.google.com/logs/viewer?project=ba882-team9&resource=cloud_run_revision/service_name/ml-sf-predict/revision_name/ml-sf-predict-00001-nfz&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22ml-sf-predict%22%0Aresource.labels.revision_name%3D%22ml-sf-predict-00001-nfz%22
+      observedGeneration: 1
+  serviceName: run.googleapis.com
+  status:
+    code: 9
+    message: |-
+      Ready condition status changed to False for Revision ml-sf-predict-00001-nfz with message: The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The healtcheck timeout can be extended. Logs for this revision might contain more information.
+
+      Logs URL: https://console.cloud.google.com/logs/viewer?project=ba882-team9&resource=cloud_run_revision/service_name/ml-sf-predict/revision_name/ml-sf-predict-00001-nfz&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22ml-sf-predict%22%0Aresource.labels.revision_name%3D%22ml-sf-predict-00001-nfz%22 
+      For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+receiveTimestamp: '2024-11-09T19:17:55.880454499Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00001-nfz
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: ERROR
+timestamp: '2024-11-09T19:17:55.803171Z'
+---
+insertId: 672fb563000c1710caf35b21
+labels:
+  instanceId: 004940b3b85adf7ce0f86567eaef926b9df2c8c2fd036c2186b48f226f3267305407306a97e46d8aa340abafc98f90292b99e8ccf5466441b57aefb3e37da7619cbec81cd80a
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:17:56.025931562Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00001-nfz
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: ERROR
+textPayload: Default STARTUP TCP probe failed 1 time consecutively for container "ml-sf-predict-1"
+  on port 8080. The instance was not started.
+timestamp: '2024-11-09T19:17:55.792336Z'
+---
+insertId: 672fb563000a7cc6f68b5c03
+labels:
+  container_name: ml-sf-predict-1
+  instanceId: 004940b3b85adf7ce0f86567eaef926b9df2c8c2fd036c2186b48f226f3267305407306a97e46d8aa340abafc98f90292b99e8ccf5466441b57aefb3e37da7619cbec81cd80a
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:17:55.702072200Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00001-nfz
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: WARNING
+textPayload: Container called exit(1).
+timestamp: '2024-11-09T19:17:55.687171605Z'
+---
+errorGroups:
+- id: CJLtwt75tcr1qAE
+insertId: 672fb562000bb90351ab4b24
+labels:
+  instanceId: 004940b3b85adf7ce0f86567eaef926b9df2c8c2fd036c2186b48f226f3267305407306a97e46d8aa340abafc98f90292b99e8ccf5466441b57aefb3e37da7619cbec81cd80a
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:17:54.775657497Z'
+resource:
+  labels:
+    configuration_name: ml-sf-predict
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-predict-00001-nfz
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: ERROR
+textPayload: |-
+  Traceback (most recent call last):
+    File "/app/main.py", line 2, in <module>
+      from flask import Flask, jsonify, request
+    File "/usr/local/lib/python3.9/site-packages/flask/__init__.py", line 7, in <module>
+      from .app import Flask as Flask
+    File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 28, in <module>
+      from . import cli
+    File "/usr/local/lib/python3.9/site-packages/flask/cli.py", line 18, in <module>
+      from .helpers import get_debug_flag
+    File "/usr/local/lib/python3.9/site-packages/flask/helpers.py", line 16, in <module>
+      from werkzeug.urls import url_quote
+  ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.9/site-packages/werkzeug/urls.py)
+timestamp: '2024-11-09T19:17:54.768259Z'
+---
+insertId: q322axdlbic
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Factivity
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  authenticationInfo:
+    principalEmail: 1076180164120-compute@developer.gserviceaccount.com
+    principalSubject: serviceAccount:1076180164120-compute@developer.gserviceaccount.com
+  authorizationInfo:
+  - granted: true
+    permission: run.services.create
+    permissionType: ADMIN_WRITE
+    resource: namespaces/ba882-team9/services/ml-sf-predict
+    resourceAttributes: {}
+  - granted: true
+    permission: run.services.create
+    permissionType: ADMIN_WRITE
+    resourceAttributes:
+      name: namespaces/ba882-team9/services/ml-sf-predict
+      service: run.googleapis.com/
+      type: run.googleapis.com/Service
+  methodName: google.cloud.run.v1.Services.CreateService
+  request:
+    '@type': type.googleapis.com/google.cloud.run.v1.CreateServiceRequest
+    parent: namespaces/ba882-team9
+    service:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      metadata:
+        annotations:
+          run.googleapis.com/client-name: gcloud
+          run.googleapis.com/client-version: 498.0.0
+        name: ml-sf-predict
+        namespace: ba882-team9
+      spec:
+        template:
+          metadata:
+            annotations:
+              run.googleapis.com/client-name: gcloud
+              run.googleapis.com/client-version: 498.0.0
+              run.googleapis.com/startup-cpu-boost: 'True'
+            labels:
+              client.knative.dev/nonce: ajtubejfux
+          spec: {}
+      status: {}
+  requestMetadata:
+    callerIp: 34.135.191.87
+    callerSuppliedUserAgent: google-cloud-sdk gcloud/498.0.0 command/gcloud.run.deploy
+      invocation-id/625e572fe40f4415a92efd6da396ddb7 environment/GCE environment-version/None
+      client-os/LINUX client-os-ver/5.10.0 client-pltf-arch/x86_64 interactive/False
+      from-script/True python/3.11.9 term/ (Linux 5.10.0-33-cloud-amd64),gzip(gfe)
+    destinationAttributes: {}
+    requestAttributes:
+      auth: {}
+      time: '2024-11-09T19:17:23.644350Z'
+  resourceLocation:
+    currentLocations:
+    - us-central1
+  resourceName: namespaces/ba882-team9/services/ml-sf-predict
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/operation-id: a4eb2e0f-b94f-4782-bb2b-ec3b654ec515
+        run.googleapis.com/urls: '["https://ml-sf-predict-1076180164120.us-central1.run.app"]'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+        serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:17:23.607840Z'
+      generation: 1
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: ml-sf-predict
+      namespace: '1076180164120'
+      resourceVersion: AAYmf7ee3SA
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-predict
+      uid: ad9cf2a7-52b7-41db-90d5-cc4f3f073d7f
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '100'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 498.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: ajtubejfux
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status: {}
+  serviceName: run.googleapis.com
+receiveTimestamp: '2024-11-09T19:17:24.147451374Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ''
+    service_name: ml-sf-predict
+  type: cloud_run_revision
+severity: NOTICE
+timestamp: '2024-11-09T19:17:23.521524Z'
