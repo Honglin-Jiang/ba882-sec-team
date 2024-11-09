@@ -1,2 +1,0 @@
-duckdb==0.8.0
-google-cloud-secret-manager==2.12.7

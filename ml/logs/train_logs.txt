@@ -1,0 +1,3235 @@
+---
+insertId: 672fbf1f0004f04b1d3907e5
+labels:
+  instanceId: 004940b3b81bcea46b03fbb994ad5d083f0325e2bf2388a07cda378b378ee91f62f838d0068775f9a661e6b94877971c720967e40b9d0be2818e71dd0922bd513bed86bae4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:59:27.348940546Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:59:27 +0000] [1] [INFO] Reason: Worker failed to boot.'
+timestamp: '2024-11-09T19:59:27.323659Z'
+---
+insertId: 672fbf1f0004eff74c389e9d
+labels:
+  instanceId: 004940b3b81bcea46b03fbb994ad5d083f0325e2bf2388a07cda378b378ee91f62f838d0068775f9a661e6b94877971c720967e40b9d0be2818e71dd0922bd513bed86bae4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:59:27.348940546Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:59:27 +0000] [1] [INFO] Shutting down: Master'
+timestamp: '2024-11-09T19:59:27.323575Z'
+---
+insertId: 672fbf1f00039adb5ebf35a5
+labels:
+  instanceId: 004940b3b81bcea46b03fbb994ad5d083f0325e2bf2388a07cda378b378ee91f62f838d0068775f9a661e6b94877971c720967e40b9d0be2818e71dd0922bd513bed86bae4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:59:27.348940546Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:59:27 +0000] [2] [INFO] Worker exiting (pid: 2)'
+timestamp: '2024-11-09T19:59:27.236251Z'
+---
+errorGroups:
+- id: CNW8wbmU7rS5eQ
+insertId: 672fbf1f00039a5e544f6b59
+labels:
+  instanceId: 004940b3b81bcea46b03fbb994ad5d083f0325e2bf2388a07cda378b378ee91f62f838d0068775f9a661e6b94877971c720967e40b9d0be2818e71dd0922bd513bed86bae4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:59:27.348940546Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: ERROR
+textPayload: |-
+  Traceback (most recent call last):
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+      worker.init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+      super().init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+      self.load_wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+      self.wsgi = self.app.wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+      self.callable = self.load()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+      return self.load_wsgiapp()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+      return util.import_app(self.app_uri)
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/util.py", line 359, in import_app
+      mod = importlib.import_module(module)
+    File "/usr/local/lib/python3.9/importlib/__init__.py", line 127, in import_module
+      return _bootstrap._gcd_import(name[level:], package, level)
+    File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+    File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+    File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+    File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+    File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+    File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+    File "/app/main.py", line 4, in <module>
+      import pandas as pd
+    File "/usr/local/lib/python3.9/site-packages/pandas/__init__.py", line 22, in <module>
+      from pandas.compat import is_numpy_dev as _is_numpy_dev
+    File "/usr/local/lib/python3.9/site-packages/pandas/compat/__init__.py", line 14, in <module>
+      from pandas.compat.numpy import (
+    File "/usr/local/lib/python3.9/site-packages/pandas/compat/numpy/__init__.py", line 4, in <module>
+      from pandas.util.version import Version
+    File "/usr/local/lib/python3.9/site-packages/pandas/util/__init__.py", line 1, in <module>
+      from pandas.util._decorators import (  # noqa:F401
+    File "/usr/local/lib/python3.9/site-packages/pandas/util/_decorators.py", line 14, in <module>
+      from pandas._libs.properties import cache_readonly  # noqa:F401
+    File "/usr/local/lib/python3.9/site-packages/pandas/_libs/__init__.py", line 13, in <module>
+      from pandas._libs.interval import Interval
+    File "pandas/_libs/interval.pyx", line 1, in init pandas._libs.interval
+  ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+timestamp: '2024-11-09T19:59:27.236126Z'
+---
+insertId: 672fbf1f00039a2539fc8412
+labels:
+  instanceId: 004940b3b81bcea46b03fbb994ad5d083f0325e2bf2388a07cda378b378ee91f62f838d0068775f9a661e6b94877971c720967e40b9d0be2818e71dd0922bd513bed86bae4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:59:27.348940546Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:59:27 +0000] [2] [ERROR] Exception in worker process'
+timestamp: '2024-11-09T19:59:27.236069Z'
+---
+insertId: 672fbf1e000aae811b24f7f1
+labels:
+  instanceId: 004940b3b81bcea46b03fbb994ad5d083f0325e2bf2388a07cda378b378ee91f62f838d0068775f9a661e6b94877971c720967e40b9d0be2818e71dd0922bd513bed86bae4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:59:27.018431471Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:59:26 +0000] [2] [INFO] Booting worker with pid: 2'
+timestamp: '2024-11-09T19:59:26.700033Z'
+---
+insertId: 672fbf1e000aa67294baee1f
+labels:
+  instanceId: 004940b3b81bcea46b03fbb994ad5d083f0325e2bf2388a07cda378b378ee91f62f838d0068775f9a661e6b94877971c720967e40b9d0be2818e71dd0922bd513bed86bae4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:59:26.709818498Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: INFO
+textPayload: Default STARTUP TCP probe succeeded after 1 attempt for container "ml-sf-train-1"
+  on port 8080.
+timestamp: '2024-11-09T19:59:26.697970Z'
+---
+insertId: 672fbf1e000a6016989902c1
+labels:
+  instanceId: 004940b3b81bcea46b03fbb994ad5d083f0325e2bf2388a07cda378b378ee91f62f838d0068775f9a661e6b94877971c720967e40b9d0be2818e71dd0922bd513bed86bae4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:59:27.018431471Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:59:26 +0000] [1] [INFO] Using worker: gthread'
+timestamp: '2024-11-09T19:59:26.679958Z'
+---
+insertId: 672fbf1e000a5f3a166eb50b
+labels:
+  instanceId: 004940b3b81bcea46b03fbb994ad5d083f0325e2bf2388a07cda378b378ee91f62f838d0068775f9a661e6b94877971c720967e40b9d0be2818e71dd0922bd513bed86bae4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:59:27.018431471Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:59:26 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080
+  (1)'
+timestamp: '2024-11-09T19:59:26.679738Z'
+---
+insertId: 672fbf1e000a5a817b06ee73
+labels:
+  instanceId: 004940b3b81bcea46b03fbb994ad5d083f0325e2bf2388a07cda378b378ee91f62f838d0068775f9a661e6b94877971c720967e40b9d0be2818e71dd0922bd513bed86bae4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:59:26.684767733Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:59:26 +0000] [1] [INFO] Starting gunicorn 20.1.0'
+timestamp: '2024-11-09T19:59:26.678529Z'
+---
+httpRequest:
+  latency: 1.116393767s
+  protocol: HTTP/1.1
+  remoteIp: 35.237.233.73
+  requestMethod: POST
+  requestSize: '282'
+  requestUrl: https://ml-sf-train-1076180164120.us-central1.run.app/train
+  responseSize: '67'
+  serverIp: 216.239.34.53
+  status: 503
+  userAgent: curl/8.5.0
+insertId: 672fbf1f0005267d55be20a4
+labels:
+  instanceId: 004940b3b81bcea46b03fbb994ad5d083f0325e2bf2388a07cda378b378ee91f62f838d0068775f9a661e6b94877971c720967e40b9d0be2818e71dd0922bd513bed86bae4
+logName: projects/ba882-team9/logs/run.googleapis.com%2Frequests
+receiveTimestamp: '2024-11-09T19:59:27.343925935Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: ERROR
+spanId: 09d15efdbf363d0f
+textPayload: 'The request failed because either the HTTP response was malformed or
+  connection to the instance had an error. Additional troubleshooting documentation
+  can be found at: https://cloud.google.com/run/docs/troubleshooting#malformed-response-or-connection-error'
+timestamp: '2024-11-09T19:59:26.014093Z'
+trace: projects/ba882-team9/traces/8b3dc2304b94bd78ffaa3deca039891e
+traceSampled: true
+---
+insertId: 672fbe910000640a48aced6d
+labels:
+  container_name: ml-sf-train-1
+  instanceId: 004940b3b8d0739791b3b0225b43510a983017659b4552e1faa6abaa3f6f933c5a3e9c0b186df327152cf13750bcd17ea063dae4973c346ade36ab69a6a8229e17cbca4786
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:57:05.033521415Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: WARNING
+textPayload: Container called exit(3).
+timestamp: '2024-11-09T19:57:05.025600102Z'
+---
+insertId: 672fbe870004cfbf1fc966c2
+labels:
+  instanceId: 004940b3b8d0739791b3b0225b43510a983017659b4552e1faa6abaa3f6f933c5a3e9c0b186df327152cf13750bcd17ea063dae4973c346ade36ab69a6a8229e17cbca4786
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:56:55.320086138Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:56:55 +0000] [1] [INFO] Reason: Worker failed to boot.'
+timestamp: '2024-11-09T19:56:55.315327Z'
+---
+insertId: 672fbe870004cf746e08c7c8
+labels:
+  instanceId: 004940b3b8d0739791b3b0225b43510a983017659b4552e1faa6abaa3f6f933c5a3e9c0b186df327152cf13750bcd17ea063dae4973c346ade36ab69a6a8229e17cbca4786
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:56:55.320086138Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:56:55 +0000] [1] [INFO] Shutting down: Master'
+timestamp: '2024-11-09T19:56:55.315252Z'
+---
+insertId: 672fbe7000003de22cfb853a
+labels:
+  instanceId: 004940b3b8d0739791b3b0225b43510a983017659b4552e1faa6abaa3f6f933c5a3e9c0b186df327152cf13750bcd17ea063dae4973c346ade36ab69a6a8229e17cbca4786
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:56:32.356870797Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:56:32 +0000] [2] [INFO] Worker exiting (pid: 2)'
+timestamp: '2024-11-09T19:56:32.015842Z'
+---
+errorGroups:
+- id: CNW8wbmU7rS5eQ
+insertId: 672fbe7000003d4a0e5704c7
+labels:
+  instanceId: 004940b3b8d0739791b3b0225b43510a983017659b4552e1faa6abaa3f6f933c5a3e9c0b186df327152cf13750bcd17ea063dae4973c346ade36ab69a6a8229e17cbca4786
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:56:32.023485657Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: ERROR
+textPayload: |-
+  Traceback (most recent call last):
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+      worker.init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+      super().init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+      self.load_wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+      self.wsgi = self.app.wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+      self.callable = self.load()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+      return self.load_wsgiapp()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+      return util.import_app(self.app_uri)
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/util.py", line 359, in import_app
+      mod = importlib.import_module(module)
+    File "/usr/local/lib/python3.9/importlib/__init__.py", line 127, in import_module
+      return _bootstrap._gcd_import(name[level:], package, level)
+    File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+    File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+    File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+    File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+    File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+    File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+    File "/app/main.py", line 4, in <module>
+      import pandas as pd
+    File "/usr/local/lib/python3.9/site-packages/pandas/__init__.py", line 22, in <module>
+      from pandas.compat import is_numpy_dev as _is_numpy_dev
+    File "/usr/local/lib/python3.9/site-packages/pandas/compat/__init__.py", line 14, in <module>
+      from pandas.compat.numpy import (
+    File "/usr/local/lib/python3.9/site-packages/pandas/compat/numpy/__init__.py", line 4, in <module>
+      from pandas.util.version import Version
+    File "/usr/local/lib/python3.9/site-packages/pandas/util/__init__.py", line 1, in <module>
+      from pandas.util._decorators import (  # noqa:F401
+    File "/usr/local/lib/python3.9/site-packages/pandas/util/_decorators.py", line 14, in <module>
+      from pandas._libs.properties import cache_readonly  # noqa:F401
+    File "/usr/local/lib/python3.9/site-packages/pandas/_libs/__init__.py", line 13, in <module>
+      from pandas._libs.interval import Interval
+    File "pandas/_libs/interval.pyx", line 1, in init pandas._libs.interval
+  ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+timestamp: '2024-11-09T19:56:32.015690Z'
+---
+insertId: 672fbe7000003cf1fd855123
+labels:
+  instanceId: 004940b3b8d0739791b3b0225b43510a983017659b4552e1faa6abaa3f6f933c5a3e9c0b186df327152cf13750bcd17ea063dae4973c346ade36ab69a6a8229e17cbca4786
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:56:32.023485657Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:56:30 +0000] [2] [ERROR] Exception in worker process'
+timestamp: '2024-11-09T19:56:32.015601Z'
+---
+insertId: z0gikme133rk
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/ba882-team9/services/ml-sf-train
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: 28b2bbb9-29e8-44ab-b974-e898ff6ef7da
+        run.googleapis.com/urls: '["https://ml-sf-train-1076180164120.us-central1.run.app","https://ml-sf-train-fefwkff7jq-uc.a.run.app"]'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+        serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:06:01.488432Z'
+      generation: 7
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: ml-sf-train
+      namespace: '1076180164120'
+      resourceVersion: AAYmgD/bm48
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-train
+      uid: eeef40cc-b987-4925-8529-5f8af2065b08
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '100'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 498.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: eyzijsqshb
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          containers:
+          - env:
+            - name: MOTHERDUCK_TOKEN
+              value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1Y2hlbmx5QGJ1LmVkdSIsInNlc3Npb24iOiJ5dWNoZW5seS5idS5lZHUiLCJwYXQiOiJvQUFnWld6YUxMQUd0RndfdDRKTFMwRlFDbVZFUEtnSzZ5VW14NEluUDhvIiwidXNlcklkIjoiYTI1NGQxMWEtZGNjMy00YTljLThlZGMtZjlmNTc4OWY1ZWY5IiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzI4NTg2NDI1fQ.GSJursfAW8KiHiQNWruyCWeEeIUTUUTpCjA0ffnSkkQ
+            - name: DB_SCHEMA
+              value: your_schema_name
+            image: gcr.io/ba882-team9/ml-sf-train
+            ports:
+            - containerPort: 8080
+              name: http1
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 512Mi
+            startupProbe:
+              failureThreshold: 1
+              periodSeconds: 240
+              tcpSocket:
+                port: 8080
+              timeoutSeconds: 240
+          serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      address:
+        url: https://ml-sf-train-fefwkff7jq-uc.a.run.app
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:55:29.290127Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:55:28.008654Z'
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2024-11-09T19:55:29.250242Z'
+        status: 'True'
+        type: RoutesReady
+      latestCreatedRevisionName: ml-sf-train-00007-45r
+      latestReadyRevisionName: ml-sf-train-00007-45r
+      observedGeneration: 7
+      traffic:
+      - latestRevision: true
+        percent: 100
+        revisionName: ml-sf-train-00007-45r
+      url: https://ml-sf-train-fefwkff7jq-uc.a.run.app
+  serviceName: run.googleapis.com
+  status:
+    message: Ready condition status changed to True for Service ml-sf-train.
+receiveTimestamp: '2024-11-09T19:55:29.420598722Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ''
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: INFO
+timestamp: '2024-11-09T19:55:29.302090Z'
+---
+insertId: o5tny9dq7v2
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/ba882-team9/revisions/ml-sf-train-00007-45r
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Revision
+    apiVersion: serving.knative.dev/v1
+    kind: Revision
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: '100'
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/operation-id: 28b2bbb9-29e8-44ab-b974-e898ff6ef7da
+        run.googleapis.com/startup-cpu-boost: 'true'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:54:50.118770Z'
+      generation: 1
+      labels:
+        client.knative.dev/nonce: eyzijsqshb
+        cloud.googleapis.com/location: us-central1
+        run.googleapis.com/startupProbeType: Default
+        serving.knative.dev/configuration: ml-sf-train
+        serving.knative.dev/configurationGeneration: '7'
+        serving.knative.dev/route: ml-sf-train
+        serving.knative.dev/service: ml-sf-train
+        serving.knative.dev/serviceUid: eeef40cc-b987-4925-8529-5f8af2065b08
+      name: ml-sf-train-00007-45r
+      namespace: '1076180164120'
+      ownerReferences:
+      - apiVersion: serving.knative.dev/v1
+        blockOwnerDeletion: true
+        controller: true
+        kind: Configuration
+        name: ml-sf-train
+        uid: 44fc5764-8db4-45c4-96f7-310c90a311bb
+      resourceVersion: AAYmgD/HbyQ
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/revisions/ml-sf-train-00007-45r
+      uid: 9561d326-f97f-49c6-92c7-46fe8ece506f
+    spec:
+      containerConcurrency: 80
+      containers:
+      - env:
+        - name: MOTHERDUCK_TOKEN
+          value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1Y2hlbmx5QGJ1LmVkdSIsInNlc3Npb24iOiJ5dWNoZW5seS5idS5lZHUiLCJwYXQiOiJvQUFnWld6YUxMQUd0RndfdDRKTFMwRlFDbVZFUEtnSzZ5VW14NEluUDhvIiwidXNlcklkIjoiYTI1NGQxMWEtZGNjMy00YTljLThlZGMtZjlmNTc4OWY1ZWY5IiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzI4NTg2NDI1fQ.GSJursfAW8KiHiQNWruyCWeEeIUTUUTpCjA0ffnSkkQ
+        - name: DB_SCHEMA
+          value: your_schema_name
+        image: gcr.io/ba882-team9/ml-sf-train@sha256:ac4d5c693132d3d18a1fbe28ace80f83225901020021098b63f8058d99761881
+        name: ml-sf-train-1
+        ports:
+        - containerPort: 8080
+          name: http1
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 512Mi
+        startupProbe:
+          failureThreshold: 1
+          periodSeconds: 240
+          tcpSocket:
+            port: 8080
+          timeoutSeconds: 240
+      serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+      timeoutSeconds: 300
+    status:
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:55:27.968036Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:55:27.906788Z'
+        message: Container became healthy.
+        status: 'True'
+        type: ContainerHealthy
+      - lastTransitionTime: '2024-11-09T19:55:17.340290Z'
+        message: Container image import completed in 26.508213s.
+        status: 'True'
+        type: ContainerReady
+      - lastTransitionTime: '2024-11-09T19:55:26.758532Z'
+        message: Revision deployment finished in 9.421612s. Checking container health.
+        status: 'True'
+        type: ResourcesAvailable
+      containerStatuses:
+      - imageDigest: gcr.io/ba882-team9/ml-sf-train@sha256:ac4d5c693132d3d18a1fbe28ace80f83225901020021098b63f8058d99761881
+        name: ml-sf-train-1
+      imageDigest: gcr.io/ba882-team9/ml-sf-train@sha256:ac4d5c693132d3d18a1fbe28ace80f83225901020021098b63f8058d99761881
+      logUrl: https://console.cloud.google.com/logs/viewer?project=ba882-team9&resource=cloud_run_revision/service_name/ml-sf-train/revision_name/ml-sf-train-00007-45r&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22ml-sf-train%22%0Aresource.labels.revision_name%3D%22ml-sf-train-00007-45r%22
+      observedGeneration: 1
+  serviceName: run.googleapis.com
+  status:
+    message: Ready condition status changed to True for Revision ml-sf-train-00007-45r.
+receiveTimestamp: '2024-11-09T19:55:28.222756942Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: INFO
+timestamp: '2024-11-09T19:55:27.982437Z'
+---
+insertId: 672fbe2f000d891bb8c7bef2
+labels:
+  instanceId: 004940b3b8d0739791b3b0225b43510a983017659b4552e1faa6abaa3f6f933c5a3e9c0b186df327152cf13750bcd17ea063dae4973c346ade36ab69a6a8229e17cbca4786
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:55:28.203914003Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:55:27 +0000] [2] [INFO] Booting worker with pid: 2'
+timestamp: '2024-11-09T19:55:27.887067Z'
+---
+insertId: 672fbe2f000d85a7525dcfda
+labels:
+  instanceId: 004940b3b8d0739791b3b0225b43510a983017659b4552e1faa6abaa3f6f933c5a3e9c0b186df327152cf13750bcd17ea063dae4973c346ade36ab69a6a8229e17cbca4786
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:55:27.895360815Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: INFO
+textPayload: Default STARTUP TCP probe succeeded after 1 attempt for container "ml-sf-train-1"
+  on port 8080.
+timestamp: '2024-11-09T19:55:27.886183Z'
+---
+insertId: 672fbe2f000d34f809b4c12e
+labels:
+  instanceId: 004940b3b8d0739791b3b0225b43510a983017659b4552e1faa6abaa3f6f933c5a3e9c0b186df327152cf13750bcd17ea063dae4973c346ade36ab69a6a8229e17cbca4786
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:55:28.203914003Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:55:27 +0000] [1] [INFO] Using worker: gthread'
+timestamp: '2024-11-09T19:55:27.865528Z'
+---
+insertId: 672fbe2f000d34d2d1e0d567
+labels:
+  instanceId: 004940b3b8d0739791b3b0225b43510a983017659b4552e1faa6abaa3f6f933c5a3e9c0b186df327152cf13750bcd17ea063dae4973c346ade36ab69a6a8229e17cbca4786
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:55:28.203914003Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:55:27 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080
+  (1)'
+timestamp: '2024-11-09T19:55:27.865490Z'
+---
+insertId: 672fbe2f000d3032ef032cd1
+labels:
+  instanceId: 004940b3b8d0739791b3b0225b43510a983017659b4552e1faa6abaa3f6f933c5a3e9c0b186df327152cf13750bcd17ea063dae4973c346ade36ab69a6a8229e17cbca4786
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:55:27.872144782Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00007-45r
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:55:27 +0000] [1] [INFO] Starting gunicorn 20.1.0'
+timestamp: '2024-11-09T19:55:27.864306Z'
+---
+insertId: 7is12udnqv2
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Factivity
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  authenticationInfo:
+    principalEmail: 1076180164120-compute@developer.gserviceaccount.com
+    principalSubject: serviceAccount:1076180164120-compute@developer.gserviceaccount.com
+  authorizationInfo:
+  - granted: true
+    permission: run.services.update
+    permissionType: ADMIN_WRITE
+    resource: namespaces/ba882-team9/services/ml-sf-train
+    resourceAttributes: {}
+  - granted: true
+    permission: run.services.update
+    permissionType: ADMIN_WRITE
+    resourceAttributes:
+      name: namespaces/ba882-team9/services/ml-sf-train
+      service: run.googleapis.com/
+      type: run.googleapis.com/Service
+  methodName: google.cloud.run.v1.Services.ReplaceService
+  request:
+    '@type': type.googleapis.com/google.cloud.run.v1.ReplaceServiceRequest
+    name: namespaces/ba882-team9/services/ml-sf-train
+    service:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      metadata:
+        annotations:
+          run.googleapis.com/client-name: gcloud
+          run.googleapis.com/client-version: 498.0.0
+          run.googleapis.com/ingress: all
+          run.googleapis.com/ingress-status: all
+          run.googleapis.com/operation-id: 7ddc980a-3f8a-4d18-9695-71e42c092c4b
+          run.googleapis.com/urls: '["https://ml-sf-train-1076180164120.us-central1.run.app","https://ml-sf-train-fefwkff7jq-uc.a.run.app"]'
+          serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+          serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+        creationTimestamp: '2024-11-09T19:06:01.488432Z'
+        generation: 6
+        labels:
+          cloud.googleapis.com/location: us-central1
+        name: ml-sf-train
+        namespace: '1076180164120'
+        resourceVersion: AAYmgCJndhc
+        selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-train
+        uid: eeef40cc-b987-4925-8529-5f8af2065b08
+      spec:
+        template:
+          metadata:
+            annotations:
+              autoscaling.knative.dev/maxScale: '100'
+              run.googleapis.com/client-name: gcloud
+              run.googleapis.com/client-version: 498.0.0
+              run.googleapis.com/startup-cpu-boost: 'true'
+            labels:
+              client.knative.dev/nonce: eyzijsqshb
+              run.googleapis.com/startupProbeType: Default
+          spec:
+            containerConcurrency: 80
+            serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+            timeoutSeconds: 300
+        traffic:
+        - latestRevision: true
+          percent: 100
+      status:
+        conditions:
+        - lastTransitionTime: '2024-11-09T19:47:15.139095Z'
+          status: 'True'
+          type: Ready
+        - lastTransitionTime: '2024-11-09T19:47:14.514947Z'
+          status: 'True'
+          type: ConfigurationsReady
+        - lastTransitionTime: '2024-11-09T19:47:15.111481Z'
+          status: 'True'
+          type: RoutesReady
+        latestCreatedRevisionName: ml-sf-train-00006-859
+        latestReadyRevisionName: ml-sf-train-00006-859
+        observedGeneration: 6
+        traffic:
+        - latestRevision: true
+          percent: 100
+          revisionName: ml-sf-train-00006-859
+        url: https://ml-sf-train-fefwkff7jq-uc.a.run.app
+  requestMetadata:
+    callerIp: 35.194.91.125
+    callerSuppliedUserAgent: google-cloud-sdk gcloud/498.0.0 command/gcloud.run.deploy
+      invocation-id/c7b17a2d3da14445acbc5c156eef0edd environment/GCE environment-version/None
+      client-os/LINUX client-os-ver/5.10.0 client-pltf-arch/x86_64 interactive/False
+      from-script/True python/3.11.9 term/ (Linux 5.10.0-33-cloud-amd64),gzip(gfe)
+    destinationAttributes: {}
+    requestAttributes:
+      auth: {}
+      time: '2024-11-09T19:54:50.057141Z'
+  resourceLocation:
+    currentLocations:
+    - us-central1
+  resourceName: namespaces/ba882-team9/services/ml-sf-train
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: 28b2bbb9-29e8-44ab-b974-e898ff6ef7da
+        run.googleapis.com/urls: '["https://ml-sf-train-1076180164120.us-central1.run.app","https://ml-sf-train-fefwkff7jq-uc.a.run.app"]'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+        serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:06:01.488432Z'
+      generation: 7
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: ml-sf-train
+      namespace: '1076180164120'
+      resourceVersion: AAYmgD2EeCU
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-train
+      uid: eeef40cc-b987-4925-8529-5f8af2065b08
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '100'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 498.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: eyzijsqshb
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:47:15.139095Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:47:14.514947Z'
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2024-11-09T19:47:15.111481Z'
+        status: 'True'
+        type: RoutesReady
+      latestCreatedRevisionName: ml-sf-train-00006-859
+      latestReadyRevisionName: ml-sf-train-00006-859
+      observedGeneration: 6
+      traffic:
+      - latestRevision: true
+        percent: 100
+        revisionName: ml-sf-train-00006-859
+      url: https://ml-sf-train-fefwkff7jq-uc.a.run.app
+  serviceName: run.googleapis.com
+receiveTimestamp: '2024-11-09T19:54:50.929276748Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ''
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: NOTICE
+timestamp: '2024-11-09T19:54:49.898851Z'
+---
+insertId: 672fbcfd000d672edad7ea35
+labels:
+  instanceId: 004940b3b8afa4ba0809b90287bc80a0da4cdd7af0f5366170a342370c5195136e8e4cd889a516718cfbad0a63b6dded5b209166840c456ca03fc666b6186eca3b8de3fb7389
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:50:21.945003402Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:50:21 +0000] [1] [INFO] Reason: Worker failed to boot.'
+timestamp: '2024-11-09T19:50:21.878382Z'
+---
+insertId: 672fbcfd000d66bf3aaaa9de
+labels:
+  instanceId: 004940b3b8afa4ba0809b90287bc80a0da4cdd7af0f5366170a342370c5195136e8e4cd889a516718cfbad0a63b6dded5b209166840c456ca03fc666b6186eca3b8de3fb7389
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:50:21.945003402Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:50:21 +0000] [1] [INFO] Shutting down: Master'
+timestamp: '2024-11-09T19:50:21.878271Z'
+---
+insertId: 672fbcfd000c1864cef9508f
+labels:
+  instanceId: 004940b3b8afa4ba0809b90287bc80a0da4cdd7af0f5366170a342370c5195136e8e4cd889a516718cfbad0a63b6dded5b209166840c456ca03fc666b6186eca3b8de3fb7389
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:50:21.945003402Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:50:21 +0000] [2] [INFO] Worker exiting (pid: 2)'
+timestamp: '2024-11-09T19:50:21.792676Z'
+---
+errorGroups:
+- id: CNW8wbmU7rS5eQ
+insertId: 672fbcfd000c17f70eb91f65
+labels:
+  instanceId: 004940b3b8afa4ba0809b90287bc80a0da4cdd7af0f5366170a342370c5195136e8e4cd889a516718cfbad0a63b6dded5b209166840c456ca03fc666b6186eca3b8de3fb7389
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:50:21.945003402Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: ERROR
+textPayload: |-
+  Traceback (most recent call last):
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+      worker.init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+      super().init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+      self.load_wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+      self.wsgi = self.app.wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+      self.callable = self.load()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+      return self.load_wsgiapp()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+      return util.import_app(self.app_uri)
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/util.py", line 359, in import_app
+      mod = importlib.import_module(module)
+    File "/usr/local/lib/python3.9/importlib/__init__.py", line 127, in import_module
+      return _bootstrap._gcd_import(name[level:], package, level)
+    File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+    File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+    File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+    File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+    File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+    File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+    File "/app/main.py", line 4, in <module>
+      import pandas as pd
+    File "/usr/local/lib/python3.9/site-packages/pandas/__init__.py", line 22, in <module>
+      from pandas.compat import is_numpy_dev as _is_numpy_dev
+    File "/usr/local/lib/python3.9/site-packages/pandas/compat/__init__.py", line 14, in <module>
+      from pandas.compat.numpy import (
+    File "/usr/local/lib/python3.9/site-packages/pandas/compat/numpy/__init__.py", line 4, in <module>
+      from pandas.util.version import Version
+    File "/usr/local/lib/python3.9/site-packages/pandas/util/__init__.py", line 1, in <module>
+      from pandas.util._decorators import (  # noqa:F401
+    File "/usr/local/lib/python3.9/site-packages/pandas/util/_decorators.py", line 14, in <module>
+      from pandas._libs.properties import cache_readonly  # noqa:F401
+    File "/usr/local/lib/python3.9/site-packages/pandas/_libs/__init__.py", line 13, in <module>
+      from pandas._libs.interval import Interval
+    File "pandas/_libs/interval.pyx", line 1, in init pandas._libs.interval
+  ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+timestamp: '2024-11-09T19:50:21.792567Z'
+---
+insertId: 672fbcfd000c17b1a773531a
+labels:
+  instanceId: 004940b3b8afa4ba0809b90287bc80a0da4cdd7af0f5366170a342370c5195136e8e4cd889a516718cfbad0a63b6dded5b209166840c456ca03fc666b6186eca3b8de3fb7389
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:50:21.945003402Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:50:21 +0000] [2] [ERROR] Exception in worker process'
+timestamp: '2024-11-09T19:50:21.792497Z'
+---
+insertId: 672fbcfd000497a61e3b090a
+labels:
+  instanceId: 004940b3b8afa4ba0809b90287bc80a0da4cdd7af0f5366170a342370c5195136e8e4cd889a516718cfbad0a63b6dded5b209166840c456ca03fc666b6186eca3b8de3fb7389
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:50:21.612929428Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:50:21 +0000] [2] [INFO] Booting worker with pid: 2'
+timestamp: '2024-11-09T19:50:21.300966Z'
+---
+insertId: 672fbcfd0004834479d6b7f9
+labels:
+  instanceId: 004940b3b8afa4ba0809b90287bc80a0da4cdd7af0f5366170a342370c5195136e8e4cd889a516718cfbad0a63b6dded5b209166840c456ca03fc666b6186eca3b8de3fb7389
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:50:21.302484003Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: INFO
+textPayload: Default STARTUP TCP probe succeeded after 1 attempt for container "ml-sf-train-1"
+  on port 8080.
+timestamp: '2024-11-09T19:50:21.295748Z'
+---
+insertId: 672fbcfd000431417b0572d1
+labels:
+  instanceId: 004940b3b8afa4ba0809b90287bc80a0da4cdd7af0f5366170a342370c5195136e8e4cd889a516718cfbad0a63b6dded5b209166840c456ca03fc666b6186eca3b8de3fb7389
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:50:21.612929428Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:50:21 +0000] [1] [INFO] Using worker: gthread'
+timestamp: '2024-11-09T19:50:21.274753Z'
+---
+insertId: 672fbcfd0004306db7406d74
+labels:
+  instanceId: 004940b3b8afa4ba0809b90287bc80a0da4cdd7af0f5366170a342370c5195136e8e4cd889a516718cfbad0a63b6dded5b209166840c456ca03fc666b6186eca3b8de3fb7389
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:50:21.612929428Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:50:21 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080
+  (1)'
+timestamp: '2024-11-09T19:50:21.274541Z'
+---
+insertId: 672fbcfd00042bdba3632cd2
+labels:
+  instanceId: 004940b3b8afa4ba0809b90287bc80a0da4cdd7af0f5366170a342370c5195136e8e4cd889a516718cfbad0a63b6dded5b209166840c456ca03fc666b6186eca3b8de3fb7389
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:50:21.278748297Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:50:21 +0000] [1] [INFO] Starting gunicorn 20.1.0'
+timestamp: '2024-11-09T19:50:21.273371Z'
+---
+httpRequest:
+  latency: 1.139642003s
+  protocol: HTTP/1.1
+  remoteIp: 35.237.233.73
+  requestMethod: POST
+  requestSize: '282'
+  requestUrl: https://ml-sf-train-1076180164120.us-central1.run.app/train
+  responseSize: '67'
+  serverIp: 216.239.34.53
+  status: 503
+  userAgent: curl/8.5.0
+insertId: 672fbcfd000dba9f4bbfc14f
+labels:
+  instanceId: 004940b3b8afa4ba0809b90287bc80a0da4cdd7af0f5366170a342370c5195136e8e4cd889a516718cfbad0a63b6dded5b209166840c456ca03fc666b6186eca3b8de3fb7389
+logName: projects/ba882-team9/logs/run.googleapis.com%2Frequests
+receiveTimestamp: '2024-11-09T19:50:21.910413463Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: ERROR
+spanId: 4e0ecdd56c8445c2
+textPayload: 'The request failed because either the HTTP response was malformed or
+  connection to the instance had an error. Additional troubleshooting documentation
+  can be found at: https://cloud.google.com/run/docs/troubleshooting#malformed-response-or-connection-error'
+timestamp: '2024-11-09T19:50:20.607342Z'
+trace: projects/ba882-team9/traces/2ffbf5a826d49a2c9e9d8cb5525ea8b0
+traceSampled: true
+---
+insertId: 672fbc9f000d86f67a5f7e79
+labels:
+  container_name: ml-sf-train-1
+  instanceId: 004940b3b8e660bbaa31fcea6f094b50025789a0e5dd071a5c90a2fc84071f8548cd0c3bbb06b60c094eb81b4fb4cd92dfa2963df5e28b170ab1445fb39cd675b92f6b862541
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:48:47.893752049Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: WARNING
+textPayload: Container called exit(3).
+timestamp: '2024-11-09T19:48:47.886484908Z'
+---
+insertId: 672fbc980006befe5e2f86c3
+labels:
+  instanceId: 004940b3b8e660bbaa31fcea6f094b50025789a0e5dd071a5c90a2fc84071f8548cd0c3bbb06b60c094eb81b4fb4cd92dfa2963df5e28b170ab1445fb39cd675b92f6b862541
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:48:40.678621850Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:48:40 +0000] [1] [INFO] Reason: Worker failed to boot.'
+timestamp: '2024-11-09T19:48:40.442110Z'
+---
+insertId: 672fbc98000538d340f65a21
+labels:
+  instanceId: 004940b3b8e660bbaa31fcea6f094b50025789a0e5dd071a5c90a2fc84071f8548cd0c3bbb06b60c094eb81b4fb4cd92dfa2963df5e28b170ab1445fb39cd675b92f6b862541
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:48:40.351530059Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:48:39 +0000] [1] [INFO] Shutting down: Master'
+timestamp: '2024-11-09T19:48:40.342227Z'
+---
+insertId: 672fbc82000ce0fb10f45215
+labels:
+  instanceId: 004940b3b8e660bbaa31fcea6f094b50025789a0e5dd071a5c90a2fc84071f8548cd0c3bbb06b60c094eb81b4fb4cd92dfa2963df5e28b170ab1445fb39cd675b92f6b862541
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:48:19.083900924Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:48:18 +0000] [2] [INFO] Worker exiting (pid: 2)'
+timestamp: '2024-11-09T19:48:18.844027Z'
+---
+errorGroups:
+- id: CNW8wbmU7rS5eQ
+insertId: 672fbc82000b5cda84ba715e
+labels:
+  instanceId: 004940b3b8e660bbaa31fcea6f094b50025789a0e5dd071a5c90a2fc84071f8548cd0c3bbb06b60c094eb81b4fb4cd92dfa2963df5e28b170ab1445fb39cd675b92f6b862541
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:48:18.750036857Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: ERROR
+textPayload: |-
+  Traceback (most recent call last):
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+      worker.init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+      super().init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+      self.load_wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+      self.wsgi = self.app.wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+      self.callable = self.load()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+      return self.load_wsgiapp()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+      return util.import_app(self.app_uri)
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/util.py", line 359, in import_app
+      mod = importlib.import_module(module)
+    File "/usr/local/lib/python3.9/importlib/__init__.py", line 127, in import_module
+      return _bootstrap._gcd_import(name[level:], package, level)
+    File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+    File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+    File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+    File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+    File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+    File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+    File "/app/main.py", line 4, in <module>
+      import pandas as pd
+    File "/usr/local/lib/python3.9/site-packages/pandas/__init__.py", line 22, in <module>
+      from pandas.compat import is_numpy_dev as _is_numpy_dev
+    File "/usr/local/lib/python3.9/site-packages/pandas/compat/__init__.py", line 14, in <module>
+      from pandas.compat.numpy import (
+    File "/usr/local/lib/python3.9/site-packages/pandas/compat/numpy/__init__.py", line 4, in <module>
+      from pandas.util.version import Version
+    File "/usr/local/lib/python3.9/site-packages/pandas/util/__init__.py", line 1, in <module>
+      from pandas.util._decorators import (  # noqa:F401
+    File "/usr/local/lib/python3.9/site-packages/pandas/util/_decorators.py", line 14, in <module>
+      from pandas._libs.properties import cache_readonly  # noqa:F401
+    File "/usr/local/lib/python3.9/site-packages/pandas/_libs/__init__.py", line 13, in <module>
+      from pandas._libs.interval import Interval
+    File "pandas/_libs/interval.pyx", line 1, in init pandas._libs.interval
+  ValueError: numpy.dtype size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObject
+timestamp: '2024-11-09T19:48:18.744666Z'
+---
+insertId: 672fbc82000b5c9746a556fc
+labels:
+  instanceId: 004940b3b8e660bbaa31fcea6f094b50025789a0e5dd071a5c90a2fc84071f8548cd0c3bbb06b60c094eb81b4fb4cd92dfa2963df5e28b170ab1445fb39cd675b92f6b862541
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:48:18.750036857Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:48:16 +0000] [2] [ERROR] Exception in worker process'
+timestamp: '2024-11-09T19:48:18.744599Z'
+---
+insertId: -twdweduzno
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/ba882-team9/services/ml-sf-train
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: 7ddc980a-3f8a-4d18-9695-71e42c092c4b
+        run.googleapis.com/urls: '["https://ml-sf-train-1076180164120.us-central1.run.app","https://ml-sf-train-fefwkff7jq-uc.a.run.app"]'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+        serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:06:01.488432Z'
+      generation: 6
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: ml-sf-train
+      namespace: '1076180164120'
+      resourceVersion: AAYmgCJndhc
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-train
+      uid: eeef40cc-b987-4925-8529-5f8af2065b08
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '100'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 498.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: kamzsjuwho
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          containers:
+          - env:
+            - name: MOTHERDUCK_TOKEN
+              value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1Y2hlbmx5QGJ1LmVkdSIsInNlc3Npb24iOiJ5dWNoZW5seS5idS5lZHUiLCJwYXQiOiJvQUFnWld6YUxMQUd0RndfdDRKTFMwRlFDbVZFUEtnSzZ5VW14NEluUDhvIiwidXNlcklkIjoiYTI1NGQxMWEtZGNjMy00YTljLThlZGMtZjlmNTc4OWY1ZWY5IiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzI4NTg2NDI1fQ.GSJursfAW8KiHiQNWruyCWeEeIUTUUTpCjA0ffnSkkQ
+            - name: DB_SCHEMA
+              value: your_schema_name
+            image: gcr.io/ba882-team9/ml-sf-train
+            ports:
+            - containerPort: 8080
+              name: http1
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 512Mi
+            startupProbe:
+              failureThreshold: 1
+              periodSeconds: 240
+              tcpSocket:
+                port: 8080
+              timeoutSeconds: 240
+          serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      address:
+        url: https://ml-sf-train-fefwkff7jq-uc.a.run.app
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:47:15.139095Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:47:14.514947Z'
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2024-11-09T19:47:15.111481Z'
+        status: 'True'
+        type: RoutesReady
+      latestCreatedRevisionName: ml-sf-train-00006-859
+      latestReadyRevisionName: ml-sf-train-00006-859
+      observedGeneration: 6
+      traffic:
+      - latestRevision: true
+        percent: 100
+        revisionName: ml-sf-train-00006-859
+      url: https://ml-sf-train-fefwkff7jq-uc.a.run.app
+  serviceName: run.googleapis.com
+  status:
+    message: Ready condition status changed to True for Service ml-sf-train.
+receiveTimestamp: '2024-11-09T19:47:15.347910138Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ''
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: INFO
+timestamp: '2024-11-09T19:47:15.151983Z'
+---
+insertId: -nj6i8qe13lga
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/ba882-team9/revisions/ml-sf-train-00006-859
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Revision
+    apiVersion: serving.knative.dev/v1
+    kind: Revision
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: '100'
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/operation-id: 7ddc980a-3f8a-4d18-9695-71e42c092c4b
+        run.googleapis.com/startup-cpu-boost: 'true'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:46:45.204106Z'
+      generation: 1
+      labels:
+        client.knative.dev/nonce: kamzsjuwho
+        cloud.googleapis.com/location: us-central1
+        run.googleapis.com/startupProbeType: Default
+        serving.knative.dev/configuration: ml-sf-train
+        serving.knative.dev/configurationGeneration: '6'
+        serving.knative.dev/route: ml-sf-train
+        serving.knative.dev/service: ml-sf-train
+        serving.knative.dev/serviceUid: eeef40cc-b987-4925-8529-5f8af2065b08
+      name: ml-sf-train-00006-859
+      namespace: '1076180164120'
+      ownerReferences:
+      - apiVersion: serving.knative.dev/v1
+        blockOwnerDeletion: true
+        controller: true
+        kind: Configuration
+        name: ml-sf-train
+        uid: 44fc5764-8db4-45c4-96f7-310c90a311bb
+      resourceVersion: AAYmgCJTs4A
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/revisions/ml-sf-train-00006-859
+      uid: 44112ad6-d7a9-47a3-aef2-affbd04d46ca
+    spec:
+      containerConcurrency: 80
+      containers:
+      - env:
+        - name: MOTHERDUCK_TOKEN
+          value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1Y2hlbmx5QGJ1LmVkdSIsInNlc3Npb24iOiJ5dWNoZW5seS5idS5lZHUiLCJwYXQiOiJvQUFnWld6YUxMQUd0RndfdDRKTFMwRlFDbVZFUEtnSzZ5VW14NEluUDhvIiwidXNlcklkIjoiYTI1NGQxMWEtZGNjMy00YTljLThlZGMtZjlmNTc4OWY1ZWY5IiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzI4NTg2NDI1fQ.GSJursfAW8KiHiQNWruyCWeEeIUTUUTpCjA0ffnSkkQ
+        - name: DB_SCHEMA
+          value: your_schema_name
+        image: gcr.io/ba882-team9/ml-sf-train@sha256:56e0960e67cdb9e2a53bfb411fbc9ccac4511da4df5a82a027e48a14d46cd572
+        name: ml-sf-train-1
+        ports:
+        - containerPort: 8080
+          name: http1
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 512Mi
+        startupProbe:
+          failureThreshold: 1
+          periodSeconds: 240
+          tcpSocket:
+            port: 8080
+          timeoutSeconds: 240
+      serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+      timeoutSeconds: 300
+    status:
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:47:13.844096Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:47:13.784682Z'
+        message: Container became healthy.
+        status: 'True'
+        type: ContainerHealthy
+      - lastTransitionTime: '2024-11-09T19:47:09.918279Z'
+        message: Container image import completed in 24.04001s.
+        status: 'True'
+        type: ContainerReady
+      - lastTransitionTime: '2024-11-09T19:47:12.635952Z'
+        message: Revision deployment finished in 2.72124s. Checking container health.
+        status: 'True'
+        type: ResourcesAvailable
+      containerStatuses:
+      - imageDigest: gcr.io/ba882-team9/ml-sf-train@sha256:56e0960e67cdb9e2a53bfb411fbc9ccac4511da4df5a82a027e48a14d46cd572
+        name: ml-sf-train-1
+      imageDigest: gcr.io/ba882-team9/ml-sf-train@sha256:56e0960e67cdb9e2a53bfb411fbc9ccac4511da4df5a82a027e48a14d46cd572
+      logUrl: https://console.cloud.google.com/logs/viewer?project=ba882-team9&resource=cloud_run_revision/service_name/ml-sf-train/revision_name/ml-sf-train-00006-859&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22ml-sf-train%22%0Aresource.labels.revision_name%3D%22ml-sf-train-00006-859%22
+      observedGeneration: 1
+  serviceName: run.googleapis.com
+  status:
+    message: Ready condition status changed to True for Revision ml-sf-train-00006-859.
+receiveTimestamp: '2024-11-09T19:47:14.809287096Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: INFO
+timestamp: '2024-11-09T19:47:13.853724Z'
+---
+insertId: 672fbc41000be0fb13511ddc
+labels:
+  instanceId: 004940b3b8e660bbaa31fcea6f094b50025789a0e5dd071a5c90a2fc84071f8548cd0c3bbb06b60c094eb81b4fb4cd92dfa2963df5e28b170ab1445fb39cd675b92f6b862541
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:47:14.091943015Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:47:13 +0000] [2] [INFO] Booting worker with pid: 2'
+timestamp: '2024-11-09T19:47:13.778491Z'
+---
+insertId: 672fbc41000bb46eee55839e
+labels:
+  instanceId: 004940b3b8e660bbaa31fcea6f094b50025789a0e5dd071a5c90a2fc84071f8548cd0c3bbb06b60c094eb81b4fb4cd92dfa2963df5e28b170ab1445fb39cd675b92f6b862541
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:47:13.772512651Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: INFO
+textPayload: Default STARTUP TCP probe succeeded after 1 attempt for container "ml-sf-train-1"
+  on port 8080.
+timestamp: '2024-11-09T19:47:13.767086Z'
+---
+insertId: 672fbc41000b8395ace3ad07
+labels:
+  instanceId: 004940b3b8e660bbaa31fcea6f094b50025789a0e5dd071a5c90a2fc84071f8548cd0c3bbb06b60c094eb81b4fb4cd92dfa2963df5e28b170ab1445fb39cd675b92f6b862541
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:47:14.091943015Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:47:13 +0000] [1] [INFO] Using worker: gthread'
+timestamp: '2024-11-09T19:47:13.754581Z'
+---
+insertId: 672fbc41000b8348de1557ce
+labels:
+  instanceId: 004940b3b8e660bbaa31fcea6f094b50025789a0e5dd071a5c90a2fc84071f8548cd0c3bbb06b60c094eb81b4fb4cd92dfa2963df5e28b170ab1445fb39cd675b92f6b862541
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:47:14.091943015Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:47:13 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080
+  (1)'
+timestamp: '2024-11-09T19:47:13.754504Z'
+---
+insertId: 672fbc41000b7e6a4817f44c
+labels:
+  instanceId: 004940b3b8e660bbaa31fcea6f094b50025789a0e5dd071a5c90a2fc84071f8548cd0c3bbb06b60c094eb81b4fb4cd92dfa2963df5e28b170ab1445fb39cd675b92f6b862541
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:47:13.759998800Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00006-859
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:47:13 +0000] [1] [INFO] Starting gunicorn 20.1.0'
+timestamp: '2024-11-09T19:47:13.753258Z'
+---
+insertId: koubsdxjn1
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Factivity
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  authenticationInfo:
+    principalEmail: 1076180164120-compute@developer.gserviceaccount.com
+    principalSubject: serviceAccount:1076180164120-compute@developer.gserviceaccount.com
+  authorizationInfo:
+  - granted: true
+    permission: run.services.update
+    permissionType: ADMIN_WRITE
+    resource: namespaces/ba882-team9/services/ml-sf-train
+    resourceAttributes: {}
+  - granted: true
+    permission: run.services.update
+    permissionType: ADMIN_WRITE
+    resourceAttributes:
+      name: namespaces/ba882-team9/services/ml-sf-train
+      service: run.googleapis.com/
+      type: run.googleapis.com/Service
+  methodName: google.cloud.run.v1.Services.ReplaceService
+  request:
+    '@type': type.googleapis.com/google.cloud.run.v1.ReplaceServiceRequest
+    name: namespaces/ba882-team9/services/ml-sf-train
+    service:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      metadata:
+        annotations:
+          run.googleapis.com/client-name: gcloud
+          run.googleapis.com/client-version: 498.0.0
+          run.googleapis.com/ingress: all
+          run.googleapis.com/ingress-status: all
+          run.googleapis.com/operation-id: 866fe653-d987-4f4a-b046-5d0e17bf0da2
+          run.googleapis.com/urls: '["https://ml-sf-train-1076180164120.us-central1.run.app","https://ml-sf-train-fefwkff7jq-uc.a.run.app"]'
+          serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+          serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+        creationTimestamp: '2024-11-09T19:06:01.488432Z'
+        generation: 5
+        labels:
+          cloud.googleapis.com/location: us-central1
+        name: ml-sf-train
+        namespace: '1076180164120'
+        resourceVersion: AAYmf/XLZ8I
+        selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-train
+        uid: eeef40cc-b987-4925-8529-5f8af2065b08
+      spec:
+        template:
+          metadata:
+            annotations:
+              autoscaling.knative.dev/maxScale: '100'
+              run.googleapis.com/client-name: gcloud
+              run.googleapis.com/client-version: 498.0.0
+              run.googleapis.com/startup-cpu-boost: 'true'
+            labels:
+              client.knative.dev/nonce: kamzsjuwho
+              run.googleapis.com/startupProbeType: Default
+          spec:
+            containerConcurrency: 80
+            serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+            timeoutSeconds: 300
+        traffic:
+        - latestRevision: true
+          percent: 100
+      status:
+        conditions:
+        - lastTransitionTime: '2024-11-09T19:34:46.714306Z'
+          status: 'True'
+          type: Ready
+        - lastTransitionTime: '2024-11-09T19:34:45.464753Z'
+          status: 'True'
+          type: ConfigurationsReady
+        - lastTransitionTime: '2024-11-09T19:34:46.683309Z'
+          status: 'True'
+          type: RoutesReady
+        latestCreatedRevisionName: ml-sf-train-00005-mnf
+        latestReadyRevisionName: ml-sf-train-00005-mnf
+        observedGeneration: 5
+        traffic:
+        - latestRevision: true
+          percent: 100
+          revisionName: ml-sf-train-00005-mnf
+        url: https://ml-sf-train-fefwkff7jq-uc.a.run.app
+  requestMetadata:
+    callerIp: 34.85.196.91
+    callerSuppliedUserAgent: google-cloud-sdk gcloud/498.0.0 command/gcloud.run.deploy
+      invocation-id/b12b48063a5b47e5bd7f6d90dbf27462 environment/GCE environment-version/None
+      client-os/LINUX client-os-ver/5.10.0 client-pltf-arch/x86_64 interactive/False
+      from-script/True python/3.11.9 term/ (Linux 5.10.0-33-cloud-amd64),gzip(gfe)
+    destinationAttributes: {}
+    requestAttributes:
+      auth: {}
+      time: '2024-11-09T19:46:45.166631Z'
+  resourceLocation:
+    currentLocations:
+    - us-central1
+  resourceName: namespaces/ba882-team9/services/ml-sf-train
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: 7ddc980a-3f8a-4d18-9695-71e42c092c4b
+        run.googleapis.com/urls: '["https://ml-sf-train-1076180164120.us-central1.run.app","https://ml-sf-train-fefwkff7jq-uc.a.run.app"]'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+        serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:06:01.488432Z'
+      generation: 6
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: ml-sf-train
+      namespace: '1076180164120'
+      resourceVersion: AAYmgCCdpBU
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-train
+      uid: eeef40cc-b987-4925-8529-5f8af2065b08
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '100'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 498.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: kamzsjuwho
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:34:46.714306Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:34:45.464753Z'
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2024-11-09T19:34:46.683309Z'
+        status: 'True'
+        type: RoutesReady
+      latestCreatedRevisionName: ml-sf-train-00005-mnf
+      latestReadyRevisionName: ml-sf-train-00005-mnf
+      observedGeneration: 5
+      traffic:
+      - latestRevision: true
+        percent: 100
+        revisionName: ml-sf-train-00005-mnf
+      url: https://ml-sf-train-fefwkff7jq-uc.a.run.app
+  serviceName: run.googleapis.com
+receiveTimestamp: '2024-11-09T19:46:46.147164766Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ''
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: NOTICE
+timestamp: '2024-11-09T19:46:45.037091Z'
+---
+insertId: 672fbb7a0003b0e7be97a54d
+labels:
+  instanceId: 004940b3b83b15ff2611c4290621d6d36a7b88faaafe7399e48007eb5a277d91b31355822179a6784cfaa6097da7c44495acb88fdb8cd1ef3585547020ad1ac09774a8e643
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:43:54.367397810Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:43:54 +0000] [1] [INFO] Reason: Worker failed to boot.'
+timestamp: '2024-11-09T19:43:54.241895Z'
+---
+insertId: 672fbb7a0003b0c2cf44154b
+labels:
+  instanceId: 004940b3b83b15ff2611c4290621d6d36a7b88faaafe7399e48007eb5a277d91b31355822179a6784cfaa6097da7c44495acb88fdb8cd1ef3585547020ad1ac09774a8e643
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:43:54.367397810Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:43:54 +0000] [1] [INFO] Shutting down: Master'
+timestamp: '2024-11-09T19:43:54.241858Z'
+---
+insertId: 672fbb7a0002a42c100192f3
+labels:
+  instanceId: 004940b3b83b15ff2611c4290621d6d36a7b88faaafe7399e48007eb5a277d91b31355822179a6784cfaa6097da7c44495acb88fdb8cd1ef3585547020ad1ac09774a8e643
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:43:54.367397810Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:43:54 +0000] [2] [INFO] Worker exiting (pid: 2)'
+timestamp: '2024-11-09T19:43:54.173100Z'
+---
+errorGroups:
+- id: CJ_FiaS6heGW7wE
+insertId: 672fbb7a0002a3cee36807be
+labels:
+  instanceId: 004940b3b83b15ff2611c4290621d6d36a7b88faaafe7399e48007eb5a277d91b31355822179a6784cfaa6097da7c44495acb88fdb8cd1ef3585547020ad1ac09774a8e643
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:43:54.367397810Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: ERROR
+textPayload: |-
+  Traceback (most recent call last):
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+      worker.init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+      super().init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+      self.load_wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+      self.wsgi = self.app.wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+      self.callable = self.load()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+      return self.load_wsgiapp()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+      return util.import_app(self.app_uri)
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/util.py", line 359, in import_app
+      mod = importlib.import_module(module)
+    File "/usr/local/lib/python3.9/importlib/__init__.py", line 127, in import_module
+      return _bootstrap._gcd_import(name[level:], package, level)
+    File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+    File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+    File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+    File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+    File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+    File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+    File "/app/main.py", line 3, in <module>
+      from flask import Flask, jsonify
+    File "/usr/local/lib/python3.9/site-packages/flask/__init__.py", line 7, in <module>
+      from .app import Flask as Flask
+    File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 28, in <module>
+      from . import cli
+    File "/usr/local/lib/python3.9/site-packages/flask/cli.py", line 18, in <module>
+      from .helpers import get_debug_flag
+    File "/usr/local/lib/python3.9/site-packages/flask/helpers.py", line 16, in <module>
+      from werkzeug.urls import url_quote
+  ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.9/site-packages/werkzeug/urls.py)
+timestamp: '2024-11-09T19:43:54.173006Z'
+---
+insertId: 672fbb7a0002a3867f157fea
+labels:
+  instanceId: 004940b3b83b15ff2611c4290621d6d36a7b88faaafe7399e48007eb5a277d91b31355822179a6784cfaa6097da7c44495acb88fdb8cd1ef3585547020ad1ac09774a8e643
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:43:54.367397810Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:43:54 +0000] [2] [ERROR] Exception in worker process'
+timestamp: '2024-11-09T19:43:54.172934Z'
+---
+insertId: 672fbb79000b06cc7752cbf7
+labels:
+  instanceId: 004940b3b83b15ff2611c4290621d6d36a7b88faaafe7399e48007eb5a277d91b31355822179a6784cfaa6097da7c44495acb88fdb8cd1ef3585547020ad1ac09774a8e643
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:43:54.032491939Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:43:53 +0000] [2] [INFO] Booting worker with pid: 2'
+timestamp: '2024-11-09T19:43:53.722636Z'
+---
+insertId: 672fbb79000aed5966a44a94
+labels:
+  instanceId: 004940b3b83b15ff2611c4290621d6d36a7b88faaafe7399e48007eb5a277d91b31355822179a6784cfaa6097da7c44495acb88fdb8cd1ef3585547020ad1ac09774a8e643
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:43:53.722855312Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: INFO
+textPayload: Default STARTUP TCP probe succeeded after 1 attempt for container "ml-sf-train-1"
+  on port 8080.
+timestamp: '2024-11-09T19:43:53.716121Z'
+---
+insertId: 672fbb79000a989e419e724c
+labels:
+  instanceId: 004940b3b83b15ff2611c4290621d6d36a7b88faaafe7399e48007eb5a277d91b31355822179a6784cfaa6097da7c44495acb88fdb8cd1ef3585547020ad1ac09774a8e643
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:43:54.032491939Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:43:53 +0000] [1] [INFO] Using worker: gthread'
+timestamp: '2024-11-09T19:43:53.694430Z'
+---
+insertId: 672fbb79000a985b35d64885
+labels:
+  instanceId: 004940b3b83b15ff2611c4290621d6d36a7b88faaafe7399e48007eb5a277d91b31355822179a6784cfaa6097da7c44495acb88fdb8cd1ef3585547020ad1ac09774a8e643
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:43:54.032491939Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:43:53 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080
+  (1)'
+timestamp: '2024-11-09T19:43:53.694363Z'
+---
+insertId: 672fbb79000a93c16a02f3a1
+labels:
+  instanceId: 004940b3b83b15ff2611c4290621d6d36a7b88faaafe7399e48007eb5a277d91b31355822179a6784cfaa6097da7c44495acb88fdb8cd1ef3585547020ad1ac09774a8e643
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:43:53.700798831Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:43:53 +0000] [1] [INFO] Starting gunicorn 20.1.0'
+timestamp: '2024-11-09T19:43:53.693185Z'
+---
+httpRequest:
+  latency: 1.375519787s
+  protocol: HTTP/1.1
+  remoteIp: 35.237.233.73
+  requestMethod: POST
+  requestSize: '282'
+  requestUrl: https://ml-sf-train-1076180164120.us-central1.run.app/train
+  responseSize: '67'
+  serverIp: 216.239.34.53
+  status: 503
+  userAgent: curl/8.5.0
+insertId: 672fbb7a0003ce6fd9d99fe9
+labels:
+  instanceId: 004940b3b83b15ff2611c4290621d6d36a7b88faaafe7399e48007eb5a277d91b31355822179a6784cfaa6097da7c44495acb88fdb8cd1ef3585547020ad1ac09774a8e643
+logName: projects/ba882-team9/logs/run.googleapis.com%2Frequests
+receiveTimestamp: '2024-11-09T19:43:54.263177098Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: ERROR
+spanId: 87f78211bccb1f85
+textPayload: 'The request failed because either the HTTP response was malformed or
+  connection to the instance had an error. Additional troubleshooting documentation
+  can be found at: https://cloud.google.com/run/docs/troubleshooting#malformed-response-or-connection-error'
+timestamp: '2024-11-09T19:43:52.725778Z'
+trace: projects/ba882-team9/traces/dc472f38fe9ea879a7561a9c966b6115
+traceSampled: true
+---
+insertId: 672fba740003d09d0a061a0d
+labels:
+  instanceId: 004940b3b838eb1eb77ad8cc5c26977579b5bc4548fda23fd347515946e188e4f91b945a13640a24012004ece83166b596a594d97b47ca39e205eeb3672f0821184fd8dc46
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:39:32.440119938Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:39:32 +0000] [1] [INFO] Reason: Worker failed to boot.'
+timestamp: '2024-11-09T19:39:32.250013Z'
+---
+insertId: 672fba740003d052b7410e28
+labels:
+  instanceId: 004940b3b838eb1eb77ad8cc5c26977579b5bc4548fda23fd347515946e188e4f91b945a13640a24012004ece83166b596a594d97b47ca39e205eeb3672f0821184fd8dc46
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:39:32.440119938Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:39:32 +0000] [1] [INFO] Shutting down: Master'
+timestamp: '2024-11-09T19:39:32.249938Z'
+---
+insertId: 672fba7400030d090b3d1a35
+labels:
+  instanceId: 004940b3b838eb1eb77ad8cc5c26977579b5bc4548fda23fd347515946e188e4f91b945a13640a24012004ece83166b596a594d97b47ca39e205eeb3672f0821184fd8dc46
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:39:32.440119938Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:39:32 +0000] [2] [INFO] Worker exiting (pid: 2)'
+timestamp: '2024-11-09T19:39:32.199945Z'
+---
+errorGroups:
+- id: CJ_FiaS6heGW7wE
+insertId: 672fba7400030c94f87b1e78
+labels:
+  instanceId: 004940b3b838eb1eb77ad8cc5c26977579b5bc4548fda23fd347515946e188e4f91b945a13640a24012004ece83166b596a594d97b47ca39e205eeb3672f0821184fd8dc46
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:39:32.440119938Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: ERROR
+textPayload: |-
+  Traceback (most recent call last):
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+      worker.init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+      super().init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+      self.load_wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+      self.wsgi = self.app.wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+      self.callable = self.load()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+      return self.load_wsgiapp()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+      return util.import_app(self.app_uri)
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/util.py", line 359, in import_app
+      mod = importlib.import_module(module)
+    File "/usr/local/lib/python3.9/importlib/__init__.py", line 127, in import_module
+      return _bootstrap._gcd_import(name[level:], package, level)
+    File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+    File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+    File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+    File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+    File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+    File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+    File "/app/main.py", line 3, in <module>
+      from flask import Flask, jsonify
+    File "/usr/local/lib/python3.9/site-packages/flask/__init__.py", line 7, in <module>
+      from .app import Flask as Flask
+    File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 28, in <module>
+      from . import cli
+    File "/usr/local/lib/python3.9/site-packages/flask/cli.py", line 18, in <module>
+      from .helpers import get_debug_flag
+    File "/usr/local/lib/python3.9/site-packages/flask/helpers.py", line 16, in <module>
+      from werkzeug.urls import url_quote
+  ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.9/site-packages/werkzeug/urls.py)
+timestamp: '2024-11-09T19:39:32.199828Z'
+---
+insertId: 672fba7400030c4c9f39ffa1
+labels:
+  instanceId: 004940b3b838eb1eb77ad8cc5c26977579b5bc4548fda23fd347515946e188e4f91b945a13640a24012004ece83166b596a594d97b47ca39e205eeb3672f0821184fd8dc46
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:39:32.440119938Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:39:32 +0000] [2] [ERROR] Exception in worker process'
+timestamp: '2024-11-09T19:39:32.199756Z'
+---
+insertId: 672fba73000c14436f71deb3
+labels:
+  instanceId: 004940b3b838eb1eb77ad8cc5c26977579b5bc4548fda23fd347515946e188e4f91b945a13640a24012004ece83166b596a594d97b47ca39e205eeb3672f0821184fd8dc46
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:39:32.110910070Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:39:31 +0000] [2] [INFO] Booting worker with pid: 2'
+timestamp: '2024-11-09T19:39:31.791619Z'
+---
+insertId: 672fba73000bf6f87228f539
+labels:
+  instanceId: 004940b3b838eb1eb77ad8cc5c26977579b5bc4548fda23fd347515946e188e4f91b945a13640a24012004ece83166b596a594d97b47ca39e205eeb3672f0821184fd8dc46
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:39:31.791358166Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: INFO
+textPayload: Default STARTUP TCP probe succeeded after 1 attempt for container "ml-sf-train-1"
+  on port 8080.
+timestamp: '2024-11-09T19:39:31.784120Z'
+---
+insertId: 672fba73000bbf44a4881f14
+labels:
+  instanceId: 004940b3b838eb1eb77ad8cc5c26977579b5bc4548fda23fd347515946e188e4f91b945a13640a24012004ece83166b596a594d97b47ca39e205eeb3672f0821184fd8dc46
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:39:32.110910070Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:39:31 +0000] [1] [INFO] Using worker: gthread'
+timestamp: '2024-11-09T19:39:31.769860Z'
+---
+insertId: 672fba73000bbee1450848f2
+labels:
+  instanceId: 004940b3b838eb1eb77ad8cc5c26977579b5bc4548fda23fd347515946e188e4f91b945a13640a24012004ece83166b596a594d97b47ca39e205eeb3672f0821184fd8dc46
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:39:32.110910070Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:39:31 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080
+  (1)'
+timestamp: '2024-11-09T19:39:31.769761Z'
+---
+insertId: 672fba73000bba56e3b2bea6
+labels:
+  instanceId: 004940b3b838eb1eb77ad8cc5c26977579b5bc4548fda23fd347515946e188e4f91b945a13640a24012004ece83166b596a594d97b47ca39e205eeb3672f0821184fd8dc46
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:39:31.774462269Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:39:31 +0000] [1] [INFO] Starting gunicorn 20.1.0'
+timestamp: '2024-11-09T19:39:31.768598Z'
+---
+httpRequest:
+  latency: 1.231121881s
+  protocol: HTTP/1.1
+  remoteIp: 35.237.233.73
+  requestMethod: POST
+  requestSize: '282'
+  requestUrl: https://ml-sf-train-1076180164120.us-central1.run.app/train
+  responseSize: '67'
+  serverIp: 216.239.32.53
+  status: 503
+  userAgent: curl/8.5.0
+insertId: 672fba74000410a1188f4eac
+labels:
+  instanceId: 004940b3b838eb1eb77ad8cc5c26977579b5bc4548fda23fd347515946e188e4f91b945a13640a24012004ece83166b596a594d97b47ca39e205eeb3672f0821184fd8dc46
+logName: projects/ba882-team9/logs/run.googleapis.com%2Frequests
+receiveTimestamp: '2024-11-09T19:39:32.272914751Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: ERROR
+spanId: f3aaa708b1e2c164
+textPayload: 'The request failed because either the HTTP response was malformed or
+  connection to the instance had an error. Additional troubleshooting documentation
+  can be found at: https://cloud.google.com/run/docs/troubleshooting#malformed-response-or-connection-error'
+timestamp: '2024-11-09T19:39:30.790633Z'
+trace: projects/ba882-team9/traces/d1bb8b3afdcd6e64abf6bc5bdbb64399
+traceSampled: true
+---
+httpRequest:
+  latency: 0s
+  protocol: HTTP/1.1
+  remoteIp: 35.237.233.73
+  requestMethod: POST
+  requestSize: '282'
+  requestUrl: https://ml-sf-train-1076180164120.us-central1.run.app/train
+  serverIp: 216.239.36.53
+  status: 403
+  userAgent: curl/8.5.0
+insertId: 672fba2b000041c83a5a5d10
+logName: projects/ba882-team9/logs/run.googleapis.com%2Frequests
+receiveTimestamp: '2024-11-09T19:38:19.021770891Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: WARNING
+spanId: 3f41c180c8cbfad4
+textPayload: 'The request was not authenticated. Either allow unauthenticated invocations
+  or set the proper Authorization header. Read more at https://cloud.google.com/run/docs/securing/authenticating
+  Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client'
+timestamp: '2024-11-09T19:38:18.917919Z'
+trace: projects/ba882-team9/traces/ba4b4b8d4b7b8a938f606eab1df5cf4d
+traceSampled: true
+---
+httpRequest:
+  latency: 0s
+  protocol: HTTP/1.1
+  remoteIp: 35.237.233.73
+  requestMethod: GET
+  requestSize: '257'
+  requestUrl: https://ml-sf-train-1076180164120.us-central1.run.app/
+  serverIp: 216.239.36.53
+  status: 403
+  userAgent: curl/8.5.0
+insertId: 672fba1c0004da1e8349de4f
+logName: projects/ba882-team9/logs/run.googleapis.com%2Frequests
+receiveTimestamp: '2024-11-09T19:38:04.325623204Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: WARNING
+spanId: 7be908c15d83ff8c
+textPayload: 'The request was not authenticated. Either allow unauthenticated invocations
+  or set the proper Authorization header. Read more at https://cloud.google.com/run/docs/securing/authenticating
+  Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client'
+timestamp: '2024-11-09T19:38:04.283022Z'
+trace: projects/ba882-team9/traces/f23b3f48c9253c1c67e2cfe295ef916b
+traceSampled: true
+---
+insertId: 672fb9740007ac9e4b28c295
+labels:
+  container_name: ml-sf-train-1
+  instanceId: 004940b3b8454daff3093c777ba67fe39e7890682b821b1be1f404f5830329142c855ef19454305e328ff4e9b8889bb55732357f04491b6ade71bbdbc456936a8758015138
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:35:16.509250265Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: WARNING
+textPayload: Container called exit(3).
+timestamp: '2024-11-09T19:35:16.502825245Z'
+---
+insertId: 672fb96b00019bd0dd0a3d6a
+labels:
+  instanceId: 004940b3b8454daff3093c777ba67fe39e7890682b821b1be1f404f5830329142c855ef19454305e328ff4e9b8889bb55732357f04491b6ade71bbdbc456936a8758015138
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:35:07.372460264Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:35:07 +0000] [1] [INFO] Reason: Worker failed to boot.'
+timestamp: '2024-11-09T19:35:07.105424Z'
+---
+insertId: 672fb96b00019b6cc169202e
+labels:
+  instanceId: 004940b3b8454daff3093c777ba67fe39e7890682b821b1be1f404f5830329142c855ef19454305e328ff4e9b8889bb55732357f04491b6ade71bbdbc456936a8758015138
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:35:07.372460264Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:35:07 +0000] [1] [INFO] Shutting down: Master'
+timestamp: '2024-11-09T19:35:07.105324Z'
+---
+insertId: 672fb9650005a77a853e3a93
+labels:
+  instanceId: 004940b3b8454daff3093c777ba67fe39e7890682b821b1be1f404f5830329142c855ef19454305e328ff4e9b8889bb55732357f04491b6ade71bbdbc456936a8758015138
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:35:01.711027517Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:35:01 +0000] [2] [INFO] Worker exiting (pid: 2)'
+timestamp: '2024-11-09T19:35:01.370554Z'
+---
+errorGroups:
+- id: CJ_FiaS6heGW7wE
+insertId: 672fb9650005a720b0b61867
+labels:
+  instanceId: 004940b3b8454daff3093c777ba67fe39e7890682b821b1be1f404f5830329142c855ef19454305e328ff4e9b8889bb55732357f04491b6ade71bbdbc456936a8758015138
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:35:01.400476617Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: ERROR
+textPayload: |-
+  Traceback (most recent call last):
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+      worker.init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+      super().init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+      self.load_wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+      self.wsgi = self.app.wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+      self.callable = self.load()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+      return self.load_wsgiapp()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+      return util.import_app(self.app_uri)
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/util.py", line 359, in import_app
+      mod = importlib.import_module(module)
+    File "/usr/local/lib/python3.9/importlib/__init__.py", line 127, in import_module
+      return _bootstrap._gcd_import(name[level:], package, level)
+    File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+    File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+    File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+    File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+    File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+    File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+    File "/app/main.py", line 3, in <module>
+      from flask import Flask, jsonify
+    File "/usr/local/lib/python3.9/site-packages/flask/__init__.py", line 7, in <module>
+      from .app import Flask as Flask
+    File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 28, in <module>
+      from . import cli
+    File "/usr/local/lib/python3.9/site-packages/flask/cli.py", line 18, in <module>
+      from .helpers import get_debug_flag
+    File "/usr/local/lib/python3.9/site-packages/flask/helpers.py", line 16, in <module>
+      from werkzeug.urls import url_quote
+  ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.9/site-packages/werkzeug/urls.py)
+timestamp: '2024-11-09T19:35:01.370464Z'
+---
+insertId: 672fb9650005a6d6cfe51d8b
+labels:
+  instanceId: 004940b3b8454daff3093c777ba67fe39e7890682b821b1be1f404f5830329142c855ef19454305e328ff4e9b8889bb55732357f04491b6ade71bbdbc456936a8758015138
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:35:01.400476617Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:35:01 +0000] [2] [ERROR] Exception in worker process'
+timestamp: '2024-11-09T19:35:01.370390Z'
+---
+insertId: -glmvepe118me
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/ba882-team9/services/ml-sf-train
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: 866fe653-d987-4f4a-b046-5d0e17bf0da2
+        run.googleapis.com/urls: '["https://ml-sf-train-1076180164120.us-central1.run.app","https://ml-sf-train-fefwkff7jq-uc.a.run.app"]'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+        serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:06:01.488432Z'
+      generation: 5
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: ml-sf-train
+      namespace: '1076180164120'
+      resourceVersion: AAYmf/XLZ8I
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-train
+      uid: eeef40cc-b987-4925-8529-5f8af2065b08
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '100'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 498.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: jjempwpvbr
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          containers:
+          - env:
+            - name: MOTHERDUCK_TOKEN
+              value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1Y2hlbmx5QGJ1LmVkdSIsInNlc3Npb24iOiJ5dWNoZW5seS5idS5lZHUiLCJwYXQiOiJvQUFnWld6YUxMQUd0RndfdDRKTFMwRlFDbVZFUEtnSzZ5VW14NEluUDhvIiwidXNlcklkIjoiYTI1NGQxMWEtZGNjMy00YTljLThlZGMtZjlmNTc4OWY1ZWY5IiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzI4NTg2NDI1fQ.GSJursfAW8KiHiQNWruyCWeEeIUTUUTpCjA0ffnSkkQ
+            - name: DB_SCHEMA
+              value: your_schema_name
+            image: gcr.io/ba882-team9/ml-sf-train
+            ports:
+            - containerPort: 8080
+              name: http1
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 512Mi
+            startupProbe:
+              failureThreshold: 1
+              periodSeconds: 240
+              tcpSocket:
+                port: 8080
+              timeoutSeconds: 240
+          serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      address:
+        url: https://ml-sf-train-fefwkff7jq-uc.a.run.app
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:34:46.714306Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:34:45.464753Z'
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2024-11-09T19:34:46.683309Z'
+        status: 'True'
+        type: RoutesReady
+      latestCreatedRevisionName: ml-sf-train-00005-mnf
+      latestReadyRevisionName: ml-sf-train-00005-mnf
+      observedGeneration: 5
+      traffic:
+      - latestRevision: true
+        percent: 100
+        revisionName: ml-sf-train-00005-mnf
+      url: https://ml-sf-train-fefwkff7jq-uc.a.run.app
+  serviceName: run.googleapis.com
+  status:
+    message: Ready condition status changed to True for Service ml-sf-train.
+receiveTimestamp: '2024-11-09T19:34:47.170060622Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ''
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: INFO
+timestamp: '2024-11-09T19:34:46.727825Z'
+---
+insertId: -glmvepe118m8
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/ba882-team9/revisions/ml-sf-train-00005-mnf
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Revision
+    apiVersion: serving.knative.dev/v1
+    kind: Revision
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: '100'
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/operation-id: 866fe653-d987-4f4a-b046-5d0e17bf0da2
+        run.googleapis.com/startup-cpu-boost: 'true'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:34:16.210428Z'
+      generation: 1
+      labels:
+        client.knative.dev/nonce: jjempwpvbr
+        cloud.googleapis.com/location: us-central1
+        run.googleapis.com/startupProbeType: Default
+        serving.knative.dev/configuration: ml-sf-train
+        serving.knative.dev/configurationGeneration: '5'
+        serving.knative.dev/route: ml-sf-train
+        serving.knative.dev/service: ml-sf-train
+        serving.knative.dev/serviceUid: eeef40cc-b987-4925-8529-5f8af2065b08
+      name: ml-sf-train-00005-mnf
+      namespace: '1076180164120'
+      ownerReferences:
+      - apiVersion: serving.knative.dev/v1
+        blockOwnerDeletion: true
+        controller: true
+        kind: Configuration
+        name: ml-sf-train
+        uid: 44fc5764-8db4-45c4-96f7-310c90a311bb
+      resourceVersion: AAYmf/W3tIU
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/revisions/ml-sf-train-00005-mnf
+      uid: 6a98e2bb-8059-48ed-afa4-5061b350adea
+    spec:
+      containerConcurrency: 80
+      containers:
+      - env:
+        - name: MOTHERDUCK_TOKEN
+          value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1Y2hlbmx5QGJ1LmVkdSIsInNlc3Npb24iOiJ5dWNoZW5seS5idS5lZHUiLCJwYXQiOiJvQUFnWld6YUxMQUd0RndfdDRKTFMwRlFDbVZFUEtnSzZ5VW14NEluUDhvIiwidXNlcklkIjoiYTI1NGQxMWEtZGNjMy00YTljLThlZGMtZjlmNTc4OWY1ZWY5IiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzI4NTg2NDI1fQ.GSJursfAW8KiHiQNWruyCWeEeIUTUUTpCjA0ffnSkkQ
+        - name: DB_SCHEMA
+          value: your_schema_name
+        image: gcr.io/ba882-team9/ml-sf-train@sha256:05cab1903ddd8a9d41cf46031d16359ad1f6c5f82d5b5ee4dc870fb747d33ed8
+        name: ml-sf-train-1
+        ports:
+        - containerPort: 8080
+          name: http1
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 512Mi
+        startupProbe:
+          failureThreshold: 1
+          periodSeconds: 240
+          tcpSocket:
+            port: 8080
+          timeoutSeconds: 240
+      serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+      timeoutSeconds: 300
+    status:
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:34:45.423237Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:34:45.367367Z'
+        message: Container became healthy.
+        status: 'True'
+        type: ContainerHealthy
+      - lastTransitionTime: '2024-11-09T19:34:41.351056Z'
+        message: Container image import completed in 24.470025s.
+        status: 'True'
+        type: ContainerReady
+      - lastTransitionTime: '2024-11-09T19:34:44.265550Z'
+        message: Revision deployment finished in 2.917446s. Checking container health.
+        status: 'True'
+        type: ResourcesAvailable
+      containerStatuses:
+      - imageDigest: gcr.io/ba882-team9/ml-sf-train@sha256:05cab1903ddd8a9d41cf46031d16359ad1f6c5f82d5b5ee4dc870fb747d33ed8
+        name: ml-sf-train-1
+      imageDigest: gcr.io/ba882-team9/ml-sf-train@sha256:05cab1903ddd8a9d41cf46031d16359ad1f6c5f82d5b5ee4dc870fb747d33ed8
+      logUrl: https://console.cloud.google.com/logs/viewer?project=ba882-team9&resource=cloud_run_revision/service_name/ml-sf-train/revision_name/ml-sf-train-00005-mnf&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22ml-sf-train%22%0Aresource.labels.revision_name%3D%22ml-sf-train-00005-mnf%22
+      observedGeneration: 1
+  serviceName: run.googleapis.com
+  status:
+    message: Ready condition status changed to True for Revision ml-sf-train-00005-mnf.
+receiveTimestamp: '2024-11-09T19:34:46.180673463Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: INFO
+timestamp: '2024-11-09T19:34:45.439088Z'
+---
+insertId: 672fb9550005a36c82a2dd0b
+labels:
+  instanceId: 004940b3b8454daff3093c777ba67fe39e7890682b821b1be1f404f5830329142c855ef19454305e328ff4e9b8889bb55732357f04491b6ade71bbdbc456936a8758015138
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:34:45.685400338Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:34:45 +0000] [2] [INFO] Booting worker with pid: 2'
+timestamp: '2024-11-09T19:34:45.369516Z'
+---
+insertId: 672fb95500055dd56c36d40a
+labels:
+  instanceId: 004940b3b8454daff3093c777ba67fe39e7890682b821b1be1f404f5830329142c855ef19454305e328ff4e9b8889bb55732357f04491b6ade71bbdbc456936a8758015138
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:34:45.357545421Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: INFO
+textPayload: Default STARTUP TCP probe succeeded after 1 attempt for container "ml-sf-train-1"
+  on port 8080.
+timestamp: '2024-11-09T19:34:45.351701Z'
+---
+insertId: 672fb955000553d1ca1410a7
+labels:
+  instanceId: 004940b3b8454daff3093c777ba67fe39e7890682b821b1be1f404f5830329142c855ef19454305e328ff4e9b8889bb55732357f04491b6ade71bbdbc456936a8758015138
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:34:45.685400338Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:34:45 +0000] [1] [INFO] Using worker: gthread'
+timestamp: '2024-11-09T19:34:45.349137Z'
+---
+insertId: 672fb9550005538e151df634
+labels:
+  instanceId: 004940b3b8454daff3093c777ba67fe39e7890682b821b1be1f404f5830329142c855ef19454305e328ff4e9b8889bb55732357f04491b6ade71bbdbc456936a8758015138
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:34:45.685400338Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:34:45 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080
+  (1)'
+timestamp: '2024-11-09T19:34:45.349070Z'
+---
+insertId: 672fb95500054e78f1779553
+labels:
+  instanceId: 004940b3b8454daff3093c777ba67fe39e7890682b821b1be1f404f5830329142c855ef19454305e328ff4e9b8889bb55732357f04491b6ade71bbdbc456936a8758015138
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:34:45.355139904Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00005-mnf
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:34:45 +0000] [1] [INFO] Starting gunicorn 20.1.0'
+timestamp: '2024-11-09T19:34:45.347768Z'
+---
+insertId: n2noledlzdz
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Factivity
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  authenticationInfo:
+    principalEmail: 1076180164120-compute@developer.gserviceaccount.com
+    principalSubject: serviceAccount:1076180164120-compute@developer.gserviceaccount.com
+  authorizationInfo:
+  - granted: true
+    permission: run.services.update
+    permissionType: ADMIN_WRITE
+    resource: namespaces/ba882-team9/services/ml-sf-train
+    resourceAttributes: {}
+  - granted: true
+    permission: run.services.update
+    permissionType: ADMIN_WRITE
+    resourceAttributes:
+      name: namespaces/ba882-team9/services/ml-sf-train
+      service: run.googleapis.com/
+      type: run.googleapis.com/Service
+  methodName: google.cloud.run.v1.Services.ReplaceService
+  request:
+    '@type': type.googleapis.com/google.cloud.run.v1.ReplaceServiceRequest
+    name: namespaces/ba882-team9/services/ml-sf-train
+    service:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      metadata:
+        annotations:
+          run.googleapis.com/client-name: gcloud
+          run.googleapis.com/client-version: 498.0.0
+          run.googleapis.com/ingress: all
+          run.googleapis.com/ingress-status: all
+          run.googleapis.com/operation-id: 62aa05f3-1e46-43e3-9a22-db5d02fe33fd
+          run.googleapis.com/urls: '["https://ml-sf-train-1076180164120.us-central1.run.app","https://ml-sf-train-fefwkff7jq-uc.a.run.app"]'
+          serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+          serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+        creationTimestamp: '2024-11-09T19:06:01.488432Z'
+        generation: 4
+        labels:
+          cloud.googleapis.com/location: us-central1
+        name: ml-sf-train
+        namespace: '1076180164120'
+        resourceVersion: AAYmf8osvV4
+        selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-train
+        uid: eeef40cc-b987-4925-8529-5f8af2065b08
+      spec:
+        template:
+          metadata:
+            annotations:
+              autoscaling.knative.dev/maxScale: '100'
+              run.googleapis.com/client-name: gcloud
+              run.googleapis.com/client-version: 498.0.0
+              run.googleapis.com/startup-cpu-boost: 'true'
+            labels:
+              client.knative.dev/nonce: jjempwpvbr
+              run.googleapis.com/startupProbeType: Default
+          spec:
+            containerConcurrency: 80
+            serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+            timeoutSeconds: 300
+        traffic:
+        - latestRevision: true
+          percent: 100
+      status:
+        conditions:
+        - lastTransitionTime: '2024-11-09T19:22:34.895710Z'
+          status: 'True'
+          type: Ready
+        - lastTransitionTime: '2024-11-09T19:22:33.628329Z'
+          status: 'True'
+          type: ConfigurationsReady
+        - lastTransitionTime: '2024-11-09T19:22:34.859694Z'
+          status: 'True'
+          type: RoutesReady
+        latestCreatedRevisionName: ml-sf-train-00004-nwp
+        latestReadyRevisionName: ml-sf-train-00004-nwp
+        observedGeneration: 4
+        traffic:
+        - latestRevision: true
+          percent: 100
+          revisionName: ml-sf-train-00004-nwp
+        url: https://ml-sf-train-fefwkff7jq-uc.a.run.app
+  requestMetadata:
+    callerIp: 34.31.130.205
+    callerSuppliedUserAgent: google-cloud-sdk gcloud/498.0.0 command/gcloud.run.deploy
+      invocation-id/0545c02ae9104c479bc8cfcbb9c427e5 environment/GCE environment-version/None
+      client-os/LINUX client-os-ver/5.10.0 client-pltf-arch/x86_64 interactive/False
+      from-script/True python/3.11.9 term/ (Linux 5.10.0-33-cloud-amd64),gzip(gfe)
+    destinationAttributes: {}
+    requestAttributes:
+      auth: {}
+      time: '2024-11-09T19:34:16.168066Z'
+  resourceLocation:
+    currentLocations:
+    - us-central1
+  resourceName: namespaces/ba882-team9/services/ml-sf-train
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: 866fe653-d987-4f4a-b046-5d0e17bf0da2
+        run.googleapis.com/urls: '["https://ml-sf-train-1076180164120.us-central1.run.app","https://ml-sf-train-fefwkff7jq-uc.a.run.app"]'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+        serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:06:01.488432Z'
+      generation: 5
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: ml-sf-train
+      namespace: '1076180164120'
+      resourceVersion: AAYmf/P4048
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-train
+      uid: eeef40cc-b987-4925-8529-5f8af2065b08
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '100'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 498.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: jjempwpvbr
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:22:34.895710Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:22:33.628329Z'
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2024-11-09T19:22:34.859694Z'
+        status: 'True'
+        type: RoutesReady
+      latestCreatedRevisionName: ml-sf-train-00004-nwp
+      latestReadyRevisionName: ml-sf-train-00004-nwp
+      observedGeneration: 4
+      traffic:
+      - latestRevision: true
+        percent: 100
+        revisionName: ml-sf-train-00004-nwp
+      url: https://ml-sf-train-fefwkff7jq-uc.a.run.app
+  serviceName: run.googleapis.com
+receiveTimestamp: '2024-11-09T19:34:16.541732457Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ''
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: NOTICE
+timestamp: '2024-11-09T19:34:16.036116Z'
+---
+httpRequest:
+  latency: 0s
+  protocol: HTTP/1.1
+  remoteIp: 35.237.233.73
+  requestMethod: POST
+  requestSize: '282'
+  requestUrl: https://ml-sf-train-1076180164120.us-central1.run.app/train
+  serverIp: 216.239.34.53
+  status: 403
+  userAgent: curl/8.5.0
+insertId: 672fb745000c56a780505d97
+logName: projects/ba882-team9/logs/run.googleapis.com%2Frequests
+receiveTimestamp: '2024-11-09T19:25:57.817345461Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00004-nwp
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: WARNING
+spanId: 1f9569aeda9e2463
+textPayload: 'The request was not authenticated. Either allow unauthenticated invocations
+  or set the proper Authorization header. Read more at https://cloud.google.com/run/docs/securing/authenticating
+  Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client'
+timestamp: '2024-11-09T19:25:57.702398Z'
+trace: projects/ba882-team9/traces/9f33bd2f90eddd9f61de2131aa68d0cd
+traceSampled: true
+---
+insertId: 672fb6b7000ab9b087b6dcaa
+labels:
+  container_name: ml-sf-train-1
+  instanceId: 004940b3b8eb3808c9f89d10a78c9cebe7ed6282e08d92cfdc9595fd6e00ed2695540acc88a009070cf11424355a13581aabdf7ac4fe13b885fbae6e3c5ad3cdba56350e330a
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:23:35.710325558Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00004-nwp
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: WARNING
+textPayload: Container called exit(3).
+timestamp: '2024-11-09T19:23:35.702815866Z'
+---
+insertId: 672fb6ac000db75291e9aa8a
+labels:
+  instanceId: 004940b3b8eb3808c9f89d10a78c9cebe7ed6282e08d92cfdc9595fd6e00ed2695540acc88a009070cf11424355a13581aabdf7ac4fe13b885fbae6e3c5ad3cdba56350e330a
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:23:25.240602815Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00004-nwp
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:23:24 +0000] [1] [INFO] Reason: Worker failed to boot.'
+timestamp: '2024-11-09T19:23:24.898898Z'
+---
+insertId: 672fb6ac000db69cc588c207
+labels:
+  instanceId: 004940b3b8eb3808c9f89d10a78c9cebe7ed6282e08d92cfdc9595fd6e00ed2695540acc88a009070cf11424355a13581aabdf7ac4fe13b885fbae6e3c5ad3cdba56350e330a
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:23:24.906349171Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00004-nwp
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:23:24 +0000] [1] [INFO] Shutting down: Master'
+timestamp: '2024-11-09T19:23:24.898716Z'
+---
+insertId: 672fb69c0007b61d661c550d
+labels:
+  instanceId: 004940b3b8eb3808c9f89d10a78c9cebe7ed6282e08d92cfdc9595fd6e00ed2695540acc88a009070cf11424355a13581aabdf7ac4fe13b885fbae6e3c5ad3cdba56350e330a
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:23:08.512443069Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00004-nwp
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:23:08 +0000] [2] [INFO] Worker exiting (pid: 2)'
+timestamp: '2024-11-09T19:23:08.505373Z'
+---
+errorGroups:
+- id: CJ_FiaS6heGW7wE
+insertId: 672fb69c0007b5dbeacaf5c5
+labels:
+  instanceId: 004940b3b8eb3808c9f89d10a78c9cebe7ed6282e08d92cfdc9595fd6e00ed2695540acc88a009070cf11424355a13581aabdf7ac4fe13b885fbae6e3c5ad3cdba56350e330a
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:23:08.512443069Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00004-nwp
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: ERROR
+textPayload: |-
+  Traceback (most recent call last):
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+      worker.init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/gthread.py", line 92, in init_process
+      super().init_process()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 134, in init_process
+      self.load_wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+      self.wsgi = self.app.wsgi()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/base.py", line 67, in wsgi
+      self.callable = self.load()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+      return self.load_wsgiapp()
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+      return util.import_app(self.app_uri)
+    File "/usr/local/lib/python3.9/site-packages/gunicorn/util.py", line 359, in import_app
+      mod = importlib.import_module(module)
+    File "/usr/local/lib/python3.9/importlib/__init__.py", line 127, in import_module
+      return _bootstrap._gcd_import(name[level:], package, level)
+    File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+    File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+    File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+    File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+    File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+    File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+    File "/app/main.py", line 3, in <module>
+      from flask import Flask, jsonify
+    File "/usr/local/lib/python3.9/site-packages/flask/__init__.py", line 7, in <module>
+      from .app import Flask as Flask
+    File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 28, in <module>
+      from . import cli
+    File "/usr/local/lib/python3.9/site-packages/flask/cli.py", line 18, in <module>
+      from .helpers import get_debug_flag
+    File "/usr/local/lib/python3.9/site-packages/flask/helpers.py", line 16, in <module>
+      from werkzeug.urls import url_quote
+  ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/usr/local/lib/python3.9/site-packages/werkzeug/urls.py)
+timestamp: '2024-11-09T19:23:08.505307Z'
+---
+insertId: 672fb69c0007b57e07119b7a
+labels:
+  instanceId: 004940b3b8eb3808c9f89d10a78c9cebe7ed6282e08d92cfdc9595fd6e00ed2695540acc88a009070cf11424355a13581aabdf7ac4fe13b885fbae6e3c5ad3cdba56350e330a
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:23:08.512443069Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00004-nwp
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:23:07 +0000] [2] [ERROR] Exception in worker process'
+timestamp: '2024-11-09T19:23:08.505214Z'
+---
+insertId: -zhz4rue14qec
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/ba882-team9/services/ml-sf-train
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: 62aa05f3-1e46-43e3-9a22-db5d02fe33fd
+        run.googleapis.com/urls: '["https://ml-sf-train-1076180164120.us-central1.run.app","https://ml-sf-train-fefwkff7jq-uc.a.run.app"]'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+        serving.knative.dev/lastModifier: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:06:01.488432Z'
+      generation: 4
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: ml-sf-train
+      namespace: '1076180164120'
+      resourceVersion: AAYmf8osvV4
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/services/ml-sf-train
+      uid: eeef40cc-b987-4925-8529-5f8af2065b08
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '100'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 498.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: puefeyuoog
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          containers:
+          - env:
+            - name: MOTHERDUCK_TOKEN
+              value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1Y2hlbmx5QGJ1LmVkdSIsInNlc3Npb24iOiJ5dWNoZW5seS5idS5lZHUiLCJwYXQiOiJvQUFnWld6YUxMQUd0RndfdDRKTFMwRlFDbVZFUEtnSzZ5VW14NEluUDhvIiwidXNlcklkIjoiYTI1NGQxMWEtZGNjMy00YTljLThlZGMtZjlmNTc4OWY1ZWY5IiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzI4NTg2NDI1fQ.GSJursfAW8KiHiQNWruyCWeEeIUTUUTpCjA0ffnSkkQ
+            - name: DB_SCHEMA
+              value: your_schema_name
+            image: gcr.io/ba882-team9/ml-sf-train
+            ports:
+            - containerPort: 8080
+              name: http1
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 512Mi
+            startupProbe:
+              failureThreshold: 1
+              periodSeconds: 240
+              tcpSocket:
+                port: 8080
+              timeoutSeconds: 240
+          serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      address:
+        url: https://ml-sf-train-fefwkff7jq-uc.a.run.app
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:22:34.895710Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:22:33.628329Z'
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2024-11-09T19:22:34.859694Z'
+        status: 'True'
+        type: RoutesReady
+      latestCreatedRevisionName: ml-sf-train-00004-nwp
+      latestReadyRevisionName: ml-sf-train-00004-nwp
+      observedGeneration: 4
+      traffic:
+      - latestRevision: true
+        percent: 100
+        revisionName: ml-sf-train-00004-nwp
+      url: https://ml-sf-train-fefwkff7jq-uc.a.run.app
+  serviceName: run.googleapis.com
+  status:
+    message: Ready condition status changed to True for Service ml-sf-train.
+receiveTimestamp: '2024-11-09T19:22:35.386134095Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ''
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: INFO
+timestamp: '2024-11-09T19:22:34.908158Z'
+---
+insertId: -zhz4rue14qe8
+logName: projects/ba882-team9/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/ba882-team9/revisions/ml-sf-train-00004-nwp
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Revision
+    apiVersion: serving.knative.dev/v1
+    kind: Revision
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: '100'
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 498.0.0
+        run.googleapis.com/operation-id: 62aa05f3-1e46-43e3-9a22-db5d02fe33fd
+        run.googleapis.com/startup-cpu-boost: 'true'
+        serving.knative.dev/creator: 1076180164120-compute@developer.gserviceaccount.com
+      creationTimestamp: '2024-11-09T19:22:12.878597Z'
+      generation: 1
+      labels:
+        client.knative.dev/nonce: puefeyuoog
+        cloud.googleapis.com/location: us-central1
+        run.googleapis.com/startupProbeType: Default
+        serving.knative.dev/configuration: ml-sf-train
+        serving.knative.dev/configurationGeneration: '4'
+        serving.knative.dev/route: ml-sf-train
+        serving.knative.dev/service: ml-sf-train
+        serving.knative.dev/serviceUid: eeef40cc-b987-4925-8529-5f8af2065b08
+      name: ml-sf-train-00004-nwp
+      namespace: '1076180164120'
+      ownerReferences:
+      - apiVersion: serving.knative.dev/v1
+        blockOwnerDeletion: true
+        controller: true
+        kind: Configuration
+        name: ml-sf-train
+        uid: 44fc5764-8db4-45c4-96f7-310c90a311bb
+      resourceVersion: AAYmf8oY4G4
+      selfLink: /apis/serving.knative.dev/v1/namespaces/1076180164120/revisions/ml-sf-train-00004-nwp
+      uid: 249c4c6a-de36-42f1-b1a0-992e827443a0
+    spec:
+      containerConcurrency: 80
+      containers:
+      - env:
+        - name: MOTHERDUCK_TOKEN
+          value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1Y2hlbmx5QGJ1LmVkdSIsInNlc3Npb24iOiJ5dWNoZW5seS5idS5lZHUiLCJwYXQiOiJvQUFnWld6YUxMQUd0RndfdDRKTFMwRlFDbVZFUEtnSzZ5VW14NEluUDhvIiwidXNlcklkIjoiYTI1NGQxMWEtZGNjMy00YTljLThlZGMtZjlmNTc4OWY1ZWY5IiwiaXNzIjoibWRfcGF0IiwiaWF0IjoxNzI4NTg2NDI1fQ.GSJursfAW8KiHiQNWruyCWeEeIUTUUTpCjA0ffnSkkQ
+        - name: DB_SCHEMA
+          value: your_schema_name
+        image: gcr.io/ba882-team9/ml-sf-train@sha256:4e46705771dc87f2af2beb82a2f7456737050e16bde19c96af53a59756229477
+        name: ml-sf-train-1
+        ports:
+        - containerPort: 8080
+          name: http1
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 512Mi
+        startupProbe:
+          failureThreshold: 1
+          periodSeconds: 240
+          tcpSocket:
+            port: 8080
+          timeoutSeconds: 240
+      serviceAccountName: 1076180164120-compute@developer.gserviceaccount.com
+      timeoutSeconds: 300
+    status:
+      conditions:
+      - lastTransitionTime: '2024-11-09T19:22:33.593966Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2024-11-09T19:22:33.546205Z'
+        message: Container became healthy.
+        status: 'True'
+        type: ContainerHealthy
+      - lastTransitionTime: '2024-11-09T19:22:29.707863Z'
+        message: Container image import completed in 16.196643s.
+        status: 'True'
+        type: ContainerReady
+      - lastTransitionTime: '2024-11-09T19:22:32.435516Z'
+        message: Revision deployment finished in 2.731245s. Checking container health.
+        status: 'True'
+        type: ResourcesAvailable
+      containerStatuses:
+      - imageDigest: gcr.io/ba882-team9/ml-sf-train@sha256:4e46705771dc87f2af2beb82a2f7456737050e16bde19c96af53a59756229477
+        name: ml-sf-train-1
+      imageDigest: gcr.io/ba882-team9/ml-sf-train@sha256:4e46705771dc87f2af2beb82a2f7456737050e16bde19c96af53a59756229477
+      logUrl: https://console.cloud.google.com/logs/viewer?project=ba882-team9&resource=cloud_run_revision/service_name/ml-sf-train/revision_name/ml-sf-train-00004-nwp&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22ml-sf-train%22%0Aresource.labels.revision_name%3D%22ml-sf-train-00004-nwp%22
+      observedGeneration: 1
+  serviceName: run.googleapis.com
+  status:
+    message: Ready condition status changed to True for Revision ml-sf-train-00004-nwp.
+receiveTimestamp: '2024-11-09T19:22:34.387618502Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00004-nwp
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: INFO
+timestamp: '2024-11-09T19:22:33.602981Z'
+---
+insertId: 672fb67900084dcf58128726
+labels:
+  instanceId: 004940b3b8eb3808c9f89d10a78c9cebe7ed6282e08d92cfdc9595fd6e00ed2695540acc88a009070cf11424355a13581aabdf7ac4fe13b885fbae6e3c5ad3cdba56350e330a
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:22:33.856384258Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00004-nwp
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:22:33 +0000] [2] [INFO] Booting worker with pid: 2'
+timestamp: '2024-11-09T19:22:33.544207Z'
+---
+insertId: 672fb679000825ff9b738c6d
+labels:
+  instanceId: 004940b3b8eb3808c9f89d10a78c9cebe7ed6282e08d92cfdc9595fd6e00ed2695540acc88a009070cf11424355a13581aabdf7ac4fe13b885fbae6e3c5ad3cdba56350e330a
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2024-11-09T19:22:33.540770196Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00004-nwp
+    service_name: ml-sf-train
+  type: cloud_run_revision
+severity: INFO
+textPayload: Default STARTUP TCP probe succeeded after 1 attempt for container "ml-sf-train-1"
+  on port 8080.
+timestamp: '2024-11-09T19:22:33.534015Z'
+---
+insertId: 672fb6790007ec7687d08961
+labels:
+  instanceId: 004940b3b8eb3808c9f89d10a78c9cebe7ed6282e08d92cfdc9595fd6e00ed2695540acc88a009070cf11424355a13581aabdf7ac4fe13b885fbae6e3c5ad3cdba56350e330a
+logName: projects/ba882-team9/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2024-11-09T19:22:33.856384258Z'
+resource:
+  labels:
+    configuration_name: ml-sf-train
+    location: us-central1
+    project_id: ba882-team9
+    revision_name: ml-sf-train-00004-nwp
+    service_name: ml-sf-train
+  type: cloud_run_revision
+textPayload: '[2024-11-09 19:22:33 +0000] [1] [INFO] Using worker: gthread'
+timestamp: '2024-11-09T19:22:33.519286Z'

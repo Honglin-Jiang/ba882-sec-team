@@ -1,38 +1,30 @@
-# Set the Google Cloud project
-gcloud config set project btibert-ba882-fall24
+# set the project
+gcloud config set project ba882-team9
 
-echo "======================================================"
-echo "Deploying the stock price training function"
-echo "======================================================"
-
-# Deploy the training function
-gcloud functions deploy stock-price-train \
+echo "======================================================" 
+echo "Deploying the ml-sf-predict container" 
+echo "======================================================" 
+gcloud run deploy ml-sf-predict \ 
+    --from-container-image gcr.io/ba882-team9/ml-sf-predict \ 
     --gen2 \
-    --runtime python311 \
+    --runtime=python311 \
     --trigger-http \
-    --entry-point task \
-    --source ./functions/stock_price_train \
-    --stage-bucket ba882-team9 \
-    --service-account ba882-team9@ba882-team9.iam.gserviceaccount.com \
-    --region us-central1 \
+    --entry-point=task \
+    --region=us-central1 \
     --allow-unauthenticated \
-    --memory 2GB  \
-    --timeout 300s 
+    --memory 2GB \
+    --timeout 540s 
 
-echo "======================================================"
-echo "Deploying the stock price inference function"
-echo "======================================================"
-
-# Deploy the inference function
-gcloud functions deploy stock-price-serve \
+echo "======================================================" 
+echo "Deploying the ml-sf-train container" 
+echo "======================================================" 
+gcloud run deploy ml-sf-train \ 
+    --from-container-image gcr.io/ba882-team9/ml-sf-train \ 
     --gen2 \
-    --runtime python311 \
+    --runtime=python311 \
     --trigger-http \
-    --entry-point task \
-    --source ./functions/stock_price_serve \
-    --stage-bucket ba882-team9 \
-    --service-account ba882-team9@ba882-team9.iam.gserviceaccount.com \
-    --region us-central1 \
+    --entry-point=task \
+    --region=us-central1 \
     --allow-unauthenticated \
-    --memory 1GB  \
-    --timeout 60s
+    --memory 2GB \
+    --timeout 540s 
