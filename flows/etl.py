@@ -266,23 +266,25 @@ def extract_yfinance_9companies_78_84mo():
     send_slack_alert("9 companies 78-84 months ago stock data extraction completed successfully.")
     return resp
 
-#@task(retries=10)
-#def transform_load_yfinance(payload, batch_name):
-#    """Process the RSS feed JSON into parquet on GCS and send a customized Slack alert."""
-#    url = "https://us-central1-ba882-team9.cloudfunctions.net/transform-load-yfinance"
-#    resp = invoke_gcf(url, payload=payload)
-#    send_slack_alert(f"Yfinance data ({batch_name}) transform & load completed successfully.")
-#    return resp
 
-@task(retries=10)
-def transform_load_yfinance(offset, batch_size):
-    """Calls the Cloud Function to process a specific batch of data."""
-    url = "https://us-central1-ba882-team9.cloudfunctions.net/transform-load-yfinance"
-    params = {"offset": offset, "batch_size": batch_size}
-    response = requests.get(url, params=params)
-    result = response.json()
-    print(result["message"])
-    return result
+@task(retries=5)
+def extract_yfinance_9companies_5d():
+    """Extract 9 companies 5 days ago stock data from yfinance"""
+    url = "https://us-central1-ba882-team9.cloudfunctions.net/extract-yfinance-9companies-5d"
+    resp = invoke_gcf(url, payload={})
+    send_slack_alert("9 companies 5 days ago stock data extraction completed successfully.")
+    return resp
+
+@task(retries=5)
+def transform_load_yfinance_7d():
+    """Trigger the Cloud Function to process and load the last 7 days of YFinance data."""
+    url = "https://us-central1-ba882-team9.cloudfunctions.net/transform-load-yfinance-7d"
+    # Invoke the Google Cloud Function without additional payload
+    resp = invoke_gcf(url, payload={})
+    # Send a Slack alert upon successful transformation and load
+    send_slack_alert("YFinance data transform & load for the last 7 days completed successfully.")
+    return resp
+
 
 # Prefect Flow
 @flow(name="ba882-team9-etl-flow", log_prints=True)
@@ -349,93 +351,71 @@ def etl_flow():
 
 
 
-        extract_yfinance_9companies_6mo_result = extract_yfinance_9companies_6mo()
-        print("The yfinance data (9 companies) for range 6 months ago range were extracted into motherduck db")
-        print(f"{extract_yfinance_9companies_6mo_result}")
+        # extract_yfinance_9companies_6mo_result = extract_yfinance_9companies_6mo()
+        # print("The yfinance data (9 companies) for range 6 months ago range were extracted into motherduck db")
+        # print(f"{extract_yfinance_9companies_6mo_result}")
 
-        extract_yfinance_9companies_6_12mo_result = extract_yfinance_9companies_6_12mo()
-        print("The yfinance data (9 companies) for range 6-12 months ago range were extracted into motherduck db")
-        print(f"{extract_yfinance_9companies_6_12mo_result}")
+        # extract_yfinance_9companies_6_12mo_result = extract_yfinance_9companies_6_12mo()
+        # print("The yfinance data (9 companies) for range 6-12 months ago range were extracted into motherduck db")
+        # print(f"{extract_yfinance_9companies_6_12mo_result}")
 
-        extract_yfinance_9companies_12_18mo_result = extract_yfinance_9companies_12_18mo()
-        print("The yfinance data (9 companies) for range 12-18 months ago range were extracted into motherduck db")
-        print(f"{extract_yfinance_9companies_12_18mo_result}")
+        # extract_yfinance_9companies_12_18mo_result = extract_yfinance_9companies_12_18mo()
+        # print("The yfinance data (9 companies) for range 12-18 months ago range were extracted into motherduck db")
+        # print(f"{extract_yfinance_9companies_12_18mo_result}")
 
-        extract_yfinance_9companies_18_24mo_result = extract_yfinance_9companies_18_24mo()
-        print("The yfinance data (9 companies) for range 18-24 months ago range were extracted into motherduck db")
-        print(f"{extract_yfinance_9companies_18_24mo_result}")
+        # extract_yfinance_9companies_18_24mo_result = extract_yfinance_9companies_18_24mo()
+        # print("The yfinance data (9 companies) for range 18-24 months ago range were extracted into motherduck db")
+        # print(f"{extract_yfinance_9companies_18_24mo_result}")
 
-        extract_yfinance_9companies_24_30mo_result = extract_yfinance_9companies_24_30mo()
-        print("The yfinance data (9 companies) for range 24-30 months ago range were extracted into motherduck db")
-        print(f"{extract_yfinance_9companies_24_30mo_result}")
+        # extract_yfinance_9companies_24_30mo_result = extract_yfinance_9companies_24_30mo()
+        # print("The yfinance data (9 companies) for range 24-30 months ago range were extracted into motherduck db")
+        # print(f"{extract_yfinance_9companies_24_30mo_result}")
 
-        extract_yfinance_9companies_30_36mo_result = extract_yfinance_9companies_30_36mo()
-        print("The yfinance data (9 companies) for range 30-36 months ago range were extracted into motherduck db")
-        print(f"{extract_yfinance_9companies_30_36mo_result}")
+        # extract_yfinance_9companies_30_36mo_result = extract_yfinance_9companies_30_36mo()
+        # print("The yfinance data (9 companies) for range 30-36 months ago range were extracted into motherduck db")
+        # print(f"{extract_yfinance_9companies_30_36mo_result}")
 
-        extract_yfinance_9companies_36_42mo_result = extract_yfinance_9companies_36_42mo()
-        print("The yfinance data (9 companies) for range 36-42 months ago range were extracted into motherduck db")
-        print(f"{extract_yfinance_9companies_36_42mo_result}")
+        # extract_yfinance_9companies_36_42mo_result = extract_yfinance_9companies_36_42mo()
+        # print("The yfinance data (9 companies) for range 36-42 months ago range were extracted into motherduck db")
+        # print(f"{extract_yfinance_9companies_36_42mo_result}")
 
-        extract_yfinance_9companies_42_48mo_result = extract_yfinance_9companies_42_48mo()
-        print("The yfinance data (9 companies) for range 42-48 months ago range were extracted into motherduck db")
-        print(f"{extract_yfinance_9companies_42_48mo_result}")
+        # extract_yfinance_9companies_42_48mo_result = extract_yfinance_9companies_42_48mo()
+        # print("The yfinance data (9 companies) for range 42-48 months ago range were extracted into motherduck db")
+        # print(f"{extract_yfinance_9companies_42_48mo_result}")
 
-        extract_yfinance_9companies_48_54mo_result = extract_yfinance_9companies_48_54mo()
-        print("The yfinance data (9 companies) for range 48-54 months ago range were extracted into motherduck db")
-        print(f"{extract_yfinance_9companies_48_54mo_result}")
+        # extract_yfinance_9companies_48_54mo_result = extract_yfinance_9companies_48_54mo()
+        # print("The yfinance data (9 companies) for range 48-54 months ago range were extracted into motherduck db")
+        # print(f"{extract_yfinance_9companies_48_54mo_result}")
 
-        extract_yfinance_9companies_54_60mo_result = extract_yfinance_9companies_54_60mo()
-        print("The yfinance data (9 companies) for range 54-60 months ago range were extracted into motherduck db")
-        print(f"{extract_yfinance_9companies_54_60mo_result}")
+        # extract_yfinance_9companies_54_60mo_result = extract_yfinance_9companies_54_60mo()
+        # print("The yfinance data (9 companies) for range 54-60 months ago range were extracted into motherduck db")
+        # print(f"{extract_yfinance_9companies_54_60mo_result}")
 
-        extract_yfinance_9companies_60_66mo_result = extract_yfinance_9companies_60_66mo()
-        print("The yfinance data (9 companies) for range 60-66 months ago range were extracted into motherduck db")
-        print(f"{extract_yfinance_9companies_60_66mo_result}")
+        # extract_yfinance_9companies_60_66mo_result = extract_yfinance_9companies_60_66mo()
+        # print("The yfinance data (9 companies) for range 60-66 months ago range were extracted into motherduck db")
+        # print(f"{extract_yfinance_9companies_60_66mo_result}")
 
-        extract_yfinance_9companies_66_72mo_result = extract_yfinance_9companies_66_72mo()
-        print("The yfinance data (9 companies) for range 66-72 months ago range were extracted into motherduck db")
-        print(f"{extract_yfinance_9companies_66_72mo_result}")
+        # extract_yfinance_9companies_66_72mo_result = extract_yfinance_9companies_66_72mo()
+        # print("The yfinance data (9 companies) for range 66-72 months ago range were extracted into motherduck db")
+        # print(f"{extract_yfinance_9companies_66_72mo_result}")
 
-        extract_yfinance_9companies_72_78mo_result = extract_yfinance_9companies_72_78mo()
-        print("The yfinance data (9 companies) for range 72-78 months ago range were extracted into motherduck db")
-        print(f"{extract_yfinance_9companies_72_78mo_result}")
+        # extract_yfinance_9companies_72_78mo_result = extract_yfinance_9companies_72_78mo()
+        # print("The yfinance data (9 companies) for range 72-78 months ago range were extracted into motherduck db")
+        # print(f"{extract_yfinance_9companies_72_78mo_result}")
 
-        extract_yfinance_9companies_78_84mo_result = extract_yfinance_9companies_78_84mo()
-        print("The yfinance data (9 companies) for range 78-84 months ago range were extracted into motherduck db")
-        print(f"{extract_yfinance_9companies_78_84mo_result}")
+        # extract_yfinance_9companies_78_84mo_result = extract_yfinance_9companies_78_84mo()
+        # print("The yfinance data (9 companies) for range 78-84 months ago range were extracted into motherduck db")
+        # print(f"{extract_yfinance_9companies_78_84mo_result}")
 
+        extract_yfinance_9companies_5d_result = extract_yfinance_9companies_5d()
+        print("The yfinance data (9 companies) for range 5 days ago range were extracted into motherduck db")
+        print(f"{extract_yfinance_9companies_5d_result}")
 
-        transform_load_yfinance_result = transform_load_yfinance(extract_yfinance_9companies_78_84mo_result, "9 companies 78-84 months")
-        print("The yfinance data (9 companies) were transformed and stored into motherduck db")
+        transform_load_yfinance_result = transform_load_yfinance_7d()
+        print("The YFinance data for the last 7 days (9 companies) were transformed and stored into MotherDuck DB")
         print(f"{transform_load_yfinance_result}")
-        
 
-        # Define batch parameters
-        batch_size = 800
-        offset = 0
-        total_rows = None
-        rows_processed = 0  # Initialize rows processed
-
-        # Process each batch until all data is processed
-        while total_rows is None or offset < total_rows:
-            result = transform_load_yfinance(batch_size=batch_size, offset=offset)
-            offset += batch_size  # Update offset for the next batch
-
-            # Set total rows after the first batch to stop loop when all rows are processed
-            if total_rows is None and "total_rows" in result:
-                total_rows = result["total_rows"]
-            
-            # Update rows processed
-            rows_processed += len(result["rows_processed"]) if "rows_processed" in result else batch_size
-
-            # Send a Slack alert with progress, only if total_rows is known
-            if total_rows is not None:
-                rows_remaining = max(total_rows - rows_processed, 0)
-                progress_message = f"Batch completed: Processed {rows_processed}/{total_rows} rows. {rows_remaining} rows remaining."
-                send_slack_alert(progress_message)
-                print(progress_message)
-
+    
         send_slack_alert("******************************** The entire pipeline has successfully completed! ********************************")
 
     except Exception as e:
