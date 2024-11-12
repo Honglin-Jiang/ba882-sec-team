@@ -10,7 +10,7 @@ if __name__ == "__main__":
     etl_deployment.deploy(
         name="ba882-team9-deployment-lab6",
         work_pool_name="ba882-team9-schedule",
-        cron="35 3 * * *",
+        cron="27 4 * * *",
         tags=["daily-run"],
         description="Pipeline to extract data from YFinance API and MD&A filing, transform, and store it into Motherduck DB",
         version="1.0.0",
