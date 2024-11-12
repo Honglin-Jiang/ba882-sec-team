@@ -62,7 +62,7 @@ def task(request):
         raw_tbl_sql = f"""
         CREATE TABLE IF NOT EXISTS {raw_tbl_name} (
             business VARCHAR,
-            date TIMESTAMP,
+            date VARCHAR,
             finan_cond_result_op VARCHAR,
         );
         """

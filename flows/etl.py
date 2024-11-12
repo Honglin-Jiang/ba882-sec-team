@@ -285,6 +285,13 @@ def transform_load_yfinance_7d():
     send_slack_alert("YFinance data transform & load for the last 7 days completed successfully.")
     return resp
 
+@task(retries=5)
+def extract_mda_9companies_7y():
+    """Extract 9 companies 7 years ago MD&A data"""
+    url = "https://us-central1-ba882-team9.cloudfunctions.net/extract-mda-v2"
+    resp = invoke_gcf(url, payload={})
+    send_slack_alert("9 companies 7 years ago MD&A data extraction completed successfully.")
+    return resp
 
 # Prefect Flow
 @flow(name="ba882-team9-etl-flow", log_prints=True)
@@ -408,13 +415,16 @@ def etl_flow():
         # print(f"{extract_yfinance_9companies_78_84mo_result}")
 
         extract_yfinance_9companies_5d_result = extract_yfinance_9companies_5d()
-        print("The yfinance data (9 companies) for range 5 days ago range were extracted into motherduck db")
+        print("The yfinance data (9 companies) for range 5 days ago range were extracted into MotherDuck DB")
         print(f"{extract_yfinance_9companies_5d_result}")
 
         transform_load_yfinance_result = transform_load_yfinance_7d()
         print("The YFinance data for the last 7 days (9 companies) were transformed and stored into MotherDuck DB")
         print(f"{transform_load_yfinance_result}")
 
+        extract_mda_9companies_7y_result = extract_mda_9companies_7y()
+        print("The MD&A data for the last 7 years (9 companies) were extracted into MotherDuck DB")
+        print(f"{extract_mda_9companies_7y_result}")
     
         send_slack_alert("******************************** The entire pipeline has successfully completed! ********************************")
 
