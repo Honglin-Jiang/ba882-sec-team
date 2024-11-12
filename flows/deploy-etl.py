@@ -15,5 +15,5 @@ if __name__ == "__main__":
         description="Pipeline to extract data from YFinance API and MD&A filing, transform, and store it into Motherduck DB",
         version="1.0.0",
         job_variables={
-            "pip_packages": ["pandas", "requests", "google-cloud-secret-manager"]}
+            "pip_packages": ["pandas", "requests", "google-cloud-secret-manager", "google"]}
     ) 
