@@ -1,0 +1,34 @@
+Discovered type 'process' for work pool 'ba882-team9-schedule'.
+Worker 'ProcessWorker d6b831c9-e627-4b23-9206-00940bfc675f' started!
+20:31:55.254 | INFO    | prefect.flow_runs.worker - Worker 'ProcessWorker d6b831c9-e627-4b23-9206-00940bfc675f' submitting flow run '01276c3f-541d-4a01-8c58-6bc919248c26'
+20:31:55.615 | INFO    | prefect.flow_runs.worker - Opening process...
+20:31:55.660 | INFO    | prefect.flow_runs.worker - Completed submission of flow run '01276c3f-541d-4a01-8c58-6bc919248c26'
+20:32:00.288 | INFO    | Flow run 'myrtle-iguana' - Slack alert sent successfully
+20:32:00.551 | INFO    | Task run 'schema_setup-39a' - Created task run 'schema_setup-39a' for task 'schema_setup'
+20:32:07.701 | INFO    | Task run 'schema_setup-39a' - Slack alert sent successfully
+20:32:07.708 | INFO    | Task run 'schema_setup-39a' - Finished in state Completed()
+20:32:07.712 | INFO    | Flow run 'myrtle-iguana' - The schema setup completed
+20:32:07.745 | INFO    | Task run 'extract_yfinance_9companies_5d-eb8' - Created task run 'extract_yfinance_9companies_5d-eb8' for task 'extract_yfinance_9companies_5d'
+20:32:19.530 | INFO    | Task run 'extract_yfinance_9companies_5d-eb8' - Slack alert sent successfully
+20:32:19.536 | INFO    | Task run 'extract_yfinance_9companies_5d-eb8' - Finished in state Completed()
+20:32:19.537 | INFO    | Flow run 'myrtle-iguana' - The yfinance data (9 companies) for range 5 days ago range were extracted into motherduck db
+20:32:19.541 | INFO    | Flow run 'myrtle-iguana' - {'message': 'YFinance data for 5 days ago successfully inserted into MotherDuck'}
+20:32:19.571 | INFO    | Task run 'transform_load_yfinance_7d-baa' - Created task run 'transform_load_yfinance_7d-baa' for task 'transform_load_yfinance_7d'
+20:32:30.790 | INFO    | Task run 'transform_load_yfinance_7d-baa' - Slack alert sent successfully
+20:32:30.797 | INFO    | Task run 'transform_load_yfinance_7d-baa' - Finished in state Completed()
+20:32:30.798 | INFO    | Flow run 'myrtle-iguana' - The YFinance data for the last 7 days (9 companies) were transformed and stored into MotherDuck DB
+20:32:30.800 | INFO    | Flow run 'myrtle-iguana' - {'message': 'YFinance data successfully cleaned and inserted into transformed schema'}
+20:32:31.001 | INFO    | Flow run 'myrtle-iguana' - Slack alert sent successfully
+20:32:31.090 | INFO    | Flow run 'myrtle-iguana' - Finished in state Completed()
+ > Running set_working_directory step...
+20:32:31.540 | INFO    | prefect.flow_runs.worker - Process 2914 exited cleanly.
+Usage: prefect [OPTIONS] COMMAND [ARGS]...
+Try 'prefect --help' for help.
+╭─ Error ──────────────────────────────────────────────────────────────────────╮
+│ No such command 'agent'.                                                     │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Discovered type 'process' for work pool 'ba882-team9-schedule'.
+Worker 'ProcessWorker 21cf30f1-4552-42f1-b9c6-9c4014dfdbf9' started!
+Received SIGTERM. Sending SIGINT to the None worker (PID 2865)...
+Received SIGINT. Sending SIGINT to the None worker (PID 2865)...
+Worker 'ProcessWorker d6b831c9-e627-4b23-9206-00940bfc675f' stopped!
