@@ -6,6 +6,8 @@ import json
 from prefect import flow, task
 from datetime import timedelta
 from google.cloud import secretmanager
+import logging
+logging.basicConfig(level=logging.DEBUG)
 
 # Helper function - access any secret from Secret Manager
 def get_secret(secret_id, project_id="ba882-team9"):
