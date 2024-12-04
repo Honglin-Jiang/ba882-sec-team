@@ -86,7 +86,6 @@ def get_secret(project_id, secret_id, version_id="latest"):
 
     return secret_data
 
-
 # Set Prefect API key and workspace
 PREFECT_API_KEY = get_secret(project_id, secret_id, version_id)
 PREFECT_API_URL = "https://app.prefect.cloud/account/db2be91e-ac3c-47c7-8afc-9f1f043c2027/workspace/2d46f809-2085-4220-97da-e282ded15dc7"
