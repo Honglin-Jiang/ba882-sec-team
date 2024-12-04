@@ -112,9 +112,26 @@ if _name_ == "_main_":
                 "env": {},
                 "pip_packages": ["pandas", "requests"]
             },
-            cron="0 23 * * *", # New York Time 6PM/7PM
+            cron="00 12 * * *", # New York Time 7PM/8PM
             tags=["prod"],
             description="Pipeline to extract data from YFinance API and MD&A filing, transform, and store it into Motherduck DB.",
+            version="1.0.0",
+        )
+
+        # Deploy the flow - test
+        flow.from_source(
+            source="https://github.com/Honglin-Jiang/ba882-sec-team.git",
+            entrypoint="flows/etl.py:etl_flow",
+        ).deploy(
+            name="daily-etl-test",
+            work_pool_name="ba882-team9-schedule",
+            job_variables={
+                "env": {},
+                "pip_packages": ["pandas", "requests"]
+            },
+            cron="30 3 * * *", # New York Time 9:30PM/10:00PM
+            tags=["prod"],
+            description="Pipeline to extract data from YFinance API and MD&A filing, transform, and store it into Motherduck DB. - test version",
             version="1.0.0",
         )
     except Exception as e:
