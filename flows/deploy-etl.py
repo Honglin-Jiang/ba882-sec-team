@@ -129,7 +129,7 @@ if __name__ == "__main__":
                 "env": {},
                 "pip_packages": ["pandas", "requests"]
             },
-            cron="30 3 * * *", # New York Time 9:30PM/10:00PM
+            cron="30 4 * * *", # New York Time 10:30PM/11:30PM
             tags=["prod"],
             description="Pipeline to extract data from YFinance API and MD&A filing, transform, and store it into Motherduck DB. - test version",
             version="1.0.0",
