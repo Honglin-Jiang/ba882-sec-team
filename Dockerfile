@@ -14,4 +14,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Run the script
-CMD ["python", "flows/deploy-etl.py"]
+#CMD ["python", "flows/deploy-etl.py"]
+ENTRYPOINT ["python", "flows/deploy-etl.py"]
