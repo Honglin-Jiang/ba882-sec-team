@@ -10,11 +10,16 @@ from io import BytesIO
 
 project_id = 'ba882-team9'
 motherduck_secret_id = 'mother_duck'
-version_id = "latest"  # Use the latest version
+version_id = "latest"
 
 ############################################## Streamlit setup
 
-st.image("https://questromworld.bu.edu/ftmba/wp-content/uploads/sites/42/2021/11/Questrom-1-1.png")
+st.markdown(
+    """
+    <img src="https://github.com/Honglin-Jiang/ba882-sec-team/blob/main/ba882_team9.jpeg?raw=true" alt="Logo" width="1000">
+    """,
+    unsafe_allow_html=True
+)
 
 # Initialize chat history
 if "messages" not in st.session_state:
