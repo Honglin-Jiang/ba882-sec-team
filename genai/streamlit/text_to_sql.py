@@ -5,6 +5,8 @@ from vertexai.generative_models import GenerativeModel, ChatSession
 import duckdb
 from google.cloud import secretmanager
 import pandas as pd
+import plotly.express as px
+from io import BytesIO
 
 project_id = 'ba882-team9'
 motherduck_secret_id = 'mother_duck'
@@ -138,10 +140,13 @@ def execute_sql(sql_query):
         st.error(f"Error executing SQL: {str(e)}")
         return None, None
 
-
 # Main application
 if st.button("Generate and Execute SQL"):
     if user_input.strip():
+        # Clear session state for a new query
+        st.session_state["query_executed"] = False
+        st.session_state.pop("df", None)
+
         # Generate SQL query
         sql_query = generate_sql(user_input, table_schema)
         
@@ -153,12 +158,62 @@ if st.button("Generate and Execute SQL"):
             cleaned_sql = clean_sql(sql_query)
             result, columns = execute_sql(cleaned_sql)
             if result:
-                st.subheader("Query Results")
-                df = pd.DataFrame(result, columns=columns)
-                st.write(df)
+                # Save DataFrame to session state
+                st.session_state["df"] = pd.DataFrame(result, columns=columns)
+                st.session_state["query_executed"] = True
             else:
                 st.info("Query executed successfully but returned no results.")
         else:
             st.error("Failed to generate SQL query.")
     else:
         st.error("Please enter a question.")
+
+# Check if query was executed successfully
+if "query_executed" in st.session_state and st.session_state["query_executed"]:
+    df = st.session_state["df"]  # Retrieve DataFrame from session state
+    
+    # Display Query Results
+    st.subheader("Query Results")
+    st.write(df)
+
+    # Interactive Visualization
+    st.subheader("Visualize Query Results")
+    visualization_type = st.selectbox("Select a visualization type", ["None", "Bar Chart", "Line Chart", "Scatter Plot"])
+    
+    if visualization_type != "None":
+        x_axis = st.selectbox("Select X-axis", df.columns)
+        y_axis = st.selectbox("Select Y-axis", df.columns)
+        
+        if visualization_type == "Bar Chart":
+            fig = px.bar(df, x=x_axis, y=y_axis)
+        elif visualization_type == "Line Chart":
+            fig = px.line(df, x=x_axis, y=y_axis)
+        elif visualization_type == "Scatter Plot":
+            fig = px.scatter(df, x=x_axis, y=y_axis)
+        
+        st.plotly_chart(fig)
+
+    # Export Options
+    st.subheader("Export Query Results")
+    export_format = st.radio("Select export format", ["CSV", "Excel"])
+    
+    if export_format == "CSV":
+        csv_data = df.to_csv(index=False)
+        st.download_button(
+            label="Download as CSV",
+            data=csv_data,
+            file_name="query_results.csv",
+            mime="text/csv"
+        )
+    elif export_format == "Excel":
+        # Create Excel file in memory
+        from io import BytesIO
+        excel_data = BytesIO()
+        df.to_excel(excel_data, index=False, engine="openpyxl")
+        excel_data.seek(0)
+        st.download_button(
+            label="Download as Excel",
+            data=excel_data,
+            file_name="query_results.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        )
