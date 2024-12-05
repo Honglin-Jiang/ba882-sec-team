@@ -9,7 +9,7 @@ import pandas as pd
 
 project_id = 'ba882-team9'
 motherduck_secret_id = 'mother_duck'
-version_id = "latest"  # 使用最新版本
+version_id = "latest"
 
 ############################################## streamlit setup
 
@@ -41,7 +41,6 @@ vertexai.init(project=GCP_PROJECT, location=GCP_REGION)
 ######################################################################## Streamlit App 1 - Simple Conversational Agent
 
 
-# that chat model
 #model = GenerativeModel("gemini-1.5-flash-002")
 model = GenerativeModel("gemini-1.5-pro-001")
 chat_session = model.start_chat(response_validation=False)
@@ -61,7 +60,65 @@ table_schema = """
 
 def generate_sql(prompt, table_schema):
     try:
-        # 定義生成模型的 prompt
+        # Imports
+import streamlit as st
+import vertexai
+from vertexai.generative_models import GenerativeModel, ChatSession
+import duckdb
+from google.cloud import secretmanager
+import pandas as pd
+
+project_id = 'ba882-team9'
+motherduck_secret_id = 'mother_duck'
+version_id = "latest"  # Use the latest version
+
+############################################## Streamlit setup
+
+st.image("https://questromworld.bu.edu/ftmba/wp-content/uploads/sites/42/2021/11/Questrom-1-1.png")
+
+# Initialize chat history
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
+# App layout
+st.title("Text-to-SQL with Google Cloud Vertex AI")
+st.subheader("Query your stock price and MD&A data")
+
+# Sidebar filters for demo purposes, not functional
+st.sidebar.header("Inputs")
+st.sidebar.markdown("One option is to use sidebars for inputs")
+
+user_input = st.text_input("Ask a question about your data:", "Show average stock price for 2021 by company")
+
+############################################## Project setup
+GCP_PROJECT = 'ba882-team9'
+GCP_REGION = "us-central1"
+
+vertexai.init(project=GCP_PROJECT, location=GCP_REGION)
+
+######################################################################## Streamlit App 1 - Simple Conversational Agent
+
+# Initialize the chat model
+# model = GenerativeModel("gemini-1.5-flash-002")
+model = GenerativeModel("gemini-1.5-pro-001")
+chat_session = model.start_chat(response_validation=False)
+
+table_schema = """
+    Schema: ba882_team9.transformed.y_finance
+        - ticker: VARCHAR (Stock ticker symbol)
+        - date: DATE (Date of the stock price)
+        - close: FLOAT (Closing stock price)
+        - volume: INT (Trading volume)
+
+    Schema: ba882_team9.stage.K10
+        - business: VARCHAR (Description of the business)
+        - date: VARCHAR (Date of the report)
+        - finan_cond_result_op: VARCHAR (Summary of financial condition and results of operation)
+"""
+
+def generate_sql(prompt, table_schema):
+    try:
+        # Define the generation model prompt
         full_prompt = f"""
         You are a SQL expert. Based on the following database schema, generate a SQL query:
         
@@ -80,7 +137,7 @@ def generate_sql(prompt, table_schema):
         SQL Query:
         """
         
-        # 使用 Vertex AI 生成查詢
+        # Use Vertex AI to generate the query
         response = model.generate_content(full_prompt)
         sql_query = response.text.strip()
         return sql_query
@@ -92,7 +149,7 @@ def generate_sql(prompt, table_schema):
 st.markdown("---")
 
 def correct_date_handling(sql_query):
-    # 通用替換規則
+    # General replacement rules
     replacements = {
         "CAST(SUBSTRING(date, 1, 4) AS INT)": "YEAR(date)",
         "CAST(SUBSTRING(date, 6, 2) AS INT)": "MONTH(date)",
@@ -101,12 +158,12 @@ def correct_date_handling(sql_query):
         "CAST(WEEK(date) AS INT)": "WEEK(date)",
     }
     
-    # 檢查和替換日期篩選條件
+    # Check and replace date filters
     corrected_query = sql_query
     for old, new in replacements.items():
         corrected_query = corrected_query.replace(old, new)
 
-    # 自動處理 date BETWEEN
+    # Automatically handle `date BETWEEN`
     if "BETWEEN" in corrected_query:
         corrected_query = corrected_query.replace(
             "BETWEEN '", ">= DATE('").replace("AND", "AND date <= DATE").replace("'", "')"
@@ -116,7 +173,7 @@ def correct_date_handling(sql_query):
 
 
 def clean_sql(sql_query):
-    # 移除 Markdown 標記和多餘空格
+    # Remove Markdown formatting and extra spaces
     return sql_query.replace("```sql", "").replace("```", "").strip()
 
 
