@@ -210,7 +210,7 @@ if mda_result:
                 side="left",
                 titlefont=dict(color="blue"),
                 tickfont=dict(color="blue"),
-                showgrid=True,  # Enable shared gridlines
+                showgrid=True,
             ),
             yaxis2=dict(
                 title="Trading Volume",
@@ -218,7 +218,7 @@ if mda_result:
                 overlaying="y",
                 titlefont=dict(color="orange"),
                 tickfont=dict(color="orange"),
-                showgrid=False,  # Ensure only one set of gridlines appears
+                showgrid=False,
             ),
             legend=dict(orientation="h", y=-0.3),
         )
