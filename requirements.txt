@@ -5,3 +5,6 @@ prefect
 google-cloud-secret-manager
 google-cloud
 
+google-cloud-storage
+google-api-python-client
+
