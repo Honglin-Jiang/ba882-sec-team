@@ -13,6 +13,12 @@ MOTHERDUCK_SECRET_ID = "mother_duck"
 VERSION_ID = "latest"
 
 # Streamlit Setup
+st.markdown(
+    """
+    <img src="https://github.com/Honglin-Jiang/ba882-sec-team/blob/main/ba882_team9.jpeg?raw=true" alt="Logo" width="1000">
+    """,
+    unsafe_allow_html=True
+)
 st.title("News Topic Modeling and Sentiment Analysis")
 st.subheader("Extract Topics and Sentiment Trends from News Data")
 
