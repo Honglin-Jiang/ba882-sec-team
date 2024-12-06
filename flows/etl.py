@@ -268,11 +268,11 @@ def extract_yfinance_9companies_78_84mo():
 
 
 @task(retries=5)
-def extract_yfinance_9companies_5d():
-    """Extract 9 companies 5 days ago stock data from yfinance"""
-    url = "https://us-central1-ba882-team9.cloudfunctions.net/extract-yfinance-9companies-5d"
+def extract_yfinance_9companies_7d():
+    """Extract 9 companies 7 days ago stock data from yfinance"""
+    url = "https://us-central1-ba882-team9.cloudfunctions.net/extract-yfinance-9companies-7d"
     resp = invoke_gcf(url, payload={})
-    send_slack_alert("9 companies 5 days ago stock data extraction completed successfully.")
+    send_slack_alert("9 companies 7 days ago stock data extraction completed successfully.")
     return resp
 
 @task(retries=5)
@@ -291,6 +291,14 @@ def extract_mda_9companies_7y():
     url = "https://us-central1-ba882-team9.cloudfunctions.net/extract-mda-v2"
     resp = invoke_gcf(url, payload={})
     send_slack_alert("9 companies 7 years ago MD&A data extraction completed successfully.")
+    return resp
+
+@task(retries=5)
+def extract_yfinance_news_9companies_sameday():
+    """Extract 9 companies same day yfinance news data"""
+    url = "https://us-central1-ba882-team9.cloudfunctions.net/extract-yfinance-news-9companies-sameday"
+    resp = invoke_gcf(url, payload={})
+    send_slack_alert("9 companies same day yfinance news data extraction completed successfully.")
     return resp
 
 # Prefect Flow
@@ -414,9 +422,13 @@ def etl_flow():
         # print("The yfinance data (9 companies) for range 78-84 months ago range were extracted into motherduck db")
         # print(f"{extract_yfinance_9companies_78_84mo_result}")
 
-        extract_yfinance_9companies_5d_result = extract_yfinance_9companies_5d()
-        print("The yfinance data (9 companies) for range 5 days ago range were extracted into MotherDuck DB")
-        print(f"{extract_yfinance_9companies_5d_result}")
+        extract_yfinance_news_9companies_sameday_result = extract_yfinance_news_9companies_sameday()
+        print("The same day yfinance news data (9 companies) were extracted into MotherDuck DB")
+        print(f"{extract_yfinance_news_9companies_sameday_result}")
+
+        extract_yfinance_9companies_7d_result = extract_yfinance_9companies_7d()
+        print("The yfinance data (9 companies) for range 7 days ago were extracted into MotherDuck DB")
+        print(f"{extract_yfinance_9companies_7d_result}")
 
         transform_load_yfinance_result = transform_load_yfinance_7d()
         print("The YFinance data for the last 7 days (9 companies) were transformed and stored into MotherDuck DB")

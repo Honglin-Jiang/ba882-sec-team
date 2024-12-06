@@ -37,11 +37,11 @@ companies = cloud_companies + chip_companies
 
 # Function to fetch stock data using yfinance
 def get_yfinance_data(ticker):
-    """Fetch stock data for the given ticker using yfinance for 5 days ago range."""
+    """Fetch stock data for the given ticker using yfinance for 7 days ago range."""
     try:
-        # Fetch the last 5 days of data
+        # Fetch the last 7 days of data
         stock = yf.Ticker(ticker)
-        history = stock.history(period="5d")
+        history = stock.history(period="7d")
         print(f"Fetched {len(history)} records for {ticker}. Data preview: {history.head()}")
         
         # Check if data is empty
