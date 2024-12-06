@@ -69,6 +69,20 @@ def task(request):
         print(f"{raw_tbl_sql}")
         md.sql(raw_tbl_sql)
 
+        # y_finance_news
+        raw_tbl_name = f"{db_schema}.y_finance_news"
+        raw_tbl_sql = f"""
+        CREATE TABLE IF NOT EXISTS {raw_tbl_name} (
+            ticker VARCHAR,
+            news_time TIMESTAMP,
+            title TEXT,
+            url TEXT,
+            source VARCHAR
+        );
+        """
+        print(f"{raw_tbl_sql}")
+        md.sql(raw_tbl_sql)
+
         return {}, 200
     except Exception as e:
             print(f"Error occurred: {e}")
