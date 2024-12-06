@@ -19,7 +19,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.title("Sentiment-Driven Stock Insights")
+st.title("Yearly MD&A Sentiment-Driven Stock Insights")
 st.subheader("Analyze MD&A sentiment and its impact on stock price trends")
 
 ############################################## Initialize Vertex AI and sentiment analyzer
