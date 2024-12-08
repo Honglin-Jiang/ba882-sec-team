@@ -8,10 +8,11 @@ from prefect import flow, task
 from prefect.logging import get_run_logger
 from flask import Flask, jsonify
 import logging
+import traceback
 
 app = Flask(__name__)
 
-# Set up basic logging
+# Enhanced logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -161,18 +162,23 @@ def home():
 
 @app.route('/forecast', methods=['POST'])
 def forecast_endpoint():
-    result = run_forecasting()
-    return jsonify({"message": "Forecast process started"}), 200
+    try:
+        logger.info("Starting forecast endpoint")
+        result = run_forecasting()
+        logger.info(f"Forecast completed with result: {result}")
+        return jsonify({"message": "Forecast process completed", "result": result}), 200
+    except Exception as e:
+        error_details = traceback.format_exc()
+        logger.error(f"Error in forecast endpoint: {str(e)}\nTraceback: {error_details}")
+        return jsonify({
+            "error": str(e),
+            "details": error_details,
+            "message": "Error processing forecast"
+        }), 500
 
 if __name__ == "__main__":
     try:
-        # Deploy the flow
-        run_forecasting.serve(
-            name="stock-forecasting",
-            cron="0 0 * * *",  # Run daily at midnight
-            tags=["stock-forecasting"],
-            version="1",
-            description="Daily stock price forecasting pipeline"
-        )
+        port = int(os.environ.get('PORT', 8080))
+        app.run(host='0.0.0.0', port=port, debug=False)
     except Exception as e:
-        logger.error(f"Error deploying flow: {e}")
+        logger.error(f"Error starting server: {e}")

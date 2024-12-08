@@ -6,16 +6,17 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt gunicorn
 
 # Copy the rest of the application
 COPY . .
 
-# Set environment variable for Flask
+# Set environment variables
+ENV PORT=8080
 ENV FLASK_APP=main.py
 
 # Expose the port
 EXPOSE 8080
 
-# Command to run the Flask application
-CMD ["python", "main.py"]
+# Use gunicorn to run the Flask app
+CMD exec gunicorn --bind :$PORT main:app
