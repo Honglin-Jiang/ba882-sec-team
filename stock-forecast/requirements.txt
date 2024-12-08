@@ -1,0 +1,6 @@
+duckdb>=1.1.1
+pandas>=2.0.0
+statsmodels>=0.14.0
+prefect>=2.0.0
+flask>=2.0.0
+python-dotenv>=1.0.0
