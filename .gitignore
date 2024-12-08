@@ -1,3 +1,5 @@
 gcp/*.json
 gcp/*.json
 ba882-team9-3880f34f3e88.json
+__pycache__/
+*.pyc
