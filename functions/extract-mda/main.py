@@ -91,27 +91,30 @@ def task(request):
         # Fetch MD&A data
         mdna = {company: {year: get_mdna(company, year, queryApi, extractorApi) for year in filing_years} for company in companies}
 
-        # Transform and load the data into MotherDuck
         for company, data in mdna.items():
             for year, mdna_text in data.items():
-                if mdna_text:  # Insert only if data is fetched
-                    # Check if the record already exists
+                if mdna_text:
+                    # Generate a unique ID (using UUID here)
+                    id = uuid.uuid4()
+
+                    # Check if a record with this ID already exists
                     check_sql = f"""
-                        SELECT 1 FROM {db_schema}.K10 
-                        WHERE business = '{company}' AND date = '{year}'
+                        SELECT 1 FROM {db_schema}.K10_new
+                        WHERE id = '{id}'  -- Check for duplicate ID
                         LIMIT 1
                     """
                     existing_record = md.sql(check_sql).fetchall()
-                    print(f"The record for {company} ({year}) has already exists")
-                    
-                    if not existing_record:  # Insert only if record doesn't already exist
+
+                    if not existing_record:
                         mdna_text = mdna_text.replace("'", "''")
                         insert_sql = f"""
-                            INSERT INTO {db_schema}.K10 (business, date, finan_cond_result_op) 
-                            VALUES ('{company}', '{year}', '{mdna_text}')
+                            INSERT INTO {db_schema}.K10_new (id, business, date, finan_cond_result_op) 
+                            VALUES ('{id}', '{company}', '{year}', '{mdna_text}')
                         """
                         md.sql(insert_sql)
-                        print(f"Inserted record for {company} ({year})")
+                        print(f"Inserted record for {company} ({year}) with ID {id} into K10_new")
+                    else:
+                        print(f"Record with ID {id} already exists. Skipping insertion.")
 
         return {"status": "Success"}, 200
 
