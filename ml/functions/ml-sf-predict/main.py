@@ -14,9 +14,9 @@ app = Flask(__name__)
 def connect_to_motherduck():
     """Connect to MotherDuck database"""
     try:
-        token = os.environ.get('MOTHERDUCK_TOKEN')
+        token = os.environ.get('mother_duck')
         if not token:
-            raise ValueError("MOTHERDUCK_TOKEN environment variable is not set")
+            raise ValueError("mother_duckenvironment variable is not set")
         
         logger.info("Attempting to connect to MotherDuck")
         conn = connect(f"md:?token={token}")
