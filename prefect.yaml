@@ -60,3 +60,22 @@ deployments:
     active: true
     max_active_runs:
     catchup: false
+- name: ba882-team9-daily-etl-autorun
+  version:
+  tags:
+  - prod
+  concurrency_limit:
+  description: Pipeline to extract data from YFinance API and MD&A filing, transform,
+    and store it into Motherduck DB.
+  entrypoint: flows/etl.py:etl_flow
+  parameters: {}
+  work_pool:
+    name: ba882-team9-autorun
+    work_queue_name:
+    job_variables: {}
+  schedules:
+  - cron: 45 8 * * *
+    timezone:
+    day_or: true
+    active: true
+  enforce_parameter_schema: true
