@@ -1,0 +1,8 @@
+streamlit 
+duckdb
+pinecone
+vertexai
+google-cloud-aiplatform
+google-cloud-secret-manager
+networkx
+matplotlib

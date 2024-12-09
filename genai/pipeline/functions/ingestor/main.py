@@ -15,14 +15,15 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 # settings
 project_id = 'ba882-team9'
 region_id = 'us-central1'
-secret_id = 'mother_duck'   #<---------- this is the name of the secret you created
+secret_id = 'mother_duck'  # <---------- this is the name of the secret you created
 version_id = 'latest'
 vector_secret = "pinecone"
 
 # db setup
-vector_index = "mda-content"
+vector_index = "post-content"
 
 vertexai.init(project=project_id, location=region_id)
+
 
 @functions_framework.http
 def task(request):
@@ -31,11 +32,11 @@ def task(request):
     request_json = request.get_json(silent=True)
     print(f"request: {json.dumps(request_json)}")
 
-    # read in from gcs
-    # '409b79b6115c8d051434bfcecf60f69c9f2965e0'
-    post_id = request_json.get('post_id')
+    # Assuming 'business_name' and 'record_date' are passed in the request
+    business_name = request_json.get('business_name')
+    record_date = request_json.get('record_date')
 
-    # instantiate the services 
+    # instantiate the services
     sm = secretmanager.SecretManagerServiceClient()
 
     # Build the resource name of the secret version
@@ -46,13 +47,19 @@ def task(request):
     md_token = response.payload.data.decode("UTF-8")
 
     # initiate the MotherDuck connection through an access token through
-    md = duckdb.connect(f'md:?motherduck_token={md_token}') 
+    md = duckdb.connect(f'md:?motherduck_token={md_token}')
 
     # get the post and change the published timestamp to an int representation for metadata
-    post_df = md.sql(f"select * from ba882_team9.stage.K10 where id = '{post_id}' limit 1 ;").df()
-      # Assuming your K10 table has 'date' and 'finan_cond_result_op' columns
-    post_df['published_timestamp'] = pd.to_datetime(post_df['date']).astype('int64')  # Convert 'date' to timestamp
-    post_df['content_text'] = post_df['finan_cond_result_op']  # Use 'finan_cond_result_op' as content
+    post_df = md.sql(f"""
+        SELECT * 
+        FROM ba882_team9.stage.K10 
+        WHERE business = '{business_name}' AND date = '{record_date}' 
+        LIMIT 1
+    """).df()
+    if post_df.empty:
+        return {"error": "No matching record found in K10"}, 404
+
+    post_df['timestamp'] = pd.to_datetime(post_df['date']).astype('int64')
 
     # connect to pinecone
     vector_name = f"projects/{project_id}/secrets/{vector_secret}/versions/{version_id}"
@@ -78,38 +85,38 @@ def task(request):
     )
 
     # iterate over the row
-    post_data= post_df.to_dict(orient="records")[0]
-    text = post_data['content_text'].replace('\xa0', ' ')
+    post_data = post_df.to_dict(orient="records")[0]
+    text = post_data['finan_cond_result_op'].replace('\xa0', ' ')
     chunks = text_splitter.create_documents([text])
-    id = post_data['id']
+
     for cid, chunk in enumerate(chunks):
         chunk_text = chunk.page_content
         input = TextEmbeddingInput(chunk_text, task)
         embedding = model.get_embeddings([input])
         chunk_doc = {
-            'id': id + '_' + str(cid),
+            'id': business_name + '_' + record_date + '_' + str(cid),  # Use business_name and record_date in the ID
             'values': embedding[0].values,
             'metadata': {
-                # 'link': post_data['link'],  # Remove if not applicable
-                # 'title': post_data['title'],  # Remove if not applicable
-                'published_timestamp': post_data['published_timestamp'],
+                'published_timestamp': post_data['timestamp'],
                 'chunk_index': cid,
-                'post_id': id,
                 'chunk_text': chunk_text
             }
         }
         chunk_docs.append(chunk_doc)
-    
+
     # flatten to dataframe for the ingestion
     chunk_df = pd.DataFrame(chunk_docs)
-    print(f"post id {id} has {len(chunk_df)} chunks")
+    print(f"post id {business_name}_{record_date} has {len(chunk_df)} chunks")
 
     # upsert to pinecone
     index.upsert_from_dataframe(chunk_df, batch_size=100)
 
-    # add record to warehouse 
-    md.sql(f"INSERT INTO ba882-team9.genai.pinecone_posts (id) VALUES ('{id}');")
-    print(f"post {id} added to the warehouse or job tracking")
+    # add record to warehouse with business_name and record_date
+    md.sql(f"""
+        INSERT INTO ba882_team9.genai.pinecone_posts (business, date) 
+        VALUES ('{business_name}', '{record_date}');
+    """)
+    print(f"Record added to pinecone_posts with business {business_name} and date {record_date}")
 
     # finish the job
     return {}, 200
