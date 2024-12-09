@@ -1,0 +1,8 @@
+functions-framework==3.*
+vertexai
+google-cloud-aiplatform
+langchain
+pandas
+duckdb==1.1.0
+google-cloud-secret-manager
+pinecone
