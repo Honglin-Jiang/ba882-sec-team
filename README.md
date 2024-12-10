@@ -48,7 +48,7 @@
 
 
 
-**### Streamlit App - RAG for MD&A**
+### **Streamlit App - RAG for MD&A**
 <img width="1421" alt="Screenshot 2024-12-10 at 5 20 59 PM" src="https://github.com/user-attachments/assets/b3cf7b09-6de7-4ba3-ac9f-58d3e146b375">
 
 
