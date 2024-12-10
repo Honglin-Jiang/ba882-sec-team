@@ -85,7 +85,7 @@ if search_button:
         context = "\n".join(chunks)
 
         prompt_template = f"""
-            You are an AI assistant trained to provide detailed and accurate answers based on the provided context.
+            You are an AI assistant with financial expertise trained to provide detailed and accurate answers based on the provided context about companies financial filings. 
             Use the context below to respond to the query.
             If the context does not contain sufficient information to answer, state that explicitly and avoid making up an answer.
 
@@ -100,7 +100,7 @@ if search_button:
 
         response = llm.generate_content(
             prompt_template,
-            generation_config=GenerationConfig(temperature=0)
+            generation_config=GenerationConfig(temperature=2)
         )
 
         # Display the results
