@@ -4,6 +4,8 @@
 
 
 **Group Members: Unice(Yu-Fang) Liao, Honglin Jiang, Yuchen Li, Raiymbek Ordabayev**
+---
+
 
 **1. Links:**
 **- PowerBI Dashboard:** [Click Here](https://app.powerbi.com/view?r=eyJrIjoiMjg2ZWViYjQtNWM5YS00MWNlLWJhNDgtZTcyOWQxYjg3ZjYwIiwidCI6IjAxZjNkMGExLTNkYzgtNDBkNy04YjUyLTI0YjM4YmEzM2JjYiIsImMiOjl9)
@@ -12,6 +14,8 @@
 
 **- Streamlit Apps:** [Click Here - 1](https://streamlit-genai-apps-1076180164120.us-central1.run.app/)
 [Click Here - 2](https://streamlit-rag-app-1076180164120.us-central1.run.app/)
+
+---
 
 
 **2. Graphs & Demo:**
