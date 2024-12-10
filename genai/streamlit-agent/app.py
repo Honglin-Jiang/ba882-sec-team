@@ -47,7 +47,7 @@ TASK = "RETRIEVAL_QUERY"
 ############################################## streamlit setup
 
 
-st.image("https://questromworld.bu.edu/ftmba/wp-content/uploads/sites/42/2021/11/Questrom-1-1.png")
+st.image("https://raw.githubusercontent.com/Honglin-Jiang/ba882-sec-team/refs/heads/main/ba882_team9.jpeg")
 st.title("Project RAG App")
 
 
