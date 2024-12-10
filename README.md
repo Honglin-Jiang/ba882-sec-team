@@ -12,7 +12,8 @@
 
 <img width="1308" alt="Screenshot 2024-12-10 at 5 00 58 PM" src="https://github.com/user-attachments/assets/43a0d3cb-60c6-4478-a45a-b744c29065c6">
 
-### **Streamlit Apps:** [Click Here - 1](https://streamlit-genai-apps-1076180164120.us-central1.run.app/)
+### **Streamlit Apps:** 
+[Click Here - 1](https://streamlit-genai-apps-1076180164120.us-central1.run.app/)
 [Click Here - 2](https://streamlit-rag-app-1076180164120.us-central1.run.app/)
 
 ---
