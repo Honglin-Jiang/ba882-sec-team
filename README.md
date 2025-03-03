@@ -76,11 +76,6 @@ This approach makes the 10-K filings accessible to non-technical stakeholders, i
 4. **Streamlit Web App**: 
    - Users can interact with 10-K filings using natural language queries, powered by GenAI for text-to-SQL translation.
 
-## Getting Started
-
-### 1. Clone the Repository:
-```bash
-git clone https://github.com/Honglin-Jiang/ba882-sec-team.git
 
 ---
 
