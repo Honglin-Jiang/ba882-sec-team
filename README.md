@@ -3,6 +3,84 @@
 ![ba882_team9](https://github.com/user-attachments/assets/9ceb29a6-9bcd-4c0d-983a-b44af1b9762e)
 
 **Group Members: Unice(Yu-Fang) Liao, Honglin Jiang, Yuchen Li, Raiymbek Ordabayev**
+# SEC 10-K Filing & Financial Data Pipeline and ML Models
+
+## Overview
+
+This project involves the development and deployment of an ETL pipeline, real-time price prediction models, and a web application to improve financial data accessibility and forecasting for portfolio management. The solution leverages multiple technologies including Google Cloud Functions, Prefect for pipeline orchestration, machine learning models (Logit, XGBoost), and Streamlit for building an interactive web application.
+
+### Key Features:
+- **ETL Pipeline** for SEC 10-K filing and stock pricing data.
+- **Real-time Price Prediction** using Logit and XGBoost models.
+- **Tableau Dashboard** for daily market summaries and long-term trends.
+- **Streamlit Web App** for querying SEC 10-K filings with natural language via GenAI-powered RAG and text-to-SQL functionality.
+
+## Technologies Used
+- **Google Cloud Platform** (GCP) for deploying cloud functions and managing services.
+- **SEC API** for retrieving 10-K filings.
+- **Prefect** for pipeline orchestration.
+- **Tableau** for building interactive dashboards.
+- **XGBoost** and **Logit** models for machine learning predictions.
+- **Streamlit** for building a web application.
+- **GenAI** for enhancing the querying process with RAG and text-to-SQL features.
+
+## Data Overview
+
+### 1. SEC 10-K Filings:
+The project ingests SEC 10-K filings for company financial data, which are retrieved using the SEC API. This data is essential for understanding a company’s financial health and is processed through an ETL pipeline for analysis.
+
+### 2. Stock Pricing Data:
+Historical pricing data is fetched using APIs from relevant sources. This data is then transformed and aggregated for use in model training and dashboard visualizations.
+
+## Pipeline Architecture
+
+### ETL Process:
+- **Extraction:** Data is fetched using the SEC API for 10-K filings and pricing data from various financial sources.
+- **Transformation:** The data undergoes cleaning, normalization, and transformation into a usable format.
+- **Load:** Processed data is loaded into a cloud database (e.g., Google Cloud SQL) for reporting and analytics.
+
+The entire ETL process is orchestrated using **Prefect**, which ensures data is available on time and can be monitored for successful execution.
+
+### Machine Learning Models:
+- **Logit and XGBoost Models**: These models are trained on historical stock data and financial information from the 10-K filings to predict future stock prices in real-time. The models are integrated into a GCP-deployed pipeline, allowing for fast predictions.
+- **31% Improvement**: The integration of XGBoost achieved a 31% improvement in benchmark accuracy compared to the previous model.
+
+## Dashboard & Visualizations
+
+A **Tableau dashboard** was developed to provide stakeholders with:
+- **Daily Market Summaries**: Quick overviews of portfolio stock movements.
+- **Long-Term Trends**: Visualizations of stock performance over time.
+- **Time Series Predictions**: Forecasts of future stock prices based on the machine learning model's output.
+
+This dashboard enables stakeholders to make data-driven investment decisions by visualizing trends and potential future outcomes.
+
+## Web Application
+
+A **Streamlit web app** was developed to allow stakeholders to query SEC 10-K filings using natural language. The app integrates with **GenAI-powered RAG** and **text-to-SQL** functionality, allowing users to ask questions such as:
+- "What is the revenue for the last fiscal year?"
+- "Show me the total liabilities and assets."
+
+This approach makes the 10-K filings accessible to non-technical stakeholders, improving their ability to make informed decisions.
+
+## How It Works
+
+1. **ETL Pipeline**: 
+   - The pipeline fetches data from the SEC API and external financial sources, processes it, and loads it into a cloud-based database for reporting and analysis.
+   
+2. **Machine Learning Models**: 
+   - The models are trained on historical pricing and financial data. The trained models are deployed in the cloud for real-time price prediction.
+
+3. **Tableau Dashboard**: 
+   - The dashboard pulls data from the cloud database and displays various key performance indicators (KPIs) and stock trends in an interactive format.
+
+4. **Streamlit Web App**: 
+   - Users can interact with 10-K filings using natural language queries, powered by GenAI for text-to-SQL translation.
+
+## Getting Started
+
+### 1. Clone the Repository:
+```bash
+git clone https://github.com/Honglin-Jiang/ba882-sec-team.git
 
 ---
 
