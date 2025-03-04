@@ -45,23 +45,6 @@ The entire ETL process is orchestrated using **Prefect**, which ensures data is 
 - **Logit and XGBoost Models**: These models are trained on historical stock data and financial information from the 10-K filings to predict future stock prices in real-time. The models are integrated into a GCP-deployed pipeline, allowing for fast predictions.
 - **31% Improvement**: The integration of XGBoost achieved a 31% improvement in benchmark accuracy compared to the previous model.
 
-## Dashboard & Visualizations
-
-A **Tableau dashboard** was developed to provide stakeholders with:
-- **Daily Market Summaries**: Quick overviews of portfolio stock movements.
-- **Long-Term Trends**: Visualizations of stock performance over time.
-- **Time Series Predictions**: Forecasts of future stock prices based on the machine learning model's output.
-
-This dashboard enables stakeholders to make data-driven investment decisions by visualizing trends and potential future outcomes.
-
-## Web Application
-
-A **Streamlit web app** was developed to allow stakeholders to query SEC 10-K filings using natural language. The app integrates with **GenAI-powered RAG** and **text-to-SQL** functionality, allowing users to ask questions such as:
-- "What is the revenue for the last fiscal year?"
-- "Show me the total liabilities and assets."
-
-This approach makes the 10-K filings accessible to non-technical stakeholders, improving their ability to make informed decisions.
-
 ## How It Works
 
 1. **ETL Pipeline**: 
@@ -85,11 +68,21 @@ This approach makes the 10-K filings accessible to non-technical stakeholders, i
 [Click Here](https://app.powerbi.com/view?r=eyJrIjoiMjg2ZWViYjQtNWM5YS00MWNlLWJhNDgtZTcyOWQxYjg3ZjYwIiwidCI6IjAxZjNkMGExLTNkYzgtNDBkNy04YjUyLTI0YjM4YmEzM2JjYiIsImMiOjl9)
 
 <img width="1308" alt="Screenshot 2024-12-10 at 5 00 58 PM" src="https://github.com/user-attachments/assets/43a0d3cb-60c6-4478-a45a-b744c29065c6">
+A **Tableau dashboard** was developed to provide stakeholders with:
+- **Daily Market Summaries**: Quick overviews of portfolio stock movements.
+- **Long-Term Trends**: Visualizations of stock performance over time.
+- **Time Series Predictions**: Forecasts of future stock prices based on the machine learning model's output.
+
+This dashboard enables stakeholders to make data-driven investment decisions by visualizing trends and potential future outcomes.
 
 ### **Streamlit Apps:** 
 [Click Here - 1](https://streamlit-genai-apps-1076180164120.us-central1.run.app/)
 [Click Here - 2](https://streamlit-rag-app-1076180164120.us-central1.run.app/)
+A **Streamlit web app** was developed to allow stakeholders to query SEC 10-K filings using natural language. The app integrates with **GenAI-powered RAG** and **text-to-SQL** functionality, allowing users to ask questions such as:
+- "What is the revenue for the last fiscal year?"
+- "Show me the total liabilities and assets."
 
+This approach makes the 10-K filings accessible to non-technical stakeholders, improving their ability to make informed decisions.
 ---
 
 
