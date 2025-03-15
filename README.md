@@ -19,7 +19,7 @@ This project involves the development and deployment of an ETL pipeline, real-ti
 - **Google Cloud Platform** (GCP) for deploying cloud functions and managing services.
 - **SEC API** for retrieving 10-K filings.
 - **Prefect** for pipeline orchestration.
-- **Tableau** for building interactive dashboards.
+- **PowerBI** for building interactive dashboards.
 - **XGBoost** and **Logit** models for machine learning predictions.
 - **Streamlit** for building a web application.
 - **GenAI** for enhancing the querying process with RAG and text-to-SQL features.
