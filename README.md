@@ -12,7 +12,7 @@ This project involves the development and deployment of an ETL pipeline, real-ti
 ### Key Features:
 - **ETL Pipeline** for SEC 10-K filing and stock pricing data.
 - **Real-time Price Prediction** using Logit and XGBoost models.
-- **Tableau Dashboard** for daily market summaries and long-term trends.
+- **PowerBI Dashboard** for daily market summaries and long-term trends.
 - **Streamlit Web App** for querying SEC 10-K filings with natural language via GenAI-powered RAG and text-to-SQL functionality.
 
 ## Technologies Used
