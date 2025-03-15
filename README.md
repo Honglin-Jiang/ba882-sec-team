@@ -53,7 +53,7 @@ The entire ETL process is orchestrated using **Prefect**, which ensures data is 
 2. **Machine Learning Models**: 
    - The models are trained on historical pricing and financial data. The trained models are deployed in the cloud for real-time price prediction.
 
-3. **Tableau Dashboard**: 
+3. **PowerBI Dashboard**: 
    - The dashboard pulls data from the cloud database and displays various key performance indicators (KPIs) and stock trends in an interactive format.
 
 4. **Streamlit Web App**: 
@@ -68,7 +68,7 @@ The entire ETL process is orchestrated using **Prefect**, which ensures data is 
 [Click Here](https://app.powerbi.com/view?r=eyJrIjoiMjg2ZWViYjQtNWM5YS00MWNlLWJhNDgtZTcyOWQxYjg3ZjYwIiwidCI6IjAxZjNkMGExLTNkYzgtNDBkNy04YjUyLTI0YjM4YmEzM2JjYiIsImMiOjl9)
 
 <img width="1308" alt="Screenshot 2024-12-10 at 5 00 58 PM" src="https://github.com/user-attachments/assets/43a0d3cb-60c6-4478-a45a-b744c29065c6">
-A **Tableau dashboard** was developed to provide stakeholders with:
+A **PowerBI dashboard** was developed to provide stakeholders with:
 - **Daily Market Summaries**: Quick overviews of portfolio stock movements.
 - **Long-Term Trends**: Visualizations of stock performance over time.
 - **Time Series Predictions**: Forecasts of future stock prices based on the machine learning model's output.
