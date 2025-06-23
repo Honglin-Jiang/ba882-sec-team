@@ -64,7 +64,8 @@ The entire ETL process is orchestrated using **Prefect**, which ensures data is 
 
 
 ## **1. Links**
-### **PowerBI Dashboard:** 
+### **PowerBI Dashboard:(⚠️ Note: The live PowerBI and Streamlit links are currently inactive due to expiration of the cloud storage and services on Google Cloud Platform. However, we’ve included demo screenshots below to provide a visual walkthrough of the functionality.
+)** 
 [Click Here](https://app.powerbi.com/view?r=eyJrIjoiMjg2ZWViYjQtNWM5YS00MWNlLWJhNDgtZTcyOWQxYjg3ZjYwIiwidCI6IjAxZjNkMGExLTNkYzgtNDBkNy04YjUyLTI0YjM4YmEzM2JjYiIsImMiOjl9)
 
 <img width="1308" alt="Screenshot 2024-12-10 at 5 00 58 PM" src="https://github.com/user-attachments/assets/43a0d3cb-60c6-4478-a45a-b744c29065c6">
@@ -75,7 +76,8 @@ A **PowerBI dashboard** was developed to provide stakeholders with:
 
 This dashboard enables stakeholders to make data-driven investment decisions by visualizing trends and potential future outcomes.
 
-### **Streamlit Apps:** 
+### **Streamlit Apps:⚠️ Note: The live PowerBI and Streamlit links are currently inactive due to expiration of the cloud storage and services on Google Cloud Platform. However, we’ve included demo screenshots below to provide a visual walkthrough of the functionality.
+** 
 [Click Here - 1](https://streamlit-genai-apps-1076180164120.us-central1.run.app/)
 [Click Here - 2](https://streamlit-rag-app-1076180164120.us-central1.run.app/)
 A **Streamlit web app** was developed to allow stakeholders to query SEC 10-K filings using natural language. The app integrates with **GenAI-powered RAG** and **text-to-SQL** functionality, allowing users to ask questions such as:
